@@ -1,9 +1,43 @@
-           $('.show-on-logon').hide();
-            var socket = io.connect("http://vps614872.ovh.net:8087");
-
             var myLogin = $('#login').html();
             var myCouleur = $('#couleur').val();
             var reception_message;
+			var myNotifications = 'false';
+
+                function setCookie(nom, valeur, expire, chemin, domaine, securite){
+                    document.cookie = nom + ' = ' + escape(valeur) + '  ' +
+                    ((expire == undefined) ? '' : ('; expires = ' + expire.toGMTString())) +
+                    ((chemin == undefined) ? '' : ('; path = ' + chemin)) +
+                    ((domaine == undefined) ? '' : ('; domain = ' + domaine)) +
+                    ((securite == true) ? '; secure' : '');
+                }
+
+                function getCookie(name){
+                    if(document.cookie.length == 0)
+                        return null;
+
+                    var regSepCookie = new RegExp('(; )', 'g');
+                    var cookies = document.cookie.split(regSepCookie);
+
+                    for(var i = 0; i < cookies.length; i++){
+                        var regInfo = new RegExp('=', 'g');
+                        var infos = cookies[i].split(regInfo);
+                        if(infos[0] == name){
+                            return unescape(infos[1]);
+                        }
+                    }
+                    return null;
+                }
+
+           $('.show-on-logon').hide();
+
+			// On coche ou décoche la checkbox activation-notifications en fonction de la valeur du cookie si il exist
+			if (myNotifications = getCookie('notifications')) {
+				if (myNotifications == 'true') {
+					$('#activation-notifications').prop("checked", true);
+				}
+			}
+            var socket = io.connect("http://vps614872.ovh.net:8088");
+
 
             if (myLogin != '') {
                 $('.show-on-logon').show();
@@ -20,11 +54,13 @@
                         couleur = "#6F6F6F";
                     }
 
-                    if (! document.hasFocus()) {
-                        if (typeof(reception_message) == 'undefined') {
-                            reception_message = setInterval('FaireClignoterTitre()', 1000);
-                        }
-                    }
+					if (myNotifications == 'true' ) {
+                    	if (! document.hasFocus()) {
+                    	    if (typeof(reception_message) == 'undefined') {
+                    	        reception_message = setInterval('FaireClignoterTitre()', 1000);
+                    	    }
+                    	}
+					}
 
                     $('#chat').prepend("<div class='chat' style='background-color:" + couleur + "' readonly>" + login + ' : ' + insertion_emoticons(message) + "</div>");
                 });
@@ -50,11 +86,13 @@
                 });
 
                 socket.on(myLogin, function(message, login){
-                    if (! document.hasFocus()) {
-                        if (typeof(reception_message) == 'undefined') {
-                            reception_message = setInterval('FaireClignoterTitre("!")', 1000);
-                        }
-                    }
+					if (myNotifications == 'true' ) {
+                    	if (! document.hasFocus()) {
+                    	    if (typeof(reception_message) == 'undefined') {
+                    	        reception_message = setInterval('FaireClignoterTitre("!")', 1000);
+                    	    }
+                    	}
+					}
                     $('#chat').prepend("<div class='chat'>" + login + ' : ' + insertion_emoticons(message) + "</div>");
                 });
 
@@ -69,10 +107,6 @@
                     }
                 });
 
-                $('#couleur').change(function(){
-                    $('#formCouleur').submit();
-                });
-
                 function sendToMembre(membre) {
                     if ($('#socket-message').val() !=  ''){             
                         socket.emit('messagePersonnel', $('#socket-message').val(), myLogin, membre);
@@ -85,15 +119,15 @@
 
                 // Se déclanche à la réception d'un message : Fait clignoter le titre de l'onglet
                 function FaireClignoterTitre(message = null){
-                    if (document.title != '...') {
-                        document.title = '...';
-                    } else {
-                        if (message != null) {
-                            document.title = message;
-                        } else {
-                            document.title = '... ...';
-                        }
-                    }
+                   	if (document.title != '...') {
+                   	    document.title = '...';
+                   	} else {
+                   	    if (message != null) {
+                   	        document.title = message;
+                   	    } else {
+                   	        document.title = '... ...';
+                   	    }
+                   	}
                 }
 
                 $(window).focus(function() {
@@ -137,4 +171,21 @@
                         .replace(/:\*r/g,       "<img src='images/emoticon_bisou_recu.gif'      height=35px; />")
                         .replace(/:\*/g,        "<img src='images/emoticon_bisou.gif'           height=35px; />");
                 }
+
+
+				$('#activation-notifications').click(function() {
+					myNotifications = String($('#activation-notifications').is(':checked'));
+					var notification = $('#activation-notifications').is(':checked');
+					var dtExpire = new Date();
+					dtExpire.setTime(dtExpire.getTime() + 3600 * 1000);
+					setCookie('notifications', notification, dtExpire, '/' );
+				});
+	
+				$('#couleur').change(function(){
+					myCouleur = $('#couleur').val();
+					var dtExpire = new Date();
+					dtExpire.setTime(dtExpire.getTime() + 3600 * 1000);
+					setCookie('couleur', myCouleur, dtExpire, '/' );
+                });
+				
         }

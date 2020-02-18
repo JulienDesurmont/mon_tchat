@@ -108,11 +108,6 @@ app.use(session)
 	}
 	res.redirect('/accueil');
 })
-.post('/define/couleur', urlencodedParser, function(req, res) {
-	couleur = req.body.couleur;
-	res.cookie('couleur', couleur, {maxAge: 9000000, httpOnly: true});
-	res.redirect('/accueil');
-})
 .use(function(req, res, next){
 	logger.log({
 		level: 'error',
@@ -178,6 +173,6 @@ io.sockets.on('connection', function(socket) {
 	}
 });
 
-server.listen(8087);
+server.listen(8088);
 
 

@@ -7,11 +7,11 @@
 
 	<body>
 		<header>
-			<h1><form method='POST' action='/define/couleur' id='formCouleur'>
-					<input type="color" <% if (couleur) { %>value=<%= couleur %> <% } else { %> value="#ffffff" <% } %> id="couleur" class='show-on-logon' name="couleur" />
-				</form>
+			<h1>
+				<input type="color" <% if (couleur) { %>value=<%= couleur %> <% } else { %> value="#ffffff" <% } %> id="couleur" class='show-on-logon' name="couleur" />
 				<span id='login'><%=login %></span>
 			</h1>
+			<p><span>Activer les notifications</span><input type='checkbox' name='activation-notifications' id='activation-notifications'></p>
 		</header>
 		<section>
 			<div class='sous-section'>
