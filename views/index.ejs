@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>La com LCI</title>
+		<link rel="stylesheet" style='text/css' href='css/super_chat.css'>
+	</head>
+
+	<body>
+		<header>
+			<h1><form method='POST' action='/define/couleur' id='formCouleur'>
+					<input type="color" <% if (couleur) { %>value=<%= couleur %> <% } else { %> value="#ffffff" <% } %> id="couleur" class='show-on-logon' name="couleur" />
+				</form>
+				<span id='login'><%=login %></span>
+			</h1>
+		</header>
+		<section>
+			<div class='sous-section'>
+				<div>
+					<p class='paragraphe-admin'><span id='message-admin'><%= message %></span></p>
+					<p class='show-on-logon'>
+						<textarea name='socket-message' id='socket-message' style="background-color:"<%= couleur %>></textarea>
+					</p>
+					<p class='show-on-logon'>
+						<input type='button' id='envoi-socket-message' value='Envoyer le message à tous' />
+					</p>
+					<form method='POST' action='/define/login' id='communication-formulaire'>
+						<input type='text' name='login' placeholder='Indiquez votre login' />
+						<input type='submit' value='Envoyer le login' />
+					</form>				
+				</div>
+				<div id='div-liste-utilisateurs'>
+					<% if (login) {%>
+						<h1>
+							<% if (nombreDePostesConnectes > 1) { %>
+								Liste des <span id='nombreDePostesConnectes'><%= nombreDePostesConnectes %></span> &nbsp; membres connectés
+							<% } else if (nombreDePostesConnectes == 1) { %>
+								Membre connecté
+							<% } else { %>
+								0 membre connectés
+							<% } %>
+						</h1>
+						<p><i><b>(cliquez sur un membre pour envoyer le message en privé)</b></i></p>
+						<div id='listeUtilisateurs'>
+							<% tabLogin.forEach(function(user) { %>
+								<p class='membre' onClick=sendToMembre('<%= user %>');><%= user %></p>
+							<% }); %>
+						</div>
+					<% } %>
+				</div>
+			</div>
+			<div class='sous-section'>
+				<div id='chat'>
+				</div>
+			</div>
+		</section>
+
+
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="js/fonctions.js"></script>
+	</body>
+</html>
+
+		
+

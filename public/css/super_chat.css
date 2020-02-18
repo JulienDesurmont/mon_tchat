@@ -1,0 +1,99 @@
+body {
+	position: fixed;
+	top:0;
+	bottom:0;
+	left: 0;
+	right:0;
+}
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100px;
+}
+
+h1 {
+	display:flex; 
+	flex-direction: row;
+	margin: 0;
+}
+h1 span {
+	margin-left: 10px;
+}
+section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: calc(100% - 100px);
+}
+
+.sous-section {
+	position: relative;
+	max-width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border: 2px solid gray;
+	width: 45%;
+	height: calc(100% - 100px);
+	overflow: auto;
+}
+input[type='text'] {
+	width: 400px;
+}
+input[type='button'], input[type='submit'] {
+	width: 300px;
+}
+#socket-message {
+	border:2px solid black;
+	width: 90%;
+	min-height: 50px;
+	max-height: 150px;
+	min-width: calc(100% - 8px);
+	max-width: calc(100% - 8px);
+}
+
+.chat {
+	position: relative;
+	display: flex;
+	border: 2px solid black;
+	background: gray;
+	min-height: 50px;
+	max-height: 150px;
+	min-width: calc(100% - 8px);
+	max-width: calc(100% - 8px);
+	margin-bottom: 10px;
+	color: white;
+	overflow: auto;
+	/*pointer-events: none;*/
+}
+#message-admin {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	font-style: bold;
+	color: white;
+	height: 50px;
+}
+.paragraphe-admin {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 0;
+	background: #6E33FF;
+	font-style: bold;
+	color: white;
+	height: 60px;
+}
+.titre {
+	width: 200px;
+}
+#div-liste-utilisateurs {
+	border:2px solid black;
+	height: 300px;
+	overflow: auto;
+}
+.membre {
+	cursor: pointer;
+}

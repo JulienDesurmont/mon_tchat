@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>La Com LCI</title>
+		<link rel="stylesheet" style='text/css' href='css/super_chat.css'>
+	</head>
+
+	<body>
+		<header>
+			<h1><span id='login'><%=login %></span></h1>
+		</header>
+		<section>
+			<div class='sous-section'>
+				<div>
+					<p class='paragraphe-admin'><span id='message-admin'><%= message %></span></p>
+					<p id='communicationSocket'>
+						<input type='text' name='socketMessage' id='socketMessage' />
+						<input type='button' id='envoiSocketMessage' value='Envoyer le message à tous' />
+					</p>
+					<form method='POST' action='/login' id='communicationFormulaire'>
+						<input type='text' name='login' placeholder='Indiquez votre login' />
+						<input type='submit' value='Envoyer le login' />
+					</form>
+				</div>
+				<div id='divListeUtilisateurs'>
+					<h1>
+						<% if (nombreDePostesConnectes > 1) { %>
+							Liste des <span id='nombreDePostesConnectes'><%= nombreDePostesConnectes %></span> membres connectés
+						<% } else if (nombreDePostesConnectes == 1) { %>
+							Membre connecté
+						<% } else { %>
+							0 membre connectés
+						<% } %>
+					</h1>
+					<p><i><b>(cliquez sur un membre pour envoyer le message en privé)</b></i></p>
+					<div id='listeUtilisateurs'>
+						<% tabLogin.forEach(function(user) { %>
+							<p class='membre' onClick=sendToMembre('<%= user %>');><%= user %></p>
+						<% }); %>
+					</div>
+				</div>
+			</div>
+			<div class='sous-section'>
+				<div id='chat'>
+				</div>
+			</div>
+		</section>
+
+
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script type='text/javascript'>
+			$('#communicationSocket').hide();
+			var socket = io.connect("http://vps614872.ovh.net:8087");
+
+			var login = $('#login').html();
+			if (login != '') {
+				$('#communicationSocket').show();
+				$('#communicationFormulaire').hide();
+
+	    		socket.on('message', function(message, login){
+	    		    $('#chat').prepend("<div class='chat'>" + login + ' : ' + message + "</div>");
+	    		});
+	    		socket.on('messageAdmin', function(message){
+	    		    $('#message-admin').html(message);
+	    		});
+
+	    		socket.on('listeUtilisateurs', function(tabUtilisateurs, nbPostesConnectes){
+					if (tabUtilisateurs.length > 1) {
+						$('#divListeUtilisateurs h1').html("Liste des <span id='nombreDePostesConnectes'>tabUtilisateurs.length</span> membres connectés");
+					} else if (tabUtilisateurs.length == 1) {
+						$('#divListeUtilisateurs h1').html("Membre connecté");
+					}  else { 
+						$('#divListeUtilisateurs h1').html("0 membre connectés");
+					}
+	    			var textHtml = '';
+	    		 	tabUtilisateurs.forEach(function(user){
+	    		 	 	textHtml += "<p class='membre' onClick=sendToMembre('" + user + "');>"+user+'</p>';
+	    		 	});
+	    		 	$('#listeUtilisateurs').html(textHtml);
+	    		 	$('#nombreDePostesConnectes').html(nbPostesConnectes);
+	    		});
+
+	    		socket.on(login, function(message, login){
+	    			$('#chat').prepend("<div class='chat'>" + login + ' : ' + message + "</div>");
+	    		});
+
+	    		$('#envoiSocketMessage').click(function(){
+	    			if ($('#socketMessage').val() !=  ''){
+	    		    	socket.emit('message', $('#socketMessage').val(), login);
+						$('#socketMessage').val("");
+	    			}
+	    		});
+
+	    		function sendToMembre(membre) {
+					if ($('#socketMessage').val() !=  ''){   		 	
+						socket.emit('messagePersonnel', $('#socketMessage').val(), login, membre);
+						$('#socketMessage').val("");
+					}	    			
+	    		}
+    		}
+		</script>		
+	</body>
+</html>
+
+		
+

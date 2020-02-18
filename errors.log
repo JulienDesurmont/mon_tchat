@@ -1,0 +1,21 @@
+
+{"level":"error","message":"Chemin inconnu demandé : /accueil/test","service":"user-service","timestamp":"13-02-2020 00:20:48"}
+{"level":"error","message":"Chemin inconnu demandé : /accueil/css/super_chat.css","service":"user-service","timestamp":"13-02-2020 00:52:58"}
+{"level":"error","message":"Chemin inconnu demandé : /accueil/css/super_chat.css","service":"user-service","timestamp":"13-02-2020 00:54:03"}
+{"level":"error","message":"Chemin inconnu demandé : /accueil/css/super_chat.css","service":"user-service","timestamp":"13-02-2020 00:54:12"}
+{"level":"error","message":"Chemin inconnu demandé : /accueil/message","service":"user-service","timestamp":"13-02-2020 00:55:08"}
+{"level":"error","message":"Chemin inconnu demandé : /define/couleur","service":"user-service","timestamp":"13-02-2020 12:36:22"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:07:48"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:07:56"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:08:22"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:08:40"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:09:30"}
+{"level":"error","message":"Chemin inconnu demandé : /define/css/super_chat.css","service":"user-service","timestamp":"13-02-2020 14:09:44"}
+{"level":"error","message":"Chemin inconnu demandé : /define/css/super_chat.css","service":"user-service","timestamp":"13-02-2020 14:12:49"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:13:21"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:13:56"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:14:06"}
+{"level":"error","message":"Chemin inconnu demandé : /status","service":"user-service","timestamp":"14-02-2020 01:08:58"}
+{"level":"error","message":"Chemin inconnu demandé : /stat","service":"user-service","timestamp":"14-02-2020 01:08:58"}
+{"level":"error","message":"Chemin inconnu demandé : /ws/v1/cluster/apps/new-application","service":"user-service","timestamp":"17-02-2020 16:10:20"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emoticon_rire.png","service":"user-service","timestamp":"17-02-2020 16:33:58"}

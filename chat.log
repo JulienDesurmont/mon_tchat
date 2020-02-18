@@ -1,0 +1,845 @@
+
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"12-02-2020 16:14:08"}
+{"level":"info","message":"Nouveau login reçu : jul59","service":"user-service","timestamp":"12-02-2020 16:15:32"}
+{"level":"info","message":"Nouveau login reçu : test","service":"user-service","timestamp":"12-02-2020 16:18:34"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"12-02-2020 16:23:10"}
+{"level":"info","message":"Nouveau login reçu : sasa","service":"user-service","timestamp":"12-02-2020 16:26:28"}
+{"level":"info","message":"Nouveau login reçu : dzadaz","service":"user-service","timestamp":"12-02-2020 16:26:40"}
+{"level":"info","message":"Déconnexion de l'utilisateur dzadaz","service":"user-service","timestamp":"12-02-2020 16:26:45"}
+{"level":"info","message":"Déconnexion de l'utilisateur sasa","service":"user-service","timestamp":"12-02-2020 16:26:49"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:20:37"}
+{"level":"error","message":"Chemin inconnu demandé : /accueil/test","service":"user-service","timestamp":"13-02-2020 00:20:48"}
+{"level":"info","message":"Nouveau login reçu : ","service":"user-service","timestamp":"13-02-2020 00:20:57"}
+{"level":"info","message":"Nouveau login reçu : ","service":"user-service","timestamp":"13-02-2020 00:21:01"}
+{"level":"info","message":"Déconnexion de l'utilisateur ","service":"user-service","timestamp":"13-02-2020 00:21:01"}
+{"level":"info","message":"Nouveau login reçu : ","service":"user-service","timestamp":"13-02-2020 00:21:02"}
+{"level":"info","message":"Déconnexion de l'utilisateur ","service":"user-service","timestamp":"13-02-2020 00:21:03"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 00:21:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur ","service":"user-service","timestamp":"13-02-2020 00:21:14"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:28:58"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 00:29:03"}
+{"level":"info","message":"Nouveau login reçu : ","service":"user-service","timestamp":"13-02-2020 00:30:49"}
+{"level":"info","message":"Nouveau login reçu : ","service":"user-service","timestamp":"13-02-2020 00:30:51"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 00:30:56"}
+{"level":"info","message":"Déconnexion de l'utilisateur ","service":"user-service","timestamp":"13-02-2020 00:30:57"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:31:00"}
+{"level":"info","message":"Déconnexion de l'utilisateur ","service":"user-service","timestamp":"13-02-2020 00:31:00"}
+{"level":"info","message":"Déconnexion de l'utilisateur Julien","service":"user-service","timestamp":"13-02-2020 00:32:17"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 00:32:20"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 00:32:25"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:32:37"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"13-02-2020 00:32:49"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:33:09"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:40:37"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 00:40:42"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"13-02-2020 00:40:52"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 00:41:01"}
+{"level":"info","message":"Déconnexion de l'utilisateur Julien","service":"user-service","timestamp":"13-02-2020 00:41:09"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"13-02-2020 00:41:16"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:41:29"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 00:41:41"}
+{"level":"info","message":"Déconnexion de l'utilisateur Julien","service":"user-service","timestamp":"13-02-2020 00:41:54"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:42:03"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"13-02-2020 00:42:13"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"13-02-2020 00:42:16"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"13-02-2020 00:42:26"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"13-02-2020 00:42:30"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"13-02-2020 00:42:41"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"13-02-2020 00:42:46"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"13-02-2020 00:42:59"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:52:52"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:52:58"}
+{"level":"error","message":"Chemin inconnu demandé : /accueil/css/super_chat.css","service":"user-service","timestamp":"13-02-2020 00:52:58"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 00:53:18"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:54:02"}
+{"level":"error","message":"Chemin inconnu demandé : /accueil/css/super_chat.css","service":"user-service","timestamp":"13-02-2020 00:54:03"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:54:12"}
+{"level":"error","message":"Chemin inconnu demandé : /accueil/css/super_chat.css","service":"user-service","timestamp":"13-02-2020 00:54:12"}
+{"level":"error","message":"Chemin inconnu demandé : /accueil/message","service":"user-service","timestamp":"13-02-2020 00:55:08"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:55:13"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:55:17"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:56:02"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 00:58:09"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 00:58:22"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"13-02-2020 00:58:44"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"13-02-2020 00:58:48"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"13-02-2020 00:58:58"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"13-02-2020 00:59:01"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 01:00:04"}
+{"level":"info","message":"Déconnexion de l'utilisateur Julien","service":"user-service","timestamp":"13-02-2020 01:00:09"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 01:00:21"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 01:00:25"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"13-02-2020 01:00:43"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"13-02-2020 01:00:58"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 01:03:03"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 01:03:07"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"13-02-2020 01:03:14"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 01:03:48"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 01:04:00"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"13-02-2020 01:04:07"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 01:04:20"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 01:04:29"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 01:04:38"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 01:04:45"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 01:04:57"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 01:06:58"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 01:07:01"}
+{"level":"info","message":"Déconnexion de l'utilisateur Julien","service":"user-service","timestamp":"13-02-2020 01:07:07"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 01:07:13"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 01:08:59"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 01:09:04"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"13-02-2020 01:09:17"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"13-02-2020 01:09:20"}
+{"level":"info","message":"Déconnexion de l'utilisateur Julien","service":"user-service","timestamp":"13-02-2020 01:09:20"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 01:09:27"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"13-02-2020 01:09:37"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"13-02-2020 01:09:42"}
+{"level":"info","message":"Déconnexion de l'utilisateur Julien","service":"user-service","timestamp":"13-02-2020 01:09:51"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 01:12:34"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 01:12:39"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 01:12:47"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 01:13:04"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 01:14:23"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 01:16:40"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"13-02-2020 01:16:57"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"13-02-2020 01:17:00"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 01:18:03"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 01:20:50"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 01:21:00"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"13-02-2020 01:21:25"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 01:21:31"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"13-02-2020 01:21:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur Julien","service":"user-service","timestamp":"13-02-2020 01:21:41"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 08:36:20"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"13-02-2020 08:40:27"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 08:55:50"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:08:09"}
+{"level":"info","message":"Nouveau login reçu : test","service":"user-service","timestamp":"13-02-2020 09:11:49"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:16:23"}
+{"level":"info","message":"Nouveau login reçu : ssssssssssssssssssssssssssssssssssssssssssssssss","service":"user-service","timestamp":"13-02-2020 09:17:03"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:17:58"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:31:12"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:32:48"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:33:23"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:34:29"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:35:15"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"13-02-2020 09:35:51"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 09:37:38"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:39:48"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 09:40:26"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:41:13"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:41:48"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:42:00"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:42:16"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:42:41"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 09:43:35"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:43:51"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:44:05"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 09:44:18"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"13-02-2020 09:44:26"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 09:44:30"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 09:48:01"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 09:48:37"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 09:49:51"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 09:51:37"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"13-02-2020 09:51:47"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 09:51:50"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:53:03"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 09:53:38"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:54:11"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 09:54:45"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:54:56"}
+{"level":"info","message":"Déconnexion de l'utilisateur Julien","service":"user-service","timestamp":"13-02-2020 09:55:12"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 09:55:15"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"13-02-2020 09:55:57"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:57:00"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:58:59"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 09:59:24"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 10:01:24"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"13-02-2020 10:02:25"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 10:13:44"}
+{"level":"info","message":"Déconnexion de l'utilisateur Julien","service":"user-service","timestamp":"13-02-2020 10:14:01"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 10:32:45"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 10:44:05"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 10:57:53"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 10:57:58"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:00:34"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:09:58"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:10:03"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:31:12"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:33:46"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:34:17"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:34:25"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 11:34:25"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:41:10"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 11:41:21"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:41:21"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:41:48"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:53:42"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:54:18"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:56:19"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:56:22"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:57:23"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 11:57:27"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:57:27"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 11:57:33"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:57:33"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:57:45"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:58:34"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 11:58:38"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:58:38"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 11:58:45"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:58:45"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 11:58:54"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 11:58:54"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:05:16"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:07:27"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:07:48"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:10:13"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:11:02"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 12:11:26"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:11:26"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:11:29"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 12:11:40"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:11:41"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 12:11:46"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:11:46"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:12:32"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 12:12:49"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:12:49"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 12:13:21"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:13:21"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 12:13:59"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:13:59"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 12:14:20"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 12:14:20"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:15:27"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 12:15:33"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 12:16:15"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:16:15"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:16:54"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:18:03"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:18:16"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 12:18:42"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:18:42"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:21:22"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 12:21:29"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:21:29"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:22:57"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 12:23:01"}
+{"level":"info","message":"Nouveau login reçu : j:null","service":"user-service","timestamp":"13-02-2020 12:23:01"}
+{"level":"info","message":"Déconnexion de l'utilisateur j:null","service":"user-service","timestamp":"13-02-2020 12:23:03"}
+{"level":"info","message":"Nouveau login reçu : j:null","service":"user-service","timestamp":"13-02-2020 12:23:03"}
+{"level":"info","message":"Nouveau login reçu : j:null","service":"user-service","timestamp":"13-02-2020 12:23:18"}
+{"level":"info","message":"Déconnexion de l'utilisateur j:null","service":"user-service","timestamp":"13-02-2020 12:23:20"}
+{"level":"info","message":"Nouveau login reçu : undefined","service":"user-service","timestamp":"13-02-2020 12:23:20"}
+{"level":"info","message":"Nouveau login reçu : undefined","service":"user-service","timestamp":"13-02-2020 12:23:22"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 12:23:22"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 12:23:29"}
+{"level":"info","message":"Nouveau login reçu : undefined","service":"user-service","timestamp":"13-02-2020 12:23:37"}
+{"level":"info","message":"Nouveau login reçu : undefined","service":"user-service","timestamp":"13-02-2020 12:25:39"}
+{"level":"info","message":"Nouveau login reçu : undefined","service":"user-service","timestamp":"13-02-2020 12:27:33"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 12:27:37"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:30:06"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:30:06"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:30:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 12:30:36"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:30:36"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 12:30:47"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 12:30:47"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:34:05"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:34:05"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:34:26"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:34:26"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:34:39"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:34:39"}
+{"level":"error","message":"Chemin inconnu demandé : /define/couleur","service":"user-service","timestamp":"13-02-2020 12:36:22"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:36:25"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:36:31"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:36:34"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:36:37"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:14"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:20"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:20"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:20"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:20"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:20"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:20"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:20"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:20"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:21"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:21"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:21"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:22"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:22"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:25"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:25"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:26"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:26"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:26"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:26"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:27"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:27"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:27"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:27"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:28"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:28"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:28"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:28"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:28"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:28"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:29"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:29"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:29"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:29"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:29"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:31"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:31"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:32"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:32"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:39"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:46"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:37:46"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:37:51"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:38:06"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:38:06"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:38:08"}
+{"level":"info","message":"Nouveau login reçu : JD","service":"user-service","timestamp":"13-02-2020 12:38:08"}
+{"level":"info","message":"Déconnexion de l'utilisateur JD","service":"user-service","timestamp":"13-02-2020 12:42:08"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:37:25"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:39:45"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:39:45"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:40:30"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:40:30"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:40:45"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:40:45"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:41:09"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:41:09"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:41:17"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:41:17"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:43:15"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:43:15"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:45:40"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:47:32"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:47:32"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:47:36"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:47:59"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:47:59"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:48:09"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:48:09"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:48:25"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:48:37"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:48:37"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:48:47"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:48:47"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:48:53"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:48:53"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:49:07"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:49:07"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:49:44"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:49:44"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:50:08"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:50:08"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:50:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:50:14"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:52:05"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:52:05"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:52:13"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:52:14"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:52:27"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:52:27"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:53:08"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:53:08"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:53:19"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:53:19"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 13:53:34"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:53:46"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:53:46"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:53:57"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:53:57"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 13:54:07"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 13:54:07"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:54:12"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:54:12"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:55:46"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:55:46"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:56:45"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:56:45"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:56:54"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:56:54"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 13:57:22"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 13:57:22"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 13:57:57"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 13:58:05"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 13:58:10"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 13:58:47"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 13:59:46"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 13:59:51"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:02:37"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:02:41"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 14:02:41"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:02:43"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:02:44"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 14:02:44"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:02:54"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 14:02:57"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:02:57"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:02:59"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 14:02:59"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:03:01"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:03:02"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 14:03:02"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:03:27"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 14:03:31"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:03:31"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 14:03:39"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:03:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 14:03:48"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:06:40"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:06:44"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 14:06:44"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:06:55"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:07:45"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:07:48"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:07:48"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:07:56"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:07:56"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:08:14"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:08:22"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:08:22"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 14:08:22"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:08:33"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:08:40"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:08:40"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 14:08:40"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:09:30"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:09:34"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:09:41"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 14:09:44"}
+{"level":"error","message":"Chemin inconnu demandé : /define/css/super_chat.css","service":"user-service","timestamp":"13-02-2020 14:09:44"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:12:46"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 14:12:49"}
+{"level":"error","message":"Chemin inconnu demandé : /define/css/super_chat.css","service":"user-service","timestamp":"13-02-2020 14:12:49"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:12:59"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:13:21"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:13:21"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 14:13:21"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:13:56"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:13:59"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:14:06"}
+{"level":"error","message":"Chemin inconnu demandé : /erreur","service":"user-service","timestamp":"13-02-2020 14:14:06"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 14:14:06"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:14:29"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:14:36"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:14:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 14:14:39"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:15:09"}
+{"level":"info","message":"Déconnexion de l'utilisateur sa","service":"user-service","timestamp":"13-02-2020 14:15:10"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:23:18"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:23:18"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:23:25"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:23:33"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:23:33"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:24:01"}
+{"level":"info","message":"Nouveau login reçu : sa","service":"user-service","timestamp":"13-02-2020 14:26:16"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:26:16"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:26:22"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:26:39"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:26:59"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:27:06"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:27:14"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:28:30"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:28:36"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:30:16"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:30:34"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:30:34"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:31:23"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:31:23"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:31:29"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:31:32"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:31:35"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:35:16"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:35:16"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:35:20"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:35:20"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:35:24"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:35:24"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:35:26"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:35:26"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:35:26"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:35:26"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:35:35"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:35:38"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:35:38"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:35:40"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:35:40"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:35:41"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:35:41"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:35:47"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:35:56"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:36:15"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:36:43"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:36:43"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:36:51"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:37:00"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:37:20"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:37:21"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:37:39"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:37:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:38:26"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:38:26"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:39:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur undefined","service":"user-service","timestamp":"13-02-2020 14:39:24"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:39:36"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:39:41"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:39:55"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:43:37"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:43:39"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:43:45"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:43:47"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:44:28"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:44:31"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:44:32"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:47:53"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:47:57"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:48:02"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:48:27"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:54:15"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:54:57"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:56:09"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:58:02"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 14:58:16"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:05:08"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:05:08"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:05:27"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:05:49"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:05:56"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:06:03"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:09:54"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:11:32"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:12:56"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:16:04"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:17:34"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:17:45"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:18:21"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:19:07"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:19:11"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:20:08"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:20:11"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:20:23"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:20:35"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:21:31"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:21:39"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:21:47"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:22:00"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:22:03"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:23:58"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:23:59"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:24:01"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:24:03"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:24:07"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:24:11"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:24:19"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:24:25"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:24:30"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:24:35"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:24:37"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:24:41"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:24:44"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:24:50"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:24:56"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:25:25"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:27:23"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:27:28"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:27:31"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:27:36"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:30:12"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:30:17"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:30:19"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 15:30:29"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:30:53"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 15:32:51"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:32:51"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 15:33:07"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:33:07"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:34:52"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:35:06"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:35:10"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 15:35:29"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:35:36"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 15:36:15"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 15:36:15"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 15:36:48"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:36:48"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 15:36:56"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 15:37:00"}
+{"level":"info","message":"Déconnexion de l'utilisateur Julien","service":"user-service","timestamp":"13-02-2020 15:37:16"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 15:37:33"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:38:31"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 15:38:31"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 15:38:32"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 15:38:33"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:38:40"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 15:38:44"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:38:46"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:38:55"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:39:40"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 15:39:47"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:40:02"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 15:44:35"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:44:35"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:44:36"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:47:11"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 15:47:11"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 15:47:12"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:48:25"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 15:48:28"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:49:12"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 15:49:12"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 15:49:13"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:49:13"}
+{"level":"info","message":"Déconnexion de l'utilisateur Julien","service":"user-service","timestamp":"13-02-2020 15:53:30"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 15:53:36"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 16:01:29"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 16:01:37"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 16:01:43"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 16:02:00"}
+{"level":"info","message":"Nouveau login reçu : Julien","service":"user-service","timestamp":"13-02-2020 16:02:19"}
+{"level":"info","message":"Déconnexion de l'utilisateur Julien","service":"user-service","timestamp":"13-02-2020 16:02:19"}
+{"level":"info","message":"Déconnexion de l'utilisateur Julien","service":"user-service","timestamp":"13-02-2020 16:02:44"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 16:02:52"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 16:02:57"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 16:02:57"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 16:03:03"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 16:03:03"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 16:03:10"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 16:03:10"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 16:03:16"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 16:03:16"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 16:34:10"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 16:35:09"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 16:35:36"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 16:35:37"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 16:35:52"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 16:37:55"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 16:37:55"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"13-02-2020 16:59:21"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"13-02-2020 17:02:20"}
+{"level":"error","message":"Chemin inconnu demandé : /status","service":"user-service","timestamp":"14-02-2020 01:08:58"}
+{"level":"error","message":"Chemin inconnu demandé : /stat","service":"user-service","timestamp":"14-02-2020 01:08:58"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"14-02-2020 11:03:55"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 11:04:01"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 11:04:01"}
+{"level":"info","message":"Nouveau login reçu : J","service":"user-service","timestamp":"14-02-2020 14:39:42"}
+{"level":"info","message":"Nouveau login reçu : J","service":"user-service","timestamp":"14-02-2020 14:39:42"}
+{"level":"info","message":"Nouveau login reçu : Vincent","service":"user-service","timestamp":"14-02-2020 14:49:53"}
+{"level":"info","message":"Nouveau login reçu : Vincent","service":"user-service","timestamp":"14-02-2020 14:49:53"}
+{"level":"info","message":"Nouveau login reçu : Vincent","service":"user-service","timestamp":"14-02-2020 14:50:05"}
+{"level":"info","message":"Déconnexion de l'utilisateur Vincent","service":"user-service","timestamp":"14-02-2020 14:50:05"}
+{"level":"info","message":"Nouveau login reçu : ","service":"user-service","timestamp":"14-02-2020 14:58:09"}
+{"level":"info","message":"Nouveau login reçu : ALo","service":"user-service","timestamp":"14-02-2020 14:58:13"}
+{"level":"info","message":"Nouveau login reçu : ALo","service":"user-service","timestamp":"14-02-2020 14:58:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur J","service":"user-service","timestamp":"14-02-2020 15:03:26"}
+{"level":"info","message":"Nouveau login reçu : J","service":"user-service","timestamp":"14-02-2020 15:03:26"}
+{"level":"info","message":"Déconnexion de l'utilisateur J","service":"user-service","timestamp":"14-02-2020 15:05:42"}
+{"level":"info","message":"Nouveau login reçu : J","service":"user-service","timestamp":"14-02-2020 15:05:42"}
+{"level":"info","message":"Nouveau login reçu : ALo","service":"user-service","timestamp":"14-02-2020 15:05:51"}
+{"level":"info","message":"Nouveau login reçu : Vincent","service":"user-service","timestamp":"14-02-2020 15:05:52"}
+{"level":"info","message":"Nouveau login reçu : Vincent","service":"user-service","timestamp":"14-02-2020 15:05:52"}
+{"level":"info","message":"Nouveau login reçu : ALo","service":"user-service","timestamp":"14-02-2020 15:07:40"}
+{"level":"info","message":"Nouveau login reçu : J","service":"user-service","timestamp":"14-02-2020 15:07:40"}
+{"level":"info","message":"Nouveau login reçu : Vincent","service":"user-service","timestamp":"14-02-2020 15:07:40"}
+{"level":"info","message":"Nouveau login reçu : ALo","service":"user-service","timestamp":"14-02-2020 15:07:40"}
+{"level":"info","message":"Nouveau login reçu : ALo","service":"user-service","timestamp":"14-02-2020 15:07:40"}
+{"level":"info","message":"Nouveau login reçu : J","service":"user-service","timestamp":"14-02-2020 15:10:19"}
+{"level":"info","message":"Nouveau login reçu : Vincent","service":"user-service","timestamp":"14-02-2020 15:10:22"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 15:10:36"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 15:10:37"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"14-02-2020 15:10:42"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 15:10:42"}
+{"level":"info","message":"Nouveau login reçu : ALo","service":"user-service","timestamp":"14-02-2020 15:12:27"}
+{"level":"info","message":"Nouveau login reçu : ALo","service":"user-service","timestamp":"14-02-2020 15:12:27"}
+{"level":"info","message":"Nouveau login reçu : Vincent","service":"user-service","timestamp":"14-02-2020 15:17:04"}
+{"level":"info","message":"Nouveau login reçu : ALo","service":"user-service","timestamp":"14-02-2020 15:17:04"}
+{"level":"info","message":"Nouveau login reçu : J","service":"user-service","timestamp":"14-02-2020 15:17:05"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 15:17:06"}
+{"level":"info","message":"Nouveau login reçu : Vincent","service":"user-service","timestamp":"14-02-2020 15:18:08"}
+{"level":"info","message":"Nouveau login reçu : J","service":"user-service","timestamp":"14-02-2020 15:18:08"}
+{"level":"info","message":"Nouveau login reçu : J","service":"user-service","timestamp":"14-02-2020 15:18:09"}
+{"level":"info","message":"Déconnexion de l'utilisateur Vincent","service":"user-service","timestamp":"14-02-2020 15:18:16"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 15:18:16"}
+{"level":"info","message":"Nouveau login reçu : J","service":"user-service","timestamp":"14-02-2020 15:19:11"}
+{"level":"info","message":"Nouveau login reçu : Vincent","service":"user-service","timestamp":"14-02-2020 15:22:16"}
+{"level":"info","message":"Nouveau login reçu : ALo","service":"user-service","timestamp":"14-02-2020 15:22:45"}
+{"level":"info","message":"Déconnexion de l'utilisateur Vincent","service":"user-service","timestamp":"14-02-2020 15:26:11"}
+{"level":"info","message":"Déconnexion de l'utilisateur J","service":"user-service","timestamp":"14-02-2020 15:48:18"}
+{"level":"info","message":"Nouveau login reçu : J","service":"user-service","timestamp":"14-02-2020 15:50:51"}
+{"level":"info","message":"Déconnexion de l'utilisateur ALo","service":"user-service","timestamp":"14-02-2020 15:55:07"}
+{"level":"info","message":"Déconnexion de l'utilisateur J","service":"user-service","timestamp":"14-02-2020 15:58:38"}
+{"level":"info","message":"Nouveau login reçu : J","service":"user-service","timestamp":"14-02-2020 15:58:52"}
+{"level":"info","message":"Déconnexion de l'utilisateur J","service":"user-service","timestamp":"14-02-2020 15:58:56"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"14-02-2020 16:16:59"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 16:56:04"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 16:56:04"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 16:56:14"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 16:56:22"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 16:57:07"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"14-02-2020 16:59:06"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"14-02-2020 16:59:52"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"14-02-2020 17:00:14"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"14-02-2020 17:00:14"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 17:00:22"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"14-02-2020 17:00:46"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"14-02-2020 17:00:46"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"14-02-2020 17:00:50"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"14-02-2020 17:00:50"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 17:01:11"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 17:01:17"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"14-02-2020 17:01:17"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 17:01:24"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"14-02-2020 17:01:24"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"14-02-2020 17:01:34"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"14-02-2020 17:01:34"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"14-02-2020 17:04:35"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"14-02-2020 17:49:15"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"15-02-2020 11:23:38"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"15-02-2020 12:16:30"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"15-02-2020 12:16:51"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 09:44:40"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 09:44:40"}
+{"level":"info","message":"Nouveau login reçu : jd","service":"user-service","timestamp":"17-02-2020 14:23:01"}
+{"level":"info","message":"Nouveau login reçu : jd","service":"user-service","timestamp":"17-02-2020 14:23:01"}
+{"level":"info","message":"Nouveau login reçu : OMG","service":"user-service","timestamp":"17-02-2020 14:26:57"}
+{"level":"info","message":"Nouveau login reçu : OMG","service":"user-service","timestamp":"17-02-2020 14:26:57"}
+{"level":"info","message":"Déconnexion de l'utilisateur OMG","service":"user-service","timestamp":"17-02-2020 14:27:07"}
+{"level":"info","message":"Nouveau login reçu : OMG","service":"user-service","timestamp":"17-02-2020 14:27:07"}
+{"level":"info","message":"Déconnexion de l'utilisateur OMG","service":"user-service","timestamp":"17-02-2020 14:27:32"}
+{"level":"info","message":"Nouveau login reçu : OMG","service":"user-service","timestamp":"17-02-2020 14:27:32"}
+{"level":"info","message":"Déconnexion de l'utilisateur OMG","service":"user-service","timestamp":"17-02-2020 14:27:44"}
+{"level":"info","message":"Nouveau login reçu : Badroro","service":"user-service","timestamp":"17-02-2020 14:27:58"}
+{"level":"info","message":"Nouveau login reçu : Badroro","service":"user-service","timestamp":"17-02-2020 14:27:59"}
+{"level":"info","message":"Déconnexion de l'utilisateur Badroro","service":"user-service","timestamp":"17-02-2020 14:28:22"}
+{"level":"info","message":"Nouveau login reçu : Badroro","service":"user-service","timestamp":"17-02-2020 14:28:22"}
+{"level":"info","message":"Déconnexion de l'utilisateur Badroro","service":"user-service","timestamp":"17-02-2020 14:28:44"}
+{"level":"info","message":"Nouveau login reçu : Badroro","service":"user-service","timestamp":"17-02-2020 14:28:44"}
+{"level":"info","message":"Nouveau login reçu : alo","service":"user-service","timestamp":"17-02-2020 14:30:38"}
+{"level":"info","message":"Nouveau login reçu : alo","service":"user-service","timestamp":"17-02-2020 14:30:38"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"17-02-2020 14:40:30"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 14:40:37"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 14:40:37"}
+{"level":"info","message":"Déconnexion de l'utilisateur alo","service":"user-service","timestamp":"17-02-2020 14:56:31"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 14:59:46"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:17:37"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:17:40"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"17-02-2020 15:17:40"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:23:48"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:25:30"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:32:40"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:32:42"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"17-02-2020 15:32:42"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:33:38"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:33:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"17-02-2020 15:33:39"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:35:23"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:35:36"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:35:48"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"17-02-2020 15:35:48"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:37:08"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"17-02-2020 15:37:08"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:37:47"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"17-02-2020 15:37:47"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:46:21"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:47:07"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:49:47"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:49:47"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 15:50:18"}
+{"level":"error","message":"Chemin inconnu demandé : /ws/v1/cluster/apps/new-application","service":"user-service","timestamp":"17-02-2020 16:10:20"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:33:17"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:33:25"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:33:55"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emoticon_rire.png","service":"user-service","timestamp":"17-02-2020 16:33:58"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:34:35"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:34:52"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:35:22"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:35:22"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:38:51"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:38:51"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:38:52"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:39:00"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"17-02-2020 16:39:00"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:39:05"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:39:05"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:39:05"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:39:06"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"17-02-2020 16:40:12"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:40:12"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:40:58"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:40:58"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"17-02-2020 16:40:58"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:40:59"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:41:02"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:41:37"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:41:37"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"17-02-2020 16:41:43"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:41:43"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:46:37"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:46:38"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"17-02-2020 16:46:44"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:46:44"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:46:47"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"17-02-2020 16:46:47"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"17-02-2020 16:47:01"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:47:01"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:49:43"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:49:45"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"17-02-2020 16:49:53"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:49:53"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:50:44"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"17-02-2020 16:50:44"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:50:48"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:50:49"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:50:52"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:51:22"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:51:25"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:52:33"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:52:34"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:52:36"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"17-02-2020 16:52:36"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:54:25"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:54:26"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"17-02-2020 16:54:26"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:54:28"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"17-02-2020 16:54:30"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 16:54:30"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"17-02-2020 16:56:06"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"17-02-2020 16:57:28"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"17-02-2020 17:04:51"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"17-02-2020 17:04:53"}
+{"level":"info","message":"Nouveau login reçu : hecalim","service":"user-service","timestamp":"17-02-2020 17:04:55"}
+{"level":"info","message":"Nouveau login reçu : hecalim","service":"user-service","timestamp":"17-02-2020 17:04:55"}
+{"level":"info","message":"Déconnexion de l'utilisateur hecalim","service":"user-service","timestamp":"17-02-2020 17:05:06"}
+{"level":"info","message":"Nouveau login reçu : hecalim","service":"user-service","timestamp":"17-02-2020 17:05:06"}
+{"level":"info","message":"Nouveau login reçu : hgfg","service":"user-service","timestamp":"17-02-2020 17:06:23"}
+{"level":"info","message":"Nouveau login reçu : hgfg","service":"user-service","timestamp":"17-02-2020 17:06:23"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"17-02-2020 17:11:31"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"17-02-2020 17:11:31"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"17-02-2020 17:12:52"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"17-02-2020 17:12:52"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"17-02-2020 17:14:31"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"18-02-2020 08:57:07"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"18-02-2020 08:57:08"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"18-02-2020 08:57:24"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"18-02-2020 08:57:24"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"18-02-2020 09:16:26"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"18-02-2020 09:16:26"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"18-02-2020 09:17:18"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"18-02-2020 09:17:19"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"18-02-2020 09:19:30"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"18-02-2020 09:19:30"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"18-02-2020 09:19:49"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"18-02-2020 09:19:50"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"18-02-2020 09:21:05"}
+{"level":"info","message":"Nouveau login reçu : Zeilu","service":"user-service","timestamp":"18-02-2020 09:48:48"}
+{"level":"info","message":"Déconnexion de l'utilisateur Zeilu","service":"user-service","timestamp":"18-02-2020 09:50:34"}
