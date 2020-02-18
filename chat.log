@@ -1867,3 +1867,8 @@
 {"level":"info","message":"Nouveau login reçu : lrfoorf","service":"user-service","timestamp":"18-02-2020 16:14:55"}
 {"level":"info","message":"Déconnexion de l'utilisateur lrfoorf","service":"user-service","timestamp":"18-02-2020 16:16:40"}
 {"level":"info","message":"Nouveau login reçu : lrfoorf","service":"user-service","timestamp":"18-02-2020 16:16:40"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"18-02-2020 16:40:41"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"18-02-2020 16:40:46"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"18-02-2020 16:40:46"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"18-02-2020 16:40:49"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"18-02-2020 16:40:49"}
