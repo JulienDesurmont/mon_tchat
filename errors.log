@@ -19,3 +19,7 @@
 {"level":"error","message":"Chemin inconnu demandé : /stat","service":"user-service","timestamp":"14-02-2020 01:08:58"}
 {"level":"error","message":"Chemin inconnu demandé : /ws/v1/cluster/apps/new-application","service":"user-service","timestamp":"17-02-2020 16:10:20"}
 {"level":"error","message":"Chemin inconnu demandé : /images/emoticon_rire.png","service":"user-service","timestamp":"17-02-2020 16:33:58"}
+{"level":"error","message":"Chemin inconnu demandé : /ws/v1/cluster/apps/new-application","service":"user-service","timestamp":"18-02-2020 11:40:56"}
+{"level":"error","message":"Chemin inconnu demandé : /ws/v1/cluster/apps/new-application","service":"user-service","timestamp":"18-02-2020 13:01:02"}
+{"level":"error","message":"Chemin inconnu demandé : /ws/v1/cluster/apps/new-application","service":"user-service","timestamp":"18-02-2020 14:22:02"}
+{"level":"error","message":"Chemin inconnu demandé : /ws/v1/cluster/apps/new-application","service":"user-service","timestamp":"18-02-2020 15:49:15"}

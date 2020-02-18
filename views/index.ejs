@@ -1,57 +1,66 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>La com LCI</title>
 		<link rel="stylesheet" style='text/css' href='css/super_chat.css'>
 	</head>
 
 	<body>
-		<header>
+ 		<form method='POST' action='/define/login' id='communication-formulaire'>
+			<div>
+           		<input type='text' name='login' id='textbox-login' placeholder='Indiquez votre login' />
+           		<input type='submit' id='submit-login' value='Envoyer le login' />
+			</div>
+        </form>
+
+		<header class='show-on-logon'>
 			<h1>
-				<input type="color" <% if (couleur) { %>value=<%= couleur %> <% } else { %> value="#ffffff" <% } %> id="couleur" class='show-on-logon' name="couleur" />
+				<input type="color" <% if (couleur) { %>value=<%= couleur %> <% } else { %> value="#ffffff" <% } %> id="couleur" name="couleur" />
 				<span id='login'><%=login %></span>
 			</h1>
-			<p><span>Activer les notifications</span><input type='checkbox' name='activation-notifications' id='activation-notifications'></p>
 		</header>
-		<section>
-			<div class='sous-section'>
-				<div>
+		<section id='section-1' class='show-on-logon'>
+			<div id='sous-section-1' class='sous-section'>
+				<div id='encart-tete'>
 					<p class='paragraphe-admin'><span id='message-admin'><%= message %></span></p>
-					<p class='show-on-logon'>
-						<textarea name='socket-message' id='socket-message' style="background-color:"<%= couleur %>></textarea>
-					</p>
-					<p class='show-on-logon'>
-						<input type='button' id='envoi-socket-message' value='Envoyer le message à tous' />
-					</p>
-					<form method='POST' action='/define/login' id='communication-formulaire'>
-						<input type='text' name='login' placeholder='Indiquez votre login' />
-						<input type='submit' value='Envoyer le login' />
-					</form>				
+					<div id='encart-ecriture_message'>
+						<p>
+							<textarea name='socket-message' id='socket-message' style="background-color:"<%= couleur %>></textarea>
+						</p>
+						<p>
+                        	<input type='button' id='envoi-socket-message' value='Envoyer le message à tous' />
+                    	</p>
+					</div>
 				</div>
-				<div id='div-liste-utilisateurs'>
-					<% if (login) {%>
-						<h1>
-							<% if (nombreDePostesConnectes > 1) { %>
-								Liste des <span id='nombreDePostesConnectes'><%= nombreDePostesConnectes %></span> &nbsp; membres connectés
-							<% } else if (nombreDePostesConnectes == 1) { %>
-								Membre connecté
-							<% } else { %>
-								0 membre connectés
-							<% } %>
-						</h1>
-						<p><i><b>(cliquez sur un membre pour envoyer le message en privé)</b></i></p>
-						<div id='listeUtilisateurs'>
-							<% tabLogin.forEach(function(user) { %>
-								<p class='membre' onClick=sendToMembre('<%= user %>');><%= user %></p>
-							<% }); %>
-						</div>
-					<% } %>
+				<div id='sous-section-3'>
+					<div id='div-liste-utilisateurs'>
+                    	<% if (login) {%>
+                    	    <h1>
+                    	        <% if (nombreDePostesConnectes > 1) { %>
+                    	            <span id='nombreDePostesConnectes'><%= nombreDePostesConnectes %></span> &nbsp; utilisateurs : 
+                    	        <% } else if (nombreDePostesConnectes == 1) { %>
+                    	            Est connecté
+                    	        <% } else { %>
+                    	            0 utilisateur
+                    	        <% } %>
+                    	    </h1>
+                    	    <p><i><b>(cliquez sur un nom pour envoyer le message en privé)</b></i></p>
+                    	    <div id='liste-utilisateurs'>
+                    	        <% tabLogin.forEach(function(user) { %>
+                    	            <p class='utilisateur' onClick=sendToUtilisateur('<%= user %>');><%= user %></p>
+                    	        <% }); %>
+                    	    </div>
+                    	<% } %>
+                	</div>
 				</div>
 			</div>
-			<div class='sous-section'>
+			<div id='sous-section-2' class='sous-section'>
 				<div id='chat'>
-				</div>
+                </div>
 			</div>
+		</section>
+		<section id='section-2'>
 		</section>
 
 

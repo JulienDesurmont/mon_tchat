@@ -96,10 +96,10 @@ app.use(session)
 	res.redirect('/accueil');
 })
 .post('/define/login', urlencodedParser, function(req, res) {
-    if (tabLogin.includes(req.body.login)) {
+    if (tabLogin.includes(req.body.login.toLowerCase())) {
 		messageAdmin = 'Le login ' + req.body.login + ' est déjà utilisé';
     } else {
-		login = req.body.login;
+		login = req.body.login.toLowerCase();
 		res.cookie('login', login, {maxAge: 9000000, httpOnly: true});
 		logger.log({
 			level: 'info',
@@ -146,9 +146,9 @@ io.sockets.on('connection', function(socket) {
 			socket.broadcast.emit('message', capitalize(message), login);
 		});
 
-		socket.on('messagePersonnel', function(message, login, membre) {
-			socket.emit('message', '( à ' + membre + ' ) ' + capitalize(message), login); 
-			socket.broadcast.emit(membre, '( privé ) ' + capitalize(message), login);
+		socket.on('messagePersonnel', function(message, login, utilisateur) {
+			socket.emit('message', '( à ' + utilisateur + ' ) ' + capitalize(message), login); 
+			socket.broadcast.emit(utilisateur, '( privé ) ' + capitalize(message), login);
 		});
 
 		socket.on('disconnect', function(){

@@ -1,7 +1,40 @@
             var myLogin = $('#login').html();
             var myCouleur = $('#couleur').val();
-            var reception_message;
+            var receptionMessage;
 			var myNotifications = 'false';
+			var myTypeEcran;
+			var myDivListeUtilisateurs;
+			var myDivChat;
+
+		$(document).ready(function(){
+			myDivListeUtilisateurs = $($('#div-liste-utilisateurs'));
+			myDivChat = $($('#chat'));
+
+        	if (document.body.clientWidth < 1280) {
+				myTypeEcran = 'mobile';
+				$('#section-2').html(myDivListeUtilisateurs);
+				$('#sous-section-3').html(myDivChat);
+ 			} else {
+				myTypeEcran = 'pc';
+			}
+        });
+
+		window.onresize = function(){
+           	if (document.body.clientWidth < 1280) {
+				if (myTypeEcran != 'mobile') {
+					myTypeEcran = 'mobile';
+					$('#section-2').html(myDivListeUtilisateurs);
+					$('#sous-section-3').html(myDivChat);
+				}
+ 			} else {
+				if (myTypeEcran != 'pc') {
+					myTypeEcran = 'pc';
+					$('#sous-section-2').html(myDivChat);
+                	$('#sous-section-3').html(myDivListeUtilisateurs);
+				}
+ 			}
+ 		};
+
 
                 function setCookie(nom, valeur, expire, chemin, domaine, securite){
                     document.cookie = nom + ' = ' + escape(valeur) + '  ' +
@@ -56,13 +89,16 @@
 
 					if (myNotifications == 'true' ) {
                     	if (! document.hasFocus()) {
-                    	    if (typeof(reception_message) == 'undefined') {
-                    	        reception_message = setInterval('FaireClignoterTitre()', 1000);
+                    	    if (typeof(receptionMessage) == 'undefined') {
+                    	        receptionMessage = setInterval('FaireClignoterTitre()', 1000);
                     	    }
                     	}
 					}
-
-                    $('#chat').prepend("<div class='chat' style='background-color:" + couleur + "' readonly>" + login + ' : ' + insertion_emoticons(message) + "</div>");
+					if(login != 'Admin') {
+                    	$('#chat').prepend("<div class='chat' style='background-color:" + couleur + "' readonly>" + login + ' : ' + encodeURI(insertion_emoticons(message)).replace(/%0A/g, "<br />") + "</div>");
+					} else {
+						$('#chat').prepend("<div class='chat' style='background-color:" + couleur + "' readonly>" + login + ' : ' + insertion_emoticons(message) + "</div>");
+					}
                 });
                 
                 socket.on('messageAdmin', function(message){
@@ -71,29 +107,33 @@
 
                 socket.on('listeUtilisateurs', function(tabUtilisateurs, nbPostesConnectes){
                     if (tabUtilisateurs.length > 1) {
-                        $('#div-liste-utilisateurs h1').html("Liste des <span id='nombreDePostesConnectes'>tabUtilisateurs.length</span> &nbsp; membres connectés");
+                        $('#div-liste-utilisateurs h1').html("<span id='nombreDePostesConnectes'>tabUtilisateurs.length</span> &nbsp; utilisateurs : ");
                     } else if (tabUtilisateurs.length == 1) {
-                        $('#div-liste-utilisateurs h1').html("Membre connecté");
+                        $('#div-liste-utilisateurs h1').html("Est connecté");
                     }  else { 
-                        $('#div-liste-utilisateurs h1').html("0 membre connectés");
+                        $('#div-liste-utilisateurs h1').html("0 utilisateur connectés");
                     }
                     var textHtml = '';
                     tabUtilisateurs.forEach(function(user){
-                        textHtml += "<p class='membre' onClick=sendToMembre('" + user + "');>"+user+'</p>';
+                        textHtml += "<p class='utilisateur' onClick=sendToUtilisateur('" + user + "');>"+user+'</p>';
                     });
-                    $('#listeUtilisateurs').html(textHtml);
+                    $('#liste-utilisateurs').html(textHtml);
                     $('#nombreDePostesConnectes').html(nbPostesConnectes);
                 });
 
                 socket.on(myLogin, function(message, login){
 					if (myNotifications == 'true' ) {
                     	if (! document.hasFocus()) {
-                    	    if (typeof(reception_message) == 'undefined') {
-                    	        reception_message = setInterval('FaireClignoterTitre("!")', 1000);
+                    	    if (typeof(receptionMessage) == 'undefined') {
+                    	        receptionMessage = setInterval('FaireClignoterTitre("!")', 1000);
                     	    }
                     	}
 					}
-                    $('#chat').prepend("<div class='chat'>" + login + ' : ' + insertion_emoticons(message) + "</div>");
+					if (login != 'Admin') {
+                    	$('#chat').prepend("<div class='chat'>" + login + ' : ' + encodeURI(insertion_emoticons(message)).replace(/%0A/g, "<br />") + "</div>");
+					} else {
+						$('#chat').prepend("<div class='chat'>" + login + ' : ' + insertion_emoticons(message) + "</div>");
+					}
                 });
 
                 socket.on('refresh', function(){
@@ -107,15 +147,14 @@
                     }
                 });
 
-                function sendToMembre(membre) {
+                function sendToUtilisateur(utilisateur) {
                     if ($('#socket-message').val() !=  ''){             
-                        socket.emit('messagePersonnel', $('#socket-message').val(), myLogin, membre);
+                        socket.emit('messagePersonnel', $('#socket-message').val(), myLogin, utilisateur);
                         $('#socket-message').val("");
                     }                   
                 }
                         
 
-                var reception_message;
 
                 // Se déclanche à la réception d'un message : Fait clignoter le titre de l'onglet
                 function FaireClignoterTitre(message = null){
@@ -133,7 +172,7 @@
                 $(window).focus(function() {
                     if (document.title !=  '-')  {
                         document.title = 'La com LCI';
-                        reception_message = clearInterval(reception_message);
+                        receptionMessage = clearInterval(receptionMessage);
                     }
                 });
 
@@ -187,5 +226,4 @@
 					dtExpire.setTime(dtExpire.getTime() + 3600 * 1000);
 					setCookie('couleur', myCouleur, dtExpire, '/' );
                 });
-				
         }
