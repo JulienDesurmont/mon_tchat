@@ -105,7 +105,7 @@ input[type='button'], input[type='submit'] {
 	color: white;
 	overflow: auto;
 }
-#message-admin {
+.message-admin {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -122,6 +122,19 @@ input[type='button'], input[type='submit'] {
 	font-style: bold;
 	color: black;
 	height: 60px;
+}
+.paragraphe-admin-login{
+	position: fixed;
+	top:0;
+	right:0;
+	left: 0;
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+	background: #C2C1C1;
+    font-style: bold;
+    color: black;
+    height: 60px;
 }
 .titre {
 	width: 200px;
@@ -179,14 +192,14 @@ section#section-1 {
     justify-content: space-around;
 }
 #section-2 {
+	overflow: auto;
 }
 #sous-section-2 {
 	display: none;
 }
 #sous-section-3 {
 	overflow: auto;
-	height: 350px;
-	max-height: 350px;
+	height: 100%;
 }
 .sous-section {
     justify-content: flex-start;
@@ -197,8 +210,6 @@ section#section-1 {
 
 .sous-section:first-child {
     flex-grow: 1;
-}
-.sous-section:nth-child(2) {
 }
 #encart-tete {
     display: flex;
@@ -250,8 +261,8 @@ section#section-1 {
     display: flex;
     border: 2px solid black;
     background: gray;
-    min-height: 80px;
-    max-height: 80px;
+    min-height: 55px;
+    max-height: 55px;
     min-width: calc(100% - 14px);
     max-width: calc(100% - 14px);
     margin-bottom: 10px;
@@ -271,6 +282,10 @@ section#section-1 {
 	width: calc(100% - 4px);
 	overflow: auto;
 }
+#liste-utilisateurs p.utilisateur {
+    font-size: 20px;
+}
+
 
 
 }

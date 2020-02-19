@@ -8,6 +8,7 @@
 
 	<body>
  		<form method='POST' action='/define/login' id='communication-formulaire'>
+			<p class='paragraphe-admin-login'><span class='message-admin'><%= message %></span></p>
 			<div>
            		<input type='text' name='login' id='textbox-login' placeholder='Indiquez votre login' />
            		<input type='submit' id='submit-login' value='Envoyer le login' />
@@ -31,7 +32,7 @@
 		<section id='section-1' class='show-on-logon'>
 			<div id='sous-section-1' class='sous-section'>
 				<div id='encart-tete'>
-					<p class='paragraphe-admin'><span id='message-admin'><%= message %></span></p>
+					<p class='paragraphe-admin'><span class='message-admin'><%= message %></span></p>
 					<div id='encart-ecriture_message'>
 						<p>
 							<textarea name='socket-message' id='socket-message' style="background-color:"<%= couleur %>></textarea>

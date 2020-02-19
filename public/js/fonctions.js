@@ -23,8 +23,10 @@
 						myTypeEcran = 'pc';
 						$('#sous-section-2').html(myDivChat);
         	        	$('#sous-section-3').html(myDivListeUtilisateurs);
+						$('#envoi-socket-message').val('Envoyer le message à tous');
                         $('#option-notifications').html("Activer les notifications");
                         $('#option-reinitialiser').html("Réinitialiser le t'chat");
+						
 					}
  				}
  			};
@@ -60,7 +62,6 @@
 					$('#activation-notifications').prop("checked", true);
 				}
 			}
-            var socket = io.connect("http://vps614872.ovh.net:6969");
 
    			function sendToUtilisateur(utilisateur) {
 				if ($('#bannir').is(':checked')) {
@@ -162,6 +163,8 @@
             $('.show-on-logon').hide();
 
             if (myLogin != '') {
+				var socket = io.connect("http://vps614872.ovh.net:6969");
+
 				var nouveauMessage;
                 $('.show-on-logon').show();
                 $('#communication-formulaire').hide();
@@ -226,7 +229,7 @@
 
                 
                 socket.on('messageAdmin', function(message){
-                    $('#message-admin').html(message);
+                    $('.message-admin').html(message);
                 });
 
                 socket.on('listeUtilisateurs', function(tabUtilisateurs, nbPostesConnectes){
