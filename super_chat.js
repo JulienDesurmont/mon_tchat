@@ -30,7 +30,8 @@ var io      = require("socket.io").listen(server);
 var login;
 var tabLogin = [];
 var nombreDePostesConnectes = 0;
-
+var myLoginAdmin = 'L@scslsdc59';
+var myTabBanni = [];
 
 
 var capitalize = function(str1){
@@ -58,6 +59,7 @@ var messageAdmin = '';
 var tabAllLogins = [];
 
 
+
 app.use(session)
 .use(express.static(path.join(__dirname, '/public')))
 .use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
@@ -68,6 +70,13 @@ app.use(session)
 	res.redirect('/accueil');
 })
 .get('/accueil', function(req, res) {
+	if (! req.session.view) {
+		req.session.view = 1;
+	} /*else {
+		req.session.view ++;
+	}
+	console.log('nb de connexion : ' + req.session.view);
+	*/
 	utilisateur = req.cookies['login'];
 	if(utilisateur){
 		login = utilisateur;
@@ -85,7 +94,7 @@ app.use(session)
 	if(! couleur){
 		couleur = "C2C1C1";
 	}
-	res.render('index.ejs', {login: login, tabLogin: tabLogin, nombreDePostesConnectes: tabLogin.length, message: messageAdmin, couleur: couleur});
+	res.render('index.ejs', {login: login, tabLogin: tabLogin, nombreDePostesConnectes: tabLogin.length, message: messageAdmin, couleur: couleur, admin: req.session.admin});
 	messageAdmin = '';
 })
 .get('/message/:titre', function(req, res){
@@ -100,7 +109,16 @@ app.use(session)
 		messageAdmin = 'Le login ' + req.body.login + ' est déjà utilisé';
     } else {
 		login = req.body.login.toLowerCase();
-		res.cookie('login', login, {maxAge: 9000000, httpOnly: true});
+		// Selon le login utilisé on enregistre en variabled e session si l'utilisateur est l'admin ou pas : Permet d'ajouter des info dans la page html
+		if (req.body.login == myLoginAdmin) {
+			req.session.admin = true;
+			login = 'Admin';
+			res.cookie('login', login);
+		} else {
+			req.session.admin = false;
+			// On sauvegarde le login dans un cookie
+			res.cookie('login', login, {maxAge: 9000000, httpOnly: true});
+		}
 		logger.log({
 			level: 'info',
 			message: "Nouveau login reçu : " + login
@@ -132,7 +150,7 @@ io.sockets.on('connection', function(socket) {
 				tabLogin.push(login);
 				//console.log('Connexion de '+ socket.handshake.session.login + "( " + nombreDePostesConnectes +  " poste connecte)");
 				login = null;
-				socket.emit('message', 'Bienvenu sur le chat ' + socket.handshake.session.login, 'Admin');
+				socket.emit('messageAdmin', 'Bienvenu sur le chat ' + socket.handshake.session.login, 'Admin');
 				socket.broadcast.emit('messageAdmin', socket.handshake.session.login + " s'est connecté", 'Admin');
 				socket.emit('listeUtilisateurs', tabLogin, nombreDePostesConnectes);
 				socket.broadcast.emit('listeUtilisateurs', tabLogin, nombreDePostesConnectes);
@@ -142,13 +160,21 @@ io.sockets.on('connection', function(socket) {
 		tabAllLogins.push(socket.handshake.session.login);
 
 		socket.on('message', function(message, login){
-			socket.emit('message', capitalize(message), login);
-			socket.broadcast.emit('message', capitalize(message), login);
+			if (myTabBanni.includes(login)) {
+				socket.emit('messageAdmin', 'Vous avez été banni');
+			} else {
+				socket.emit('message', capitalize(message), login);
+				socket.broadcast.emit('message', capitalize(message), login);
+			}
 		});
 
 		socket.on('messagePersonnel', function(message, login, utilisateur) {
-			socket.emit('message', '( à ' + utilisateur + ' ) ' + capitalize(message), login); 
-			socket.broadcast.emit(utilisateur, '( privé ) ' + capitalize(message), login);
+			if (myTabBani.includes(login)) {
+                socket.emit('messageAdmin', 'Vous avez été banni');
+            } else {
+				socket.emit('message', '( à ' + utilisateur + ' ) ' + capitalize(message), login); 
+				socket.broadcast.emit(utilisateur, '( privé ) ' + capitalize(message), login);
+			}
 		});
 
 		socket.on('disconnect', function(){
@@ -170,9 +196,13 @@ io.sockets.on('connection', function(socket) {
 				socket.broadcast.emit('listeUtilisateurs', tabLogin, nombreDePostesConnectes);
 			}
 		});
+
+		socket.on('bannir', function(utilisateur) {
+			myTabBanni.push(utilisateur);
+		});
 	}
 });
 
-server.listen(8088);
+server.listen(6969);
 
 

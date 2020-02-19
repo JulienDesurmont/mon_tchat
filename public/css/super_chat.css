@@ -12,6 +12,11 @@ header {
 	height: 100px;
 }
 
+header p {
+	padding-left: 70px;
+	padding-right: 20px;
+}
+
 p {
     margin: 0;
 }
@@ -83,8 +88,8 @@ input[type='button'], input[type='submit'] {
 	width: 90%;
 	min-height: 50px;
 	max-height: 150px;
-	min-width: calc(100% - 8px);
-	max-width: calc(100% - 8px);
+	min-width: calc(100% - 10px);
+	max-width: calc(100% - 10px);
 }
 
 .chat {
@@ -106,7 +111,6 @@ input[type='button'], input[type='submit'] {
 	justify-content: flex-start;
 	align-items: center;
 	font-style: bold;
-	color: white;
 	height: 50px;
 }
 .paragraphe-admin {
@@ -116,7 +120,7 @@ input[type='button'], input[type='submit'] {
 	margin-top: 0;
 	background: #C2C1C1;
 	font-style: bold;
-	color: white;
+	color: black;
 	height: 60px;
 }
 .titre {
@@ -127,7 +131,7 @@ input[type='button'], input[type='submit'] {
     display: flex;
     flex-direction: column;
     align-items: center;
-	border:2px solid black;
+	/*border: 2px solid black;*/
     height: 300px;
     overflow: auto;
 }
@@ -148,11 +152,16 @@ body {
 	justify-content: space-between;
 }
 
-header {
+header p {
+    padding-left: 2px;
+    padding-right: 20px;
+}
+
+header div {
+	display: flex;
     flex-direction: row;
     justify-content: flex-start;
-	height: 30px;
-	align-items: flex-end;
+	align-items: flex-start;
 }
 
 h1 {
@@ -199,13 +208,19 @@ section#section-1 {
     margin-bottom: 15px;
 }
 #encart-ecriture_message {
-    height: 80px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: flex-around;
     padding-top: 10px;
     padding-bottom: 1px;
 }
+
+
+#encart-ecriture_message p:first-child {
+	flex-grow:1;
+	overflow: auto;
+}
+
 .paragraphe-admin {
 	height: 45px;
     margin-bottom: 0;
@@ -215,8 +230,14 @@ section#section-1 {
 
 /* TextBox du message à écrire */
 #socket-message {
-    min-height: 50px;
-    max-height: 50px;
+    min-width: 95%;
+    max-width: 99%;
+	max-height: 60px;
+}
+#envoi-socket-message {
+	width: 56px;
+	height: 56px;
+	margin-right: 10px;
 }
 
 #chat {
@@ -224,28 +245,18 @@ section#section-1 {
     overflow: auto;
 }
 .chat {
-	font-size: 12px;
+	font-size: 20px;
     position: relative;
     display: flex;
     border: 2px solid black;
     background: gray;
-    min-height: 30px;
-    max-height: 150px;
-    min-width: calc(100% - 8px);
-    max-width: calc(100% - 8px);
+    min-height: 80px;
+    max-height: 80px;
+    min-width: calc(100% - 14px);
+    max-width: calc(100% - 14px);
     margin-bottom: 10px;
     color: white;
     overflow: auto;
-}
-
-#message-admin {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    font-style: bold;
-    color: white;
-    height: 50px;
 }
 
 #div-liste-utilisateurs {

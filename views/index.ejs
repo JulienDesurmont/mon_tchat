@@ -15,11 +15,18 @@
         </form>
 
 		<header class='show-on-logon'>
-			<h1>
+			<div>
 				<input type="color" <% if (couleur) { %>value=<%= couleur %> <% } else { %> value="#ffffff" <% } %> id="couleur" name="couleur" />
-				<span id='login'><%=login %></span>
-			</h1>
-			<p>Activer les notifications <input type='checkbox' id='activation-notifications'/></p>
+				<h1>
+					<p id='login'><%= login %></p>
+				</h1>
+			</div>
+			<div>	
+				<% if (admin == true) { %> <p><span>Bannir </span><input type='checkbox' id='bannir'/></p><% } %>
+				<p>	<span id='option-notifications'>Activer les notifications </span><input type='checkbox' id='activation-notifications'/>
+					<span id='option-reinitialiser'>Réinitialiser le t'chat </span><input type='checkbox' id='reset-chat'/>
+				</p>
+			</div>
 		</header>
 		<section id='section-1' class='show-on-logon'>
 			<div id='sous-section-1' class='sous-section'>
