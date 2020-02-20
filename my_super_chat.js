@@ -155,10 +155,23 @@ app.use(session)
 	// console.log('Signed Cookie : ', req.signedCookies);
 	// res.cookie('ville', 'lille');
 	couleur = req.cookies['couleur'];
+	couleurTexte = req.cookies['couleurTexte'];
 	if(! couleur){
-		couleur = "C2C1C1";
+		couleur = "#C2C1C1";
 	}
-	res.render('index.ejs', {login: myLogin, tabLogin: Object.keys(tabLogin), nombreDePostesConnectes: Object.keys(tabLogin).length, message: messageAdmin, couleur: couleur, admin: req.session.admin});
+	if (! couleurTexte) {
+		couleurTexte = "#FFFFFF";
+	}
+	res.render('index.ejs', {
+			login: myLogin, 
+			tabLogin: Object.keys(tabLogin), 
+			nombreDePostesConnectes: Object.keys(tabLogin).length, 
+			message: messageAdmin, 
+			couleur: couleur, 
+			couleurTexte: couleurTexte,
+			admin: req.session.admin
+		}
+	);
 	messageAdmin = '';
 })
 .get('/message/:titre', function(req, res){
@@ -236,6 +249,7 @@ io.sockets.on('connection', function(socket) {
     });
 
     socket.on('messagePersonnel', function(message, login, utilisateur) {
+		console.log('perso');
         if (myTabBannis.includes(login)) {
             socket.emit('messageAdmin', 'Vous avez été banni');
         } else {

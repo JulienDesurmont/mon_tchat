@@ -18,10 +18,9 @@
 		<header class='show-on-logon'>
 			<span id='spn-deconnexion' class='chk-header-right'>Déconnexion <input type='checkbox' id='deconnexion' /></span>
 			<div>
-				<input type="color" <% if (couleur) { %>value=<%= couleur %> <% } else { %> value="#ffffff" <% } %> id="couleur" name="couleur" />
-				<h1>
-					<p id='login'><%= login %></p>
-				</h1>
+				<input type='color' <% if (couleur) { %>value=<%= couleur %> <% } else { %> value="#ffffff" <% } %> id="couleur" name="couleur" />
+				<h1 id='login'><% if (login) { %><%= login.charAt(0).toUpperCase() + login.substr(1)%> <% } %></h1>
+				<input type='color' <% if (couleurTexte) { %>value=<%= couleurTexte %> <% } else { %> value="#ffffff" <% } %> id="couleurTexte" name="couleurTexte" />
 			</div>
 			<div>	
 				<% if (admin == true) { %> <p><span>Bannir </span><input type='checkbox' id='bannir'/></p><% } %>
