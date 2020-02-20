@@ -14,12 +14,25 @@ var winston				= require('winston');
 // // Gestion de cookie
 var cookieParser		= require('cookie-parser');
 var cookie              = require('cookie');
+
+
+var dtSuppressionCookie = new Date();
+
+// Valeur d'un cookie qui n'expire pas : On définie une années
+// On multiplie par 1000 car le Time est exprimé en milliseconde
+var dtNoExpirationCookie = new Date();
+dtNoExpirationCookie.setTime(dtNoExpirationCookie.getTime() + (3600 * 24 * 365 * 1000));
+
+
 // Gestion de session && de session sur socket
 var session = require('express-session') ({
 	secret: "2DedcKgr@Tg567hezvfri-TGrfqs",
 	resave: true,
 	saveUninitialized: true,
-	cookie: {httpOnly: true}
+	cookie: {
+		expires: dtNoExpirationCookie,
+		httpOnly: false
+	}
 });
 var sessionSockets = require("express-socket.io-session");
 
@@ -29,7 +42,6 @@ var io      = require("socket.io").listen(server);
 
 var myLogin;
 var tabLogin = [];
-var nombreDePostesConnectes = 0;
 var myLoginAdmin = 'L@scslsdc59';
 var myTabBannis = [];
 
@@ -55,6 +67,44 @@ const logger = winston.createLogger({
 var messageAdmin = '';
 
 
+function myGetCookie(jsonCookies, searchParametre) {
+	var tabCookies = jsonCookies.split(';');
+	for (index in tabCookies) {
+		var tabParametre = tabCookies[index].split('=');
+		if (searchParametre.trim() == tabParametre[0].trim()) {
+			return tabParametre[1].trim();
+		} 
+	}
+	return null;
+}
+
+
+function mySupprimeLogin(loginASupprimer) {
+    delete(tabLogin[loginASupprimer]);
+}
+
+function myIndexOf(searchParametre) {
+	var index = 1;
+    for(login in tabLogin) {
+		if(searchParametre.trim() == login.trim()) {
+			return index;
+		}
+		index ++;
+    }
+	return -1;
+}
+
+function myConnectSid(searchParametre) {
+    for(login in tabLogin) {
+        if(searchParametre.trim() == login.trim()) {
+            return tabLogin[login];
+        }
+    }
+    return -1;
+}
+
+
+
 
 app.use(session)
 .use(express.static(path.join(__dirname, '/public')))
@@ -78,17 +128,23 @@ app.use(session)
 	utilisateur = req.cookies['login'];
 	if (utilisateur) {
 		// Si le cookie existe mais que le login est déjà utilisé on supprime le cookie (on definit expires a 'maintenant')
-		if (! tabLogin.includes(utilisateur)) {
-            nombreDePostesConnectes += 1;
+		if (! Object.keys(tabLogin).includes(utilisateur)) {
 			myLogin = utilisateur;
-            tabLogin.push(myLogin);
+			tabLogin[myLogin] = req.cookies['connect.sid'];
+			//console.log('include avec acceuil');
 			logger.log({
 				level: 'info',
 				message: "Nouveau login reçu : " + myLogin
 			});
 		} else {
-			messageAdmin = 'Le précédent login utilisé : ' + utilisateur + " est déjà en cours d'utilisation";
-			res.cookie('login', '', {expires: new Date(0)});
+			// Si le login est trouvé dans le tableau des logins en cours on vérifie qu'il apparatien à une autre session
+			if (myConnectSid(utilisateur).substr(-10) != req.cookies['connect.sid'].trim().substr(-10)) {
+				//console.log(myConnectSid(utilisateur).substr(-10) + ' != '+ req.cookies['connect.sid'].substr(-10));
+				messageAdmin = 'Le précédent login utilisé : ' + utilisateur + " est déjà en cours d'utilisation";
+			} else {
+				// Si il appartient à la session courante on redefini le login 
+				myLogin = utilisateur;
+			}
 		}
 	} else {
 		myLogin = null;
@@ -102,7 +158,7 @@ app.use(session)
 	if(! couleur){
 		couleur = "C2C1C1";
 	}
-	res.render('index.ejs', {login: myLogin, tabLogin: tabLogin, nombreDePostesConnectes: tabLogin.length, message: messageAdmin, couleur: couleur, admin: req.session.admin});
+	res.render('index.ejs', {login: myLogin, tabLogin: Object.keys(tabLogin), nombreDePostesConnectes: Object.keys(tabLogin).length, message: messageAdmin, couleur: couleur, admin: req.session.admin});
 	messageAdmin = '';
 })
 .get('/message/:titre', function(req, res){
@@ -114,20 +170,21 @@ app.use(session)
 })
 .post('/define/login', urlencodedParser, function(req, res) {
 	// Connexion depuis le formulaire de connexion
-    if (tabLogin.includes(req.body.login.toLowerCase())) {
+    if (Object.keys(tabLogin).includes(req.body.login.toLowerCase())) {
 		messageAdmin = 'Le login ' + req.body.login + " est déjà en cours d'utilisation";
     } else {
 		var loginTmp;
-
 		// Selon le login utilisé on enregistre en variable de session si l'utilisateur est l'admin ou pas : Permet d'ajouter des info dans la page html
 		if (req.body.login == myLoginAdmin) {
 			req.session.admin = true;
 			loginTmp = 'Admin';
-			res.cookie('login', loginTmp);
+			// Cookie du compte Admin: Expire à la fin de la session
+			res.cookie('login', loginTmp, {httpOnly: true});
 		} else {
 			req.session.admin = false;
 			loginTmp = req.body.login.toLowerCase();
-			res.cookie('login', loginTmp, {maxAge: 9000000, httpOnly: true});
+			// Cookie utilisateur : Sans date d'expiration
+			res.cookie('login', loginTmp, {expires: dtNoExpirationCookie});
 		}
 		logger.log({
 			level: 'info',
@@ -149,54 +206,61 @@ app.use(session)
 
 io.use(sessionSockets(session));
 io.sockets.on('connection', function(socket) {
-	// ! login si la page est affiché après la relance du serveur
+	// ! login si la page est affichée après la relance du serveur
 	if(! myLogin) {
 		socket.emit('refresh');
 	} else {
+		//console.log(myGetCookie(socket.handshake.headers.cookie, 'connect.sid'));
+		
 		// Si la variable de session socket 'login' n'est pas définie on va l'enregistrer
-		if (! socket.handshake.session.login) {
-			socket.handshake.session.login = myLogin;
-			myLogin = null;
-			socket.emit('messageAdmin', 'Bienvenu sur le chat ' + socket.handshake.session.login, 'Admin');
-			socket.broadcast.emit('messageAdmin', socket.handshake.session.login + " s'est connecté", 'Admin');
-			socket.emit('listeUtilisateurs', tabLogin, nombreDePostesConnectes);
-			socket.broadcast.emit('listeUtilisateurs', tabLogin, nombreDePostesConnectes);
+		socket.handshake.session.login = myLogin;
+		socket.emit('messageAdmin', 'Bienvenu sur le chat ' + socket.handshake.session.login, 'Admin');
+		socket.broadcast.emit('messageAdmin', socket.handshake.session.login + " s'est connecté", 'Admin');
+		// On recherche dans les clés du tableau tabLogin le parametre de nom 'login' et on vérifie son connect.sid
+		if (! Object.keys(tabLogin).includes(myLogin)) {
+			//console.log('include avec socket');
+			tabLogin[myLogin] = myGetCookie(socket.handshake.headers.cookie, 'connect.sid');
 		}
-
-		socket.on('message', function(message, login){
-			if (myTabBannis.includes(login)) {
-				socket.emit('messageAdmin', 'Vous avez été banni');
-			} else {
-				socket.emit('message', capitalize(message), login);
-				socket.broadcast.emit('message', capitalize(message), login);
-			}
-		});
-
-		socket.on('messagePersonnel', function(message, login, utilisateur) {
-			if (myTabBannis.includes(login)) {
-                socket.emit('messageAdmin', 'Vous avez été banni');
-            } else {
-				socket.emit('message', '( à ' + utilisateur + ' ) ' + capitalize(message), login); 
-				socket.broadcast.emit(utilisateur, '( privé ) ' + capitalize(message), login);
-			}
-		});
-
-		socket.on('disconnect', function(){
-			var indexUser = tabLogin.indexOf(socket.handshake.session.login);
-			logger.log({
-				level: 'info',
-				message: "Déconnexion de l'utilisateur " + socket.handshake.session.login
-			});
-			nombreDePostesConnectes -= 1;
-			tabLogin.splice(indexUser, 1);
-			socket.broadcast.emit('messageAdmin', socket.handshake.session.login + " s'est déconnecté");
-			socket.broadcast.emit('listeUtilisateurs', tabLogin, nombreDePostesConnectes);
-		});
-
-		socket.on('bannir', function(utilisateur) {
-			myTabBannis.push(utilisateur);
-		});
+		socket.emit('listeUtilisateurs', Object.keys(tabLogin), Object.keys(tabLogin).length);
+		socket.broadcast.emit('listeUtilisateurs', Object.keys(tabLogin), Object.keys(tabLogin).length);
+        myLogin = null;
 	}
+
+    socket.on('message', function(message, login){
+        if (myTabBannis.includes(login)) {
+            socket.emit('messageAdmin', 'Vous avez été banni');
+        } else {
+            socket.emit('message', capitalize(message), login);
+            socket.broadcast.emit('message', capitalize(message), login);
+        }
+    });
+
+    socket.on('messagePersonnel', function(message, login, utilisateur) {
+        if (myTabBannis.includes(login)) {
+            socket.emit('messageAdmin', 'Vous avez été banni');
+        } else {
+            socket.emit('message', '( à ' + utilisateur + ' ) ' + capitalize(message), login);
+            socket.broadcast.emit(utilisateur, '( privé ) ' + capitalize(message), login);
+        }
+    });
+
+    socket.on('disconnect', function(){
+        //console.log('disconnect');
+		if (socket.handshake.session.login) {
+         	mySupprimeLogin(socket.handshake.session.login);
+           	socket.broadcast.emit('messageAdmin', socket.handshake.session.login + " s'est déconnecté");
+           	socket.broadcast.emit('listeUtilisateurs', Object.keys(tabLogin), Object.keys(tabLogin).length);
+           	logger.log({
+           	    level: 'info',
+           	    message: "Déconnexion de l'utilisateur " + socket.handshake.session.login
+           	});
+		}
+    });
+
+    socket.on('bannir', function(utilisateur) {
+        myTabBannis.push(utilisateur);
+    });
+
 });
 
 server.listen(6969);

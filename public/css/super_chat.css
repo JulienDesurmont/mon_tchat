@@ -29,6 +29,38 @@ h1 span {
 	margin-left: 10px;
 }
 
+/* Placement du div input couleur + titre h1 (login) */
+header span +  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* Placement de l'input couleur */
+header span +  div input {
+	margin-top: 5px;
+}
+/* Placement du titre h1 (login) */
+header h1 p {
+	padding-left: 5px;
+}
+
+.cacher {
+	display: none !important;
+}
+
+/* Placement des cases à cocher "Deconnexion" et "cacher le login" */
+.chk-header-right {
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+    right: 0;
+	top: 25px;
+    cursor: pointer;
+	margin-top: 5px;
+	margin-right: 5px;
+}
 
 #communication-formulaire {
     position: fixed;
@@ -50,6 +82,7 @@ h1 span {
     height: 50px;
     text-align:center;
     margin-bottom: 10px;
+	width: 400px;
 }
 
 #submit-login {
@@ -63,6 +96,9 @@ section#section-1 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	flex-grow: 1;
+    overflow-y: auto;
+	overflow-x: hidden;
 	height: calc(100% - 100px);
 }
 
@@ -144,12 +180,15 @@ input[type='button'], input[type='submit'] {
     display: flex;
     flex-direction: column;
     align-items: center;
-	/*border: 2px solid black;*/
+	border-top: 1px solid black;
     height: 300px;
     overflow: auto;
 }
 
 #liste-utilisateurs {
+	flex-grow: 1;
+	overflow-x: hidden;
+	overflow-y: auto;
     width: 100%;
 }
 #liste-utilisateurs p.utilisateur {
@@ -203,10 +242,11 @@ section#section-1 {
 }
 .sous-section {
     justify-content: flex-start;
-	width: 100%;
+	width: calc(100% - 5px);
 	max-width: 100%;
 	overflow: auto;
 }
+
 
 .sous-section:first-child {
     flex-grow: 1;
@@ -214,16 +254,13 @@ section#section-1 {
 #encart-tete {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 120px;
-    margin-bottom: 15px;
+    justify-content: flex-start;
+    margin-bottom: 1px;
 }
 #encart-ecriture_message {
     display: flex;
     flex-direction: row;
     justify-content: flex-around;
-    padding-top: 10px;
-    padding-bottom: 1px;
 }
 
 
@@ -233,9 +270,22 @@ section#section-1 {
 }
 
 .paragraphe-admin {
-	height: 45px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 25px;
     margin-bottom: 0;
 }
+.message-admin {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-style: bold;
+    height: 25px;
+}
+
 
 
 
@@ -276,6 +326,7 @@ section#section-1 {
 	font-size: 10px;
     width: 100%;
 	height: 150px;
+	border-top: none;
 }
 #liste-utilisateurs {
 	flex-grow: 1;

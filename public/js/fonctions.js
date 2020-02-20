@@ -7,6 +7,26 @@
 			var myDivChat;
 			var myChat = [];
 			var myMaxEntreesTab = 10;
+			// Valeur d'un cookie qui n'expire pas : On définie une années
+			// On multiplie par 1000 car le Time est exprimé en milliseconde
+			var dtNoExpiration = new Date();
+			dtNoExpiration.setTime(dtNoExpiration.getTime() + (3600 * 24 * 365 * 1000));
+
+
+            myDivListeUtilisateurs = $($('#div-liste-utilisateurs'));
+            myDivChat = $($('#chat'));
+            if (document.body.clientWidth < 1280) {
+                myTypeEcran = 'mobile';
+                $('#section-2').html(myDivListeUtilisateurs);
+                $('#sous-section-3').html(myDivChat);
+                $('#envoi-socket-message').val('\u2713');
+                $('#option-notifications').html('Notifications');
+                $('#option-reinitialiser').html('Réinitialiser');
+            } else {
+                myTypeEcran = 'pc';
+            }
+            $('.show-on-logon').hide();
+
 
 			window.onresize = function(){
         	   	if (document.body.clientWidth < 1280) {
@@ -134,6 +154,7 @@
 			
 				function enregistreChat(nouveauMessage) {
                     myChat.push(nouveauMessage);
+					// On redefini le cookie tchat à chaque réception de message : Expiration à la fin de la session
                     setCookie('chat', myChat);
 					maxEntreesTab = myMaxEntreesTab -1;
 					if (myChat.length > maxEntreesTab) {
@@ -142,28 +163,10 @@
 					return 0;
 				}
 
-
-
-
-
         $(document).ready(function(){
-            myDivListeUtilisateurs = $($('#div-liste-utilisateurs'));
-            myDivChat = $($('#chat'));
-
-            if (document.body.clientWidth < 1280) {
-                myTypeEcran = 'mobile';
-                $('#section-2').html(myDivListeUtilisateurs);
-                $('#sous-section-3').html(myDivChat);
-				$('#envoi-socket-message').val('\u2713');
-                $('#option-notifications').html('Notifications');
-                $('#option-reinitialiser').html('Réinitialiser');
-            } else {
-                myTypeEcran = 'pc';
-            }
-            $('.show-on-logon').hide();
+			var socket = io.connect("http://vps614872.ovh.net:6969");
 
             if (myLogin != '') {
-				var socket = io.connect("http://vps614872.ovh.net:6969");
 
 				var nouveauMessage;
                 $('.show-on-logon').show();
@@ -181,7 +184,65 @@
 					}
 				}
 
+                $('#envoi-socket-message').click(function(){
+                    if ($('#socket-message').val() !=  ''){
+                        socket.emit('message', $('#socket-message').val(), myLogin);
+                        $('#socket-message').val("");
+                    }
+                });
 
+				$('#activation-notifications').click(function() {
+					myNotifications = String($('#activation-notifications').is(':checked'));
+					var notification = $('#activation-notifications').is(':checked');
+					// Cookie de notification : Sans date d'expiration
+					setCookie('notifications', notification, dtNoExpiration, '/' );
+				});
+	
+				$('#couleur').change(function(){
+					myCouleur = $('#couleur').val();
+					// Cookie de couleur : Sans date d'expiration
+					setCookie('couleur', myCouleur, dtNoExpiration, '/' );
+                });
+
+				$('#reset-chat').click(function() {
+					myChat = [];
+					// Cookie de tchat : Expire à la fin de la session
+					setCookie('chat', myChat);
+					$('#chat').html("");
+					$('#reset-chat').prop('checked', false);
+				});
+
+				$('#spn-deconnexion').click(function() {
+                	if ($('#deconnexion').is(':checked')) {
+						// Suppression du login pour éviter la reconnexion automatique par cookie et pour pouvoir changer de login
+						setCookie('login', '');
+						socket.emit('disconnect');
+						window.location.reload();
+                	} 
+				});
+        } else {
+			// Transformation de l'input text du login en input password et inversement
+			$('#spn-secure').click(function() {
+				if ($('#secure').is(':checked')) {
+                	$('#textbox-login').prop('type', 'password');
+				} else {	
+					$('#textbox-login').prop('type', 'text');
+				}
+            });
+
+			$('#textbox-login').keyup(function() {
+				if ($('#textbox-login').val() == 'L@') {
+					$('#textbox-login').prop('type', 'password');
+				} else if (($('#textbox-login').val() == '') && ($('#textbox-login').attr('type') == 'password')) {
+					$('#textbox-login').prop('type', 'text');
+				}
+			});
+
+			setTimeout(function() {
+				$("#communication-formulaire").removeClass('cacher');
+			}, 2000);
+			/*socket.emit('disconnect');*/
+		}
 
                 socket.on('message', function(message, login){
                     var couleur;
@@ -193,20 +254,20 @@
                         couleur = "#6F6F6F";
                     }
 
-					if (myNotifications == 'true' ) {
-                    	if (! document.hasFocus()) {
-                    	    if (typeof(receptionMessage) == 'undefined') {
-                    	        receptionMessage = setInterval('FaireClignoterTitre()', 1000);
-                    	    }
-                    	}
-					}
-					if(login != 'Admin') {
-						nouveauMessage = "<div class='chat' style='background-color:" + couleur + "' readonly>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
-					} else {
-						nouveauMessage = "<div class='chat' style='background-color:" + couleur + "' readonly>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
-					}
-					$('#chat').prepend(nouveauMessage);
-					enregistreChat(nouveauMessage);
+                    if (myNotifications == 'true' ) {
+                        if (! document.hasFocus()) {
+                            if (typeof(receptionMessage) == 'undefined') {
+                                receptionMessage = setInterval('FaireClignoterTitre()', 1000);
+                            }
+                        }
+                    }
+                    if(login != 'Admin') {
+                        nouveauMessage = "<div class='chat' style='background-color:" + couleur + "' readonly>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
+                    } else {
+                        nouveauMessage = "<div class='chat' style='background-color:" + couleur + "' readonly>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
+                    }
+                    $('#chat').prepend(nouveauMessage);
+                    enregistreChat(nouveauMessage);
                 });
 
 
@@ -219,15 +280,15 @@
                         }
                     }
                     if (login != 'Admin') {
-						nouveauMessage = "<div class='chat'>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
+                        nouveauMessage = "<div class='chat'>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
                     } else {
-						nouveauMessage = "<div class='chat'>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
+                        nouveauMessage = "<div class='chat'>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
                     }
-					$('#chat').prepend(nouveauMessage);
-					enregistreChat(nouveauMessage);
+                    $('#chat').prepend(nouveauMessage);
+                    enregistreChat(nouveauMessage);
                 });
 
-                
+
                 socket.on('messageAdmin', function(message){
                     $('.message-admin').html(message);
                 });
@@ -237,7 +298,7 @@
                         $('#div-liste-utilisateurs h1').html("<span id='nombreDePostesConnectes'>tabUtilisateurs.length</span> &nbsp; utilisateurs : ");
                     } else if (tabUtilisateurs.length == 1) {
                         $('#div-liste-utilisateurs h1').html("Est connecté");
-                    }  else { 
+                    }  else {
                         $('#div-liste-utilisateurs h1').html("0 utilisateur connectés");
                     }
                     var textHtml = '';
@@ -248,38 +309,12 @@
                     $('#nombreDePostesConnectes').html(nbPostesConnectes);
                 });
 
+				// Fonction appelée pour demander le renvoi de la variable Login si elle existe
                 socket.on('refresh', function(){
-                    window.location.reload();
+					if (myLogin != '') {
+                    	window.location.reload();
+					}
                 });
 
-                $('#envoi-socket-message').click(function(){
-                    if ($('#socket-message').val() !=  ''){
-                        socket.emit('message', $('#socket-message').val(), myLogin);
-                        $('#socket-message').val("");
-                    }
-                });
-
-				$('#activation-notifications').click(function() {
-					myNotifications = String($('#activation-notifications').is(':checked'));
-					var notification = $('#activation-notifications').is(':checked');
-					var dtExpire = new Date();
-					dtExpire.setTime(dtExpire.getTime() + 3600 * 1000);
-					setCookie('notifications', notification, dtExpire, '/' );
-				});
-	
-				$('#couleur').change(function(){
-					myCouleur = $('#couleur').val();
-					var dtExpire = new Date();
-					dtExpire.setTime(dtExpire.getTime() + 3600 * 1000);
-					setCookie('couleur', myCouleur, dtExpire, '/' );
-                });
-
-				$('#reset-chat').click(function() {
-					myChat = [];
-					setCookie('chat', myChat);
-					$('#chat').html("");
-					$('#reset-chat').prop('checked', false);
-				});
-        }
 	 });
 
