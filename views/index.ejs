@@ -24,8 +24,9 @@
 			</div>
 			<div>	
 				<% if (admin == true) { %> <p><span>Bannir </span><input type='checkbox' id='bannir'/></p><% } %>
-				<p>	<span id='option-notifications'>Activer les notifications </span><input type='checkbox' id='activation-notifications'/>
-					<span id='option-reinitialiser'>Réinitialiser le t'chat </span><input type='checkbox' id='reset-chat'/>
+				<p>	<span id='option-notifications'>Activer les notifications </span><input type='checkbox' id='activation-notifications' />
+					<span id='option-reinitialiser'>Réinitialiser le t'chat </span><input type='checkbox' id='reset-chat' />
+					<span id='option-affichage-voiture' class='affichage-voiture' >Loupe </span><input type='checkbox' id='affichage-voiture' class='affichage-voiture' />
 				</p>
 			</div>
 		</header>
@@ -33,12 +34,12 @@
 			<div id='sous-section-1' class='sous-section'>
 				<div id='encart-tete'>
 					<p class='paragraphe-admin'><span class='message-admin'><%= message %></span></p>
-					<div id='encart-ecriture_message'>
+					<div id='encart-ecriture-message'>
 						<p>
-							<textarea name='socket-message' id='socket-message' style="background-color:"<%= couleur %>></textarea>
+							<textarea id='socket-message' name='socket-message' class='loupe-possible' style="background-color:"<%= couleur %>></textarea>
 						</p>
 						<p>
-                        	<input type='button' id='envoi-socket-message' value='Envoyer le message à tous' />
+                        	<input type='button' id='envoi-socket-message' class='loupe-possible' value='Envoyer le message à tous' />
                     	</p>
 					</div>
 				</div>
@@ -57,7 +58,7 @@
                     	    <p><i><b>(cliquez sur un nom pour envoyer le message en privé)</b></i></p>
                     	    <div id='liste-utilisateurs'>
                     	        <% tabLogin.forEach(function(user) { %>
-                    	            <p class='utilisateur' onClick=sendToUtilisateur('<%= user %>');><%= user %></p>
+                    	            <p class='utilisateur loupe-possible' onClick=sendToUtilisateur('<%= user %>');><%= user %></p>
                     	        <% }); %>
                     	    </div>
                     	<% } %>
@@ -69,7 +70,7 @@
                 </div>
 			</div>
 		</section>
-		<section id='section-2'>
+		<section id='section-2' class='loupe-possible'>
 		</section>
 
 

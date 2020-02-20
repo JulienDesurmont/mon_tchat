@@ -3,6 +3,7 @@ var myCouleur = $('#couleur').val();
 var myCouleurTexte = $('#couleurTexte').val();
 var receptionMessage;
 var myNotifications = 'false';
+var myAffichageVoiture = 'false';
 var myTypeEcran;
 var myDivListeUtilisateurs;
 var myDivChat;
@@ -83,6 +84,13 @@ function getCookie(name){
 if (myNotifications = getCookie('notifications')) 
 	if (myNotifications == 'true') 
 		$('#activation-notifications').prop("checked", true);
+
+
+// On coche ou décoche la checkbox loupe en fonction de la valeur du cookie si il exist
+if (myAffichageVoiture = getCookie('affichageVoiture'))
+    if (myAffichageVoiture == 'true')
+        $('#affichage-voiture').prop("checked", true);
+
 
 
 // Se déclanche à la réception d'un message : Fait clignoter le titre de l'onglet
@@ -214,6 +222,20 @@ $(document).ready(function()
 			// Cookie de notification : Sans date d'expiration
 			setCookie('notifications', notification, dtNoExpiration, '/' );
 		});
+
+		// Lors du clic sur la checkbox loupe on passe tous les éléments du DOM ayant la classe .loupe-possible en mode loupe 
+		$('#affichage-voiture').click(function()
+        {
+			myAffichageVoiture = String($('#affichage-voiture').is(':checked'));
+			var affichageVoiture = $('#affichage-voiture').is(':checked');
+			if (affichageVoiture) 
+				$('.loupe-possible').addClass('loupe');
+			else 
+				$('.loupe-possible').removeClass('loupe');
+			// Cookie d'affichage en mode voiture : Sans date d'expiration
+			setCookie('affichageVoiture', affichageVoiture, dtNoExpiration, '/' );
+        });
+
 	
 		$('#couleur').change(function()
 		{
@@ -272,7 +294,7 @@ $(document).ready(function()
 		}, 2000);
 	}
 
-
+	// Reception d'un message de Tchat
 	socket.on('message', function(message, login)
 	{
 		var couleur;
@@ -295,9 +317,9 @@ $(document).ready(function()
 				if (typeof(receptionMessage) == 'undefined') 
 					receptionMessage = setInterval('FaireClignoterTitre()', 1000);
 		if(login != 'Admin') 
-			nouveauMessage = "<div class='chat' style='background-color:" + couleur + ";color:" + couleurTexte + "' readonly>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
+			nouveauMessage = "<div class='chat loupe-possible' style='background-color:" + couleur + ";color:" + couleurTexte + "' readonly>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
 		else 
-			nouveauMessage = "<div class='chat' style='background-color:" + couleur + ";color:" + couleurTexte + "' readonly>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
+			nouveauMessage = "<div class='chat loupe-possible' style='background-color:" + couleur + ";color:" + couleurTexte + "' readonly>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
 		$('#chat').prepend(nouveauMessage);
 		enregistreChat(nouveauMessage);
 	});
@@ -310,9 +332,9 @@ $(document).ready(function()
 				if (typeof(receptionMessage) == 'undefined') 
 					receptionMessage = setInterval('FaireClignoterTitre("!")', 1000);
 		if (login != 'Admin') 
-			nouveauMessage = "<div class='chat'>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
+			nouveauMessage = "<div class='chat loupe-possible'>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
 		else 
-			nouveauMessage = "<div class='chat'>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
+			nouveauMessage = "<div class='chat loupe-possible'>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
 		$('#chat').prepend(nouveauMessage);
 		enregistreChat(nouveauMessage);
 	});
@@ -333,7 +355,7 @@ $(document).ready(function()
 			$('#div-liste-utilisateurs h1').html("0 utilisateur connectés");
 		var textHtml = '';
 		tabUtilisateurs.forEach(function(user){
-			textHtml += "<p class='utilisateur' onClick=sendToUtilisateur('" + user + "');>" + user + '</p>';
+			textHtml += "<p class='utilisateur loupe-possible' onClick=sendToUtilisateur('" + user + "');>" + user + '</p>';
 		});
 		$('#liste-utilisateurs').html(textHtml);
 		$('#nombreDePostesConnectes').html(nbPostesConnectes);
