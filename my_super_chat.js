@@ -249,7 +249,6 @@ io.sockets.on('connection', function(socket) {
     });
 
     socket.on('messagePersonnel', function(message, login, utilisateur) {
-		console.log('perso');
         if (myTabBannis.includes(login)) {
             socket.emit('messageAdmin', 'Vous avez été banni');
         } else {

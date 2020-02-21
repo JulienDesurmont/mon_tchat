@@ -1,4 +1,4 @@
-var myLogin = $('#login').html();
+var myLogin = $('#login').html().toLowerCase().trim();
 var myCouleur = $('#couleur').val();
 var myCouleurTexte = $('#couleurTexte').val();
 var receptionMessage;
@@ -180,7 +180,7 @@ function sendToUtilisateur(utilisateur)
 	} else {
 		if ($('#socket-message').val() !=  '')
 		{
-			socket.emit('messagePersonnel', $('#socket-message').val(), myLogin, utilisateur);
+			socket.emit('messagePersonnel', $('#socket-message').val(), myLogin, utilisateur.trim());
 			$('#socket-message').val("");
 		}
 	}
@@ -296,6 +296,7 @@ $(document).ready(function()
 			myCouleur = $('#couleur').val();
 			// Cookie de couleur : Sans date d'expiration
 			setCookie('couleur', myCouleur, dtNoExpiration, '/' );
+			$('#socket-message').css('background', myCouleur);
 		});
 
 		$('#couleurTexte').change(function()
@@ -303,8 +304,10 @@ $(document).ready(function()
 			myCouleurTexte = $('#couleurTexte').val();
 			// Cookie de couleur du texte : Sans date d'expiration
 			setCookie('couleurTexte', myCouleurTexte, dtNoExpiration, '/' );
+			$('#socket-message').css('color', myCouleurTexte);
 		});
-
+		$('#couleur').triggerHandler('change');
+		$('#couleurTexte').triggerHandler('change');
 
 
 		$('#spn-deconnexion').click(function() 
@@ -348,9 +351,17 @@ $(document).ready(function()
 	}
 
 
-
-
-
+	// PROBLEME
+    socket.on(myLogin, function(message, login)
+    {
+        if (myNotifications == 'true')
+            if (! document.hasFocus())
+                if (typeof(receptionMessage) == 'undefined')
+                    receptionMessage = setInterval('FaireClignoterTitre("!")', 1000);
+        nouveauMessage = "<div class='chat " + getChatClass() + "'>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
+        $('#chat').prepend(nouveauMessage);
+        enregistreChat(nouveauMessage);
+    });
 
 
 	// Reception d'un message de Tchat
@@ -381,17 +392,6 @@ $(document).ready(function()
 		enregistreChat(nouveauMessage);
 	});
 
-
-	socket.on(myLogin, function(message, login)
-	{
-		if (myNotifications == 'true' ) 
-			if (! document.hasFocus()) 
-				if (typeof(receptionMessage) == 'undefined') 
-					receptionMessage = setInterval('FaireClignoterTitre("!")', 1000);
-		nouveauMessage = "<div class='chat " + getChatClass() + "'>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
-		$('#chat').prepend(nouveauMessage);
-		enregistreChat(nouveauMessage);
-	});
 
 
 	socket.on('messageAdmin', function(message)
