@@ -13,10 +13,31 @@ header {
 	height: 150px;
 }
 
-header p {
-	padding-left: 70px;
+header > div {
+	padding-left: 90px;
 	padding-right: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-items: center;
 }
+
+/* Placement de l'input couleur */
+header span +  div input {
+    margin-top: 5px;
+}
+
+/* Placement du titre le conteneur h1 (login) */
+header h1 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#options-tchat div{
+	margin-right: 10px;
+}
+
 
 p {
     margin: 0;
@@ -29,27 +50,12 @@ h1 {
 
 }
 
+.option {
+	cursor: pointer;
+}
+
 .affichage-voiture {
 	display: none;
-}
-
-/* Placement des div input couleur + titre h1 (login) */
-header span + div {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-	margin-left: 70px;
-}
-/* Placement de l'input couleur */
-header span +  div input {
-	margin-top: 5px;
-}
-
-/* Placement du titre le conteneur h1 (login) */
-header h1 {
-	padding-left: 5px;
-    padding-right: 5px;
 }
 
 .cacher {
@@ -64,7 +70,6 @@ header h1 {
 	align-items: center;
     right: 0;
 	top: 25px;
-    cursor: pointer;
 	margin-top: 5px;
 	margin-right: 5px;
 }
@@ -95,6 +100,7 @@ header h1 {
 #submit-login {
     height: 50px;
 }
+
 
 
 
@@ -201,7 +207,6 @@ input[type='button'], input[type='submit'] {
 }
 #liste-utilisateurs p.utilisateur {
 	font-size: 15px;
-    cursor: pointer;
     font-weight: bold;
 }
 
@@ -212,17 +217,12 @@ body {
 	justify-content: space-between;
 }
 
-header p {
-    padding-left: 2px;
-    padding-right: 20px;
+
+header > div {
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
-header div {
-	display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-	align-items: flex-start;
-}
 
 /* Placement du titre le conteneur h1 (login) */
 header h1 {

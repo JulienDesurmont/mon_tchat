@@ -227,7 +227,7 @@ io.sockets.on('connection', function(socket) {
 		
 		// Si la variable de session socket 'login' n'est pas définie on va l'enregistrer
 		socket.handshake.session.login = myLogin;
-		socket.emit('messageAdmin', 'Bienvenu sur le chat ' + socket.handshake.session.login, 'Admin');
+		socket.emit('messageAdmin', 'Bienvenu sur le tchat ' + socket.handshake.session.login, 'Admin');
 		socket.broadcast.emit('messageAdmin', socket.handshake.session.login + " s'est connecté", 'Admin');
 		// On recherche dans les clés du tableau tabLogin le parametre de nom 'login' et on vérifie son connect.sid
 		if (! Object.keys(tabLogin).includes(myLogin)) {

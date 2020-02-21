@@ -27,3 +27,8 @@
 {"level":"error","message":"Chemin inconnu demandé : /define/login","service":"user-service","timestamp":"20-02-2020 15:10:00"}
 {"level":"error","message":"Chemin inconnu demandé : /define/login","service":"user-service","timestamp":"20-02-2020 15:41:46"}
 {"level":"error","message":"Chemin inconnu demandé : /define/login","service":"user-service","timestamp":"20-02-2020 15:43:02"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emoticon_larme_3.gif","service":"user-service","timestamp":"20-02-2020 23:17:45"}
+{"level":"error","message":"Chemin inconnu demandé : /images/anime_emoticon_rire.gif","service":"user-service","timestamp":"20-02-2020 23:17:45"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_pouce.gif","service":"user-service","timestamp":"20-02-2020 23:30:42"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_pouce.gif","service":"user-service","timestamp":"20-02-2020 23:32:51"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_pouce.gif","service":"user-service","timestamp":"20-02-2020 23:33:39"}

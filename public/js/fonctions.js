@@ -3,7 +3,8 @@ var myCouleur = $('#couleur').val();
 var myCouleurTexte = $('#couleurTexte').val();
 var receptionMessage;
 var myNotifications = 'false';
-var myAffichageVoiture = 'false';
+var myAffichageVoiture;
+var myTypeEmoticons = 'smiley'
 var myTypeEcran;
 var myDivListeUtilisateurs;
 var myDivChat;
@@ -24,8 +25,8 @@ if (document.body.clientWidth < 1280)
 	$('#section-2').html(myDivListeUtilisateurs);
 	$('#sous-section-3').html(myDivChat);
 	$('#envoi-socket-message').val('\u2713');
-	$('#option-notifications').html('Notifications');
-	$('#option-reinitialiser').html('Réinitialiser');
+	$('#option-activation-notifications').html('Notifications');
+	$('#option-reset-chat').html('Réinitialiser');
 } else 
 	myTypeEcran = 'pc';
 
@@ -40,8 +41,8 @@ window.onresize = function(){
 			$('#section-2').html(myDivListeUtilisateurs);
 			$('#sous-section-3').html(myDivChat);
 			$('#envoi-socket-message').val('\u2713');
-			$('#option-notifications').html('Notifications');
-			$('#option-reinitialiser').html('Réinitialiser');
+			$('#option-activation-notifications').html('Notifications');
+			$('#option-reset-chat').html('Réinitialiser');
 		}
 	} else {
 		if (myTypeEcran != 'pc') 
@@ -50,8 +51,8 @@ window.onresize = function(){
 			$('#sous-section-2').html(myDivChat);
 			$('#sous-section-3').html(myDivListeUtilisateurs);
 			$('#envoi-socket-message').val('Envoyer le message à tous');
-			$('#option-notifications').html("Activer les notifications");
-			$('#option-reinitialiser').html("Réinitialiser le t'chat");
+			$('#option-activation-notifications').html("Activer les notifications");
+			$('#option-reset-chat').html("Réinitialiser le t'chat");
 		}
 	}
 };
@@ -80,16 +81,21 @@ function getCookie(name){
 	return null;
 }
 
-// On coche ou décoche la checkbox activation-notifications en fonction de la valeur du cookie si il exist
+
+// On coche ou décoche la checkbox activation-notifications en fonction de la valeur du cookie si il existe
 if (myNotifications = getCookie('notifications')) 
 	if (myNotifications == 'true') 
 		$('#activation-notifications').prop("checked", true);
 
-
-// On coche ou décoche la checkbox loupe en fonction de la valeur du cookie si il exist
 if (myAffichageVoiture = getCookie('affichageVoiture'))
-    if (myAffichageVoiture == 'true')
+    if (myAffichageVoiture == 'true') 
         $('#affichage-voiture').prop("checked", true);
+
+
+// On coche ou décoche la checkbox emoticon en fonction de la valeur du cookie si il existe
+if (myTypeEmoticons = getCookie('typeEmoticons'))
+    if (myTypeEmoticons == 'emojis')
+        $('#emoticons-animes').prop("checked", true);
 
 
 
@@ -120,36 +126,36 @@ $(window).focus(function()
 function insertion_emoticons(message)
 {
 	return message
-		.replace(/:\)/g,        "<img src='images/emoticon_rire.gif'            height=40px; />")
-		.replace(/:-\)/g,       "<img src='images/emoticon_lol.gif'             height=35px; />")
-		.replace(/:]/g,         "<img src='images/emoticon_lol_2.gif'           height=45px; />")
-		.replace(/=\)/g,        "<img src='images/emoticon_lol_3.gif'           height=45px; />")
-		.replace(/:D/g,         "<img src='images/emoticon_mdr.gif'             height=50px; />")
-		.replace(/;D/g,         "<img src='images/emoticon_mdr_2.gif'           height=40px; />")
-		.replace(/:&#39;&#39;\(/g,   "<img src='images/emoticon_larme_2.gif'    height=35px; />")
-		.replace(/:&#39;\(/g,   "<img src='images/emoticon_larme.gif'           height=45px; />")
-		.replace(/:\(/g,        "<img src='images/emoticon_larme_3.gif'         height=45px; />")
-		.replace(/=D/g,         "<img src='images/emoticon_mdr_moque.gif'       height=45px; />")
-		.replace(/;\)f/g,       "<img src='images/emoticon_clin_oeil_feminin.gif'  height=45px; />")
-		.replace(/;\)/g,        "<img src='images/emoticon_clin_oeil.gif'       height=35px; />")
-		.replace(/;-\)/,        "<img src='images/emoticon_clin_oeil_2.gif'     height=40px; />")
-		.replace(/&#62;:O/g,    "<img src='images/emoticon_pas_content.gif'     height=40px; />")
-		.replace(/&#62;:o/g,    "<img src='images/emoticon_pas_content_2.gif'   height=40px; />")
-		.replace(/:\//g,        "<img src='images/emoticon_nul.gif'             height=40px; />")
-		.replace(/o.O/g,        "<img src='images/emoticon_hein_quoi.gif'       height=40px; />")
-		.replace(/O.o/g,        "<img src='images/emoticon_heu_quoi.gif'        height=40px; />")
-		.replace(/-_-2/g,       "<img src='images/emoticon_pouce2.gif'          height=50px; />")
-		.replace(/-_-/g,        "<img src='images/emoticon_pouce.gif'           height=50px; />")
-		.replace(/8-\|/g,       "<img src='images/emoticon_cafe.gif'            height=45px; />")
-		.replace(/8\|/g,        "<img src='images/emoticon_lunette.gif'         height=30px; />")
-		.replace(/B\|/g,        "<img src='images/emoticon_superman.gif'        height=45px; />")
-		.replace(/:P/g,         "<img src='images/emoticon_epuise.gif'          height=45px; />")
-		.replace(/:\?/g,        "<img src='images/emoticon_no_comment.gif'      height=45px; />")
-		.replace(/:X/g,         "<img src='images/emoticon_shut.gif'            height=40px; />")
-		.replace(/:\^\)/g,      "<img src='images/emoticon_mince.gif'           height=40px; />")
-		.replace(/:-\*/g,       "<img src='images/emoticon_bisou_feminin.gif'   height=40px; />")
-		.replace(/:\*r/g,       "<img src='images/emoticon_bisou_recu.gif'      height=35px; />")
-		.replace(/:\*/g,        "<img src='images/emoticon_bisou.gif'           height=35px; />");
+		.replace(/:\)/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_rire.gif'            	height=40px; />")
+		.replace(/:-\)/g,       	"<img src='images/" + myTypeEmoticons + "_emoticon_lol.gif'             	height=35px; />")
+		.replace(/:]/g,         	"<img src='images/" + myTypeEmoticons + "_emoticon_lol_2.gif'           	height=45px; />")
+		.replace(/=\)/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_lol_3.gif'           	height=45px; />")
+		.replace(/:D/g,         	"<img src='images/" + myTypeEmoticons + "_emoticon_mdr.gif'             	height=50px; />")
+		.replace(/;D/g,         	"<img src='images/" + myTypeEmoticons + "_emoticon_mdr_2.gif'           	height=40px; />")
+		.replace(/:&#39;&#39;\(/g,  "<img src='images/" + myTypeEmoticons + "_emoticon_larme_2.gif'    			height=35px; />")
+		.replace(/:&#39;\(/g,   	"<img src='images/" + myTypeEmoticons + "_emoticon_larme.gif'           	height=45px; />")
+		.replace(/:\(/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_larme_3.gif'         	height=45px; />")
+		.replace(/=D/g,         	"<img src='images/" + myTypeEmoticons + "_emoticon_mdr_moque.gif'       	height=45px; />")
+		.replace(/;\)f/g,       	"<img src='images/" + myTypeEmoticons + "_emoticon_clin_oeil_feminin.gif'  	height=45px; />")
+		.replace(/;\)/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_clin_oeil.gif'       	height=35px; />")
+		.replace(/;-\)/,        	"<img src='images/" + myTypeEmoticons + "_emoticon_clin_oeil_2.gif'     	height=40px; />")
+		.replace(/&#62;:O/g,    	"<img src='images/" + myTypeEmoticons + "_emoticon_pas_content.gif'     	height=40px; />")
+		.replace(/&#62;:o/g,    	"<img src='images/" + myTypeEmoticons + "_emoticon_pas_content_2.gif'   	height=40px; />")
+		.replace(/:\//g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_nul.gif'             	height=40px; />")
+		.replace(/o.O/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_hein_quoi.gif'       	height=40px; />")
+		.replace(/O.o/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_heu_quoi.gif'        	height=40px; />")
+		.replace(/-_-2/g,       	"<img src='images/" + myTypeEmoticons + "_emoticon_pouce2.gif'          	height=50px; />")
+		.replace(/-_-/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_pouce.gif'           	height=50px; />")
+		.replace(/8-\|/g,       	"<img src='images/" + myTypeEmoticons + "_emoticon_cafe.gif'            	height=45px; />")
+		.replace(/8\|/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_lunette.gif'         	height=30px; />")
+		.replace(/B\|/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_superman.gif'       		height=45px; />")
+		.replace(/:P/g,         	"<img src='images/" + myTypeEmoticons + "_emoticon_epuise.gif'         		height=45px; />")
+		.replace(/:\?/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_no_comment.gif'      	height=45px; />")
+		.replace(/:X/g,         	"<img src='images/" + myTypeEmoticons + "_emoticon_shut.gif'            	height=40px; />")
+		.replace(/:\^\)/g,      	"<img src='images/" + myTypeEmoticons + "_emoticon_mince.gif'           	height=40px; />")
+		.replace(/:-\*/g,       	"<img src='images/" + myTypeEmoticons + "_emoticon_bisou_feminin.gif'   	height=40px; />")
+		.replace(/:\*r/g,       	"<img src='images/" + myTypeEmoticons + "_emoticon_bisou_recu.gif'      	height=35px; />")
+		.replace(/:\*/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_bisou.gif'           	height=35px; />");
 }
 
 			
@@ -178,6 +184,16 @@ function sendToUtilisateur(utilisateur)
 			$('#socket-message').val("");
 		}
 	}
+}
+
+// fonction qui retourne la classe des messages tchat en fonction d'affichage avec loupe ou non
+function getChatClass() {
+	var classes;
+    if (myAffichageVoiture == 'true')
+        classes = ' loupe-possible loupe ';
+    else
+        classes = ' loupe-possible ';
+	return classes;
 }
 
 
@@ -215,6 +231,9 @@ $(document).ready(function()
 			}
 		});
 
+		$('#option-activation-notifications').click(function() {
+			$('#activation-notifications').trigger("click");
+		});
 		$('#activation-notifications').click(function() 
 		{
 			myNotifications = String($('#activation-notifications').is(':checked'));
@@ -223,7 +242,11 @@ $(document).ready(function()
 			setCookie('notifications', notification, dtNoExpiration, '/' );
 		});
 
-		// Lors du clic sur la checkbox loupe on passe tous les éléments du DOM ayant la classe .loupe-possible en mode loupe 
+
+		/* Lors du clic sur la checkbox loupe on passe tous les éléments du DOM ayant la classe .loupe-possible en mode loupe */
+		$('#option-affichage-voiture').click(function() {
+            $('#affichage-voiture').trigger("click");
+        });
 		$('#affichage-voiture').click(function()
         {
 			myAffichageVoiture = String($('#affichage-voiture').is(':checked'));
@@ -235,6 +258,37 @@ $(document).ready(function()
 			// Cookie d'affichage en mode voiture : Sans date d'expiration
 			setCookie('affichageVoiture', affichageVoiture, dtNoExpiration, '/' );
         });
+		// On lance l'affichage en mode loupe si la checkbox est cochée
+		if(myAffichageVoiture == 'true')
+            $('#affichage-voiture').triggerHandler("click");
+
+
+		$('#option-emoticons-animes').click(function() {
+            $('#emoticons-animes').trigger("click");
+        });
+		$('#emoticons-animes').click(function()
+        {
+			if ($('#emoticons-animes').is(':checked')) 
+            	myTypeEmoticons = 'emojis';
+			else
+            	myTypeEmoticons = 'smiley';
+            // Cookie du choix d'emoticon : anime(emojis) ou smiley 
+            setCookie('typeEmoticons', myTypeEmoticons, dtNoExpiration, '/' );
+        });
+
+		$('#option-reset-chat').click(function() {
+            $('#reset-chat').trigger("click");
+        });
+        $('#reset-chat').click(function()
+        {
+            myChat = [];
+            // Cookie de tchat : Expire à la fin de la session
+            setCookie('chat', myChat);
+            $('#chat').html("");
+            $('#reset-chat').prop('checked', false);
+        });
+
+
 
 	
 		$('#couleur').change(function()
@@ -251,28 +305,27 @@ $(document).ready(function()
 			setCookie('couleurTexte', myCouleurTexte, dtNoExpiration, '/' );
 		});
 
-		$('#reset-chat').click(function() 
-		{
-			myChat = [];
-			// Cookie de tchat : Expire à la fin de la session
-			setCookie('chat', myChat);
-			$('#chat').html("");
-			$('#reset-chat').prop('checked', false);
-		});
+
 
 		$('#spn-deconnexion').click(function() 
 		{
-			if ($('#deconnexion').is(':checked')) 
-			{
-				// Suppression du login pour éviter la reconnexion automatique par cookie et pour pouvoir changer de login
-				setCookie('login', '');
-				socket.emit('disconnect');
-				window.location.reload();
-			}		 
+			$('#deconnexion').trigger('click');
+		});
+			
+		$('#deconnexion').click(function() 
+		{
+			// Suppression du login pour éviter la reconnexion automatique par cookie et pour pouvoir changer de login
+			setCookie('login', '');
+			socket.emit('disconnect');
+			window.location.reload();
 		});
 	} else {
 		// Transformation de l'input text du login en input password et inversement
 		$('#spn-secure').click(function() 
+		{ 
+			$('#secure').trigger('click');
+		});
+		$('#secure').click(function()
 		{
 			if ($('#secure').is(':checked')) 
 				$('#textbox-login').prop('type', 'password');
@@ -293,6 +346,12 @@ $(document).ready(function()
 			$("#communication-formulaire").removeClass('cacher');
 		}, 2000);
 	}
+
+
+
+
+
+
 
 	// Reception d'un message de Tchat
 	socket.on('message', function(message, login)
@@ -316,10 +375,8 @@ $(document).ready(function()
 			if (! document.hasFocus()) 
 				if (typeof(receptionMessage) == 'undefined') 
 					receptionMessage = setInterval('FaireClignoterTitre()', 1000);
-		if(login != 'Admin') 
-			nouveauMessage = "<div class='chat loupe-possible' style='background-color:" + couleur + ";color:" + couleurTexte + "' readonly>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
-		else 
-			nouveauMessage = "<div class='chat loupe-possible' style='background-color:" + couleur + ";color:" + couleurTexte + "' readonly>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
+
+		nouveauMessage = "<div class='chat " + getChatClass() + "' style='background-color:" + couleur + ";color:" + couleurTexte + "' readonly>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
 		$('#chat').prepend(nouveauMessage);
 		enregistreChat(nouveauMessage);
 	});
@@ -331,10 +388,7 @@ $(document).ready(function()
 			if (! document.hasFocus()) 
 				if (typeof(receptionMessage) == 'undefined') 
 					receptionMessage = setInterval('FaireClignoterTitre("!")', 1000);
-		if (login != 'Admin') 
-			nouveauMessage = "<div class='chat loupe-possible'>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
-		else 
-			nouveauMessage = "<div class='chat loupe-possible'>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
+		nouveauMessage = "<div class='chat " + getChatClass() + "'>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
 		$('#chat').prepend(nouveauMessage);
 		enregistreChat(nouveauMessage);
 	});
@@ -355,7 +409,7 @@ $(document).ready(function()
 			$('#div-liste-utilisateurs h1').html("0 utilisateur connectés");
 		var textHtml = '';
 		tabUtilisateurs.forEach(function(user){
-			textHtml += "<p class='utilisateur loupe-possible' onClick=sendToUtilisateur('" + user + "');>" + user + '</p>';
+			textHtml += "<p class='utilisateur option " + getChatClass() + "' onClick=sendToUtilisateur('" + user + "');>" + user + '</p>';
 		});
 		$('#liste-utilisateurs').html(textHtml);
 		$('#nombreDePostesConnectes').html(nbPostesConnectes);
