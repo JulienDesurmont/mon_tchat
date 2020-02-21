@@ -129,39 +129,39 @@ $(window).focus(function()
 });
 
 
-function insertion_emoticons(message)
+function insertion_emoticons(message, typeEmoticons)
 {
 	return message
-		.replace(/:\)/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_rire.gif'            	height=40px; />")
-		.replace(/:-\)/g,       	"<img src='images/" + myTypeEmoticons + "_emoticon_lol.gif'             	height=35px; />")
-		.replace(/:]/g,         	"<img src='images/" + myTypeEmoticons + "_emoticon_lol_2.gif'           	height=45px; />")
-		.replace(/=\)/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_lol_3.gif'           	height=45px; />")
-		.replace(/:D/g,         	"<img src='images/" + myTypeEmoticons + "_emoticon_mdr.gif'             	height=50px; />")
-		.replace(/;D/g,         	"<img src='images/" + myTypeEmoticons + "_emoticon_mdr_2.gif'           	height=40px; />")
-		.replace(/:&#39;&#39;\(/g,  "<img src='images/" + myTypeEmoticons + "_emoticon_larme_2.gif'    			height=35px; />")
-		.replace(/:&#39;\(/g,   	"<img src='images/" + myTypeEmoticons + "_emoticon_larme.gif'           	height=45px; />")
-		.replace(/:\(/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_larme_3.gif'         	height=45px; />")
-		.replace(/=D/g,         	"<img src='images/" + myTypeEmoticons + "_emoticon_mdr_moque.gif'       	height=45px; />")
-		.replace(/;\)f/g,       	"<img src='images/" + myTypeEmoticons + "_emoticon_clin_oeil_feminin.gif'  	height=45px; />")
-		.replace(/;\)/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_clin_oeil.gif'       	height=35px; />")
-		.replace(/;-\)/,        	"<img src='images/" + myTypeEmoticons + "_emoticon_clin_oeil_2.gif'     	height=40px; />")
-		.replace(/&#62;:O/g,    	"<img src='images/" + myTypeEmoticons + "_emoticon_pas_content.gif'     	height=40px; />")
-		.replace(/&#62;:o/g,    	"<img src='images/" + myTypeEmoticons + "_emoticon_pas_content_2.gif'   	height=40px; />")
-		.replace(/:\//g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_nul.gif'             	height=40px; />")
-		.replace(/o.O/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_hein_quoi.gif'       	height=40px; />")
-		.replace(/O.o/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_heu_quoi.gif'        	height=40px; />")
-		.replace(/-_-2/g,       	"<img src='images/" + myTypeEmoticons + "_emoticon_pouce2.gif'          	height=50px; />")
-		.replace(/-_-/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_pouce.gif'           	height=50px; />")
-		.replace(/8-\|/g,       	"<img src='images/" + myTypeEmoticons + "_emoticon_cafe.gif'            	height=45px; />")
-		.replace(/8\|/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_lunette.gif'         	height=30px; />")
-		.replace(/B\|/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_superman.gif'       		height=45px; />")
-		.replace(/:P/g,         	"<img src='images/" + myTypeEmoticons + "_emoticon_epuise.gif'         		height=45px; />")
-		.replace(/:\?/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_no_comment.gif'      	height=45px; />")
-		.replace(/:X/g,         	"<img src='images/" + myTypeEmoticons + "_emoticon_shut.gif'            	height=40px; />")
-		.replace(/:\^\)/g,      	"<img src='images/" + myTypeEmoticons + "_emoticon_mince.gif'           	height=40px; />")
-		.replace(/:-\*/g,       	"<img src='images/" + myTypeEmoticons + "_emoticon_bisou_feminin.gif'   	height=40px; />")
-		.replace(/:\*r/g,       	"<img src='images/" + myTypeEmoticons + "_emoticon_bisou_recu.gif'      	height=35px; />")
-		.replace(/:\*/g,        	"<img src='images/" + myTypeEmoticons + "_emoticon_bisou.gif'           	height=35px; />");
+		.replace(/:\)/g,        	"<img src='images/" + typeEmoticons + "_emoticon_rire.gif'            	height=40px; />")
+		.replace(/:-\)/g,       	"<img src='images/" + typeEmoticons + "_emoticon_lol.gif'             	height=35px; />")
+		.replace(/:]/g,         	"<img src='images/" + typeEmoticons + "_emoticon_lol_2.gif'           	height=45px; />")
+		.replace(/=\)/g,        	"<img src='images/" + typeEmoticons + "_emoticon_lol_3.gif'           	height=45px; />")
+		.replace(/:D/g,         	"<img src='images/" + typeEmoticons + "_emoticon_mdr.gif'             	height=50px; />")
+		.replace(/;D/g,         	"<img src='images/" + typeEmoticons + "_emoticon_mdr_2.gif'           	height=40px; />")
+		.replace(/:&#39;&#39;\(/g,  "<img src='images/" + typeEmoticons + "_emoticon_larme_2.gif'    			height=35px; />")
+		.replace(/:&#39;\(/g,   	"<img src='images/" + typeEmoticons + "_emoticon_larme.gif'           	height=45px; />")
+		.replace(/:\(/g,        	"<img src='images/" + typeEmoticons + "_emoticon_larme_3.gif'         	height=45px; />")
+		.replace(/=D/g,         	"<img src='images/" + typeEmoticons + "_emoticon_mdr_moque.gif'       	height=45px; />")
+		.replace(/;\)f/g,       	"<img src='images/" + typeEmoticons + "_emoticon_clin_oeil_feminin.gif'  	height=45px; />")
+		.replace(/;\)/g,        	"<img src='images/" + typeEmoticons + "_emoticon_clin_oeil.gif'       	height=35px; />")
+		.replace(/;-\)/,        	"<img src='images/" + typeEmoticons + "_emoticon_clin_oeil_2.gif'     	height=40px; />")
+		.replace(/&#62;:O/g,    	"<img src='images/" + typeEmoticons + "_emoticon_pas_content.gif'     	height=40px; />")
+		.replace(/&#62;:o/g,    	"<img src='images/" + typeEmoticons + "_emoticon_pas_content_2.gif'   	height=40px; />")
+		.replace(/:\//g,        	"<img src='images/" + typeEmoticons + "_emoticon_nul.gif'             	height=40px; />")
+		.replace(/o.O/g,        	"<img src='images/" + typeEmoticons + "_emoticon_hein_quoi.gif'       	height=40px; />")
+		.replace(/O.o/g,        	"<img src='images/" + typeEmoticons + "_emoticon_heu_quoi.gif'        	height=40px; />")
+		.replace(/-_-2/g,       	"<img src='images/" + typeEmoticons + "_emoticon_pouce2.gif'          	height=50px; />")
+		.replace(/-_-/g,        	"<img src='images/" + typeEmoticons + "_emoticon_pouce.gif'           	height=50px; />")
+		.replace(/8-\|/g,       	"<img src='images/" + typeEmoticons + "_emoticon_cafe.gif'            	height=45px; />")
+		.replace(/8\|/g,        	"<img src='images/" + typeEmoticons + "_emoticon_lunette.gif'         	height=30px; />")
+		.replace(/B\|/g,        	"<img src='images/" + typeEmoticons + "_emoticon_superman.gif'       		height=45px; />")
+		.replace(/:P/g,         	"<img src='images/" + typeEmoticons + "_emoticon_epuise.gif'         		height=45px; />")
+		.replace(/:\?/g,        	"<img src='images/" + typeEmoticons + "_emoticon_no_comment.gif'      	height=45px; />")
+		.replace(/:X/g,         	"<img src='images/" + typeEmoticons + "_emoticon_shut.gif'            	height=40px; />")
+		.replace(/:\^\)/g,      	"<img src='images/" + typeEmoticons + "_emoticon_mince.gif'           	height=40px; />")
+		.replace(/:-\*/g,       	"<img src='images/" + typeEmoticons + "_emoticon_bisou_feminin.gif'   	height=40px; />")
+		.replace(/:\*r/g,       	"<img src='images/" + typeEmoticons + "_emoticon_bisou_recu.gif'      	height=35px; />")
+		.replace(/:\*/g,        	"<img src='images/" + typeEmoticons + "_emoticon_bisou.gif'           	height=35px; />");
 }
 
 			
@@ -186,7 +186,7 @@ function sendToUtilisateur(utilisateur)
 	} else {
 		if ($('#socket-message').val() !=  '')
 		{
-			socket.emit('messagePersonnel', $('#socket-message').val(), myLogin, utilisateur.trim());
+			socket.emit('messagePersonnel', $('#socket-message').val(), myLogin, utilisateur.trim(), myTypeEmoticons);
 			$('#socket-message').val("");
 		}
 	}
@@ -232,7 +232,7 @@ $(document).ready(function()
 		{
 			if ($('#socket-message').val() !=  '')
 			{
-				socket.emit('message', $('#socket-message').val(), myLogin);
+				socket.emit('message', $('#socket-message').val(), myLogin, myTypeEmoticons);
 				$('#socket-message').val("");
 			}
 		});
@@ -353,20 +353,20 @@ $(document).ready(function()
 
 
 	// PROBLEME
-    socket.on(myLogin, function(message, login)
+    socket.on(myLogin, function(message, login, typeEmoticons)
     {
         if (myNotifications == 'true')
             if (! document.hasFocus())
                 if (typeof(receptionMessage) == 'undefined')
                     receptionMessage = setInterval('FaireClignoterTitre("!")', 1000);
-        nouveauMessage = "<div class='chat " + getChatClass() + "'>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
+        nouveauMessage = "<div class='chat " + getChatClass() + "'>" + login + ' : ' + insertion_emoticons(message, typeEmoticons).replace(/[\n]/g,'<br />') + "</div>";
         $('#chat').prepend(nouveauMessage);
         enregistreChat(nouveauMessage);
     });
 
 
 	// Reception d'un message de Tchat
-	socket.on('message', function(message, login)
+	socket.on('message', function(message, login, typeEmoticons)
 	{
 		var couleur;
 		var couleurTexte;
@@ -388,7 +388,7 @@ $(document).ready(function()
 				if (typeof(receptionMessage) == 'undefined') 
 					receptionMessage = setInterval('FaireClignoterTitre()', 1000);
 
-		nouveauMessage = "<div class='chat " + getChatClass() + "' style='background-color:" + couleur + ";color:" + couleurTexte + "' readonly>" + login + ' : ' + insertion_emoticons(message).replace(/[\n]/g,'<br />') + "</div>";
+		nouveauMessage = "<div class='chat " + getChatClass() + "' style='background-color:" + couleur + ";color:" + couleurTexte + "' readonly>" + login + ' : ' + insertion_emoticons(message, typeEmoticons).replace(/[\n]/g,'<br />') + "</div>";
 		$('#chat').prepend(nouveauMessage);
 		enregistreChat(nouveauMessage);
 	});

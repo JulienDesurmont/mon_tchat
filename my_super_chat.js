@@ -239,21 +239,21 @@ io.sockets.on('connection', function(socket) {
         myLogin = null;
 	}
 
-    socket.on('message', function(message, login){
+    socket.on('message', function(message, login, typeEmoticons){
         if (myTabBannis.includes(login)) {
             socket.emit('messageAdmin', 'Vous avez été banni');
         } else {
-            socket.emit('message', capitalize(message), login);
-            socket.broadcast.emit('message', capitalize(message), login);
+            socket.emit('message', capitalize(message), login, typeEmoticons);
+            socket.broadcast.emit('message', capitalize(message), login, typeEmoticons);
         }
     });
 
-    socket.on('messagePersonnel', function(message, login, utilisateur) {
+    socket.on('messagePersonnel', function(message, login, utilisateur, typeEmoticons) {
         if (myTabBannis.includes(login)) {
             socket.emit('messageAdmin', 'Vous avez été banni');
         } else {
-            socket.emit('message', '( à ' + utilisateur + ' ) ' + capitalize(message), login);
-            socket.broadcast.emit(utilisateur, '( privé ) ' + capitalize(message), login);
+            socket.emit('message', '( à ' + utilisateur + ' ) ' + capitalize(message), login, typeEmoticons);
+            socket.broadcast.emit(utilisateur, '( privé ) ' + capitalize(message), login, typeEmoticons);
         }
     });
 

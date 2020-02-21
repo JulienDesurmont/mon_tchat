@@ -32,3 +32,10 @@
 {"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_pouce.gif","service":"user-service","timestamp":"20-02-2020 23:30:42"}
 {"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_pouce.gif","service":"user-service","timestamp":"20-02-2020 23:32:51"}
 {"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_pouce.gif","service":"user-service","timestamp":"20-02-2020 23:33:39"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_superman.gif","service":"user-service","timestamp":"21-02-2020 12:26:05"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_superman.gif","service":"user-service","timestamp":"21-02-2020 12:35:14"}
+{"level":"error","message":"Chemin inconnu demandé : /images/undefined_emoticon_rire.gif","service":"user-service","timestamp":"21-02-2020 12:35:23"}
+{"level":"error","message":"Chemin inconnu demandé : /images/undefined_emoticon_rire.gif","service":"user-service","timestamp":"21-02-2020 12:35:29"}
+{"level":"error","message":"Chemin inconnu demandé : /images/undefined_emoticon_rire.gif","service":"user-service","timestamp":"21-02-2020 12:35:36"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_superman.gif","service":"user-service","timestamp":"21-02-2020 12:35:59"}
+{"level":"error","message":"Chemin inconnu demandé : /images/undefined_emoticon_rire.gif","service":"user-service","timestamp":"21-02-2020 12:35:59"}
