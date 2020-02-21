@@ -19,6 +19,8 @@ dtNoExpiration.setTime(dtNoExpiration.getTime() + (3600 * 24 * 365 * 1000));
 
 myDivListeUtilisateurs = $($('#div-liste-utilisateurs'));
 myDivChat = $($('#chat'));
+
+// Mise en forme mobile lors de la connexion
 if (document.body.clientWidth < 1280) 
 {
 	myTypeEcran = 'mobile';
@@ -27,11 +29,13 @@ if (document.body.clientWidth < 1280)
 	$('#envoi-socket-message').val('\u2713');
 	$('#option-activation-notifications').html('Notifications');
 	$('#option-reset-chat').html('Réinitialiser');
+	$('#spn-deconnexion span').html('Logout');
 } else 
 	myTypeEcran = 'pc';
 
 $('.show-on-logon').hide();
 
+// Mise en forme mobile et pc lors du redimensionnement de la page
 window.onresize = function(){
 	if (document.body.clientWidth < 1280) 
 	{
@@ -43,6 +47,7 @@ window.onresize = function(){
 			$('#envoi-socket-message').val('\u2713');
 			$('#option-activation-notifications').html('Notifications');
 			$('#option-reset-chat').html('Réinitialiser');
+			$('#spn-deconnexion span').html('Logout');
 		}
 	} else {
 		if (myTypeEcran != 'pc') 
@@ -53,6 +58,7 @@ window.onresize = function(){
 			$('#envoi-socket-message').val('Envoyer le message à tous');
 			$('#option-activation-notifications').html("Activer les notifications");
 			$('#option-reset-chat').html("Réinitialiser le t'chat");
+			$('#spn-deconnexion span').html('Déconnexion');
 		}
 	}
 };
@@ -311,11 +317,6 @@ $(document).ready(function()
 
 
 		$('#spn-deconnexion').click(function() 
-		{
-			$('#deconnexion').trigger('click');
-		});
-			
-		$('#deconnexion').click(function() 
 		{
 			// Suppression du login pour éviter la reconnexion automatique par cookie et pour pouvoir changer de login
 			setCookie('login', '');

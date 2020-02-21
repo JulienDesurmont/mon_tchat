@@ -24,7 +24,7 @@ header > div {
 }
 
 /* Placement de l'input couleur */
-header span +  div input {
+header div#options-couleurs input {
     margin-top: 5px;
 }
 
@@ -228,11 +228,18 @@ header > div {
 header h1 {
 	font-size: 20px;
 	margin-top: 10px;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
+
+
 /* Placement des div input couleur + titre h1 (login) */
-header span + div {
+header div#options-couleurs {
     margin-left: 0px;
+	margin-right: 50px;
 }
 
 .affichage-voiture {

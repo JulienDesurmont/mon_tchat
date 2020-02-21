@@ -130,8 +130,8 @@ app.use(session)
 		// Si le cookie existe mais que le login est déjà utilisé on supprime le cookie (on definit expires a 'maintenant')
 		if (! Object.keys(tabLogin).includes(utilisateur)) {
 			myLogin = utilisateur;
+			console.log('include avec acceuil -> cookie de ' + myLogin);
 			tabLogin[myLogin] = req.cookies['connect.sid'];
-			//console.log('include avec acceuil');
 			logger.log({
 				level: 'info',
 				message: "Nouveau login reçu : " + myLogin
@@ -183,7 +183,7 @@ app.use(session)
 })
 .post('/define/login', urlencodedParser, function(req, res) {
 	// Connexion depuis le formulaire de connexion
-    if (Object.keys(tabLogin).includes(req.body.login.toLowerCase())) {
+    if (Object.keys(tabLogin).includes(req.body.login.toLowerCase()) || (req.body.login.toLowerCase().substr(0,5) == 'admin')) {
 		messageAdmin = 'Le login ' + req.body.login + " est déjà en cours d'utilisation";
     } else {
 		var loginTmp;
@@ -192,7 +192,7 @@ app.use(session)
 			req.session.admin = true;
 			loginTmp = 'Admin';
 			// Cookie du compte Admin: Expire à la fin de la session
-			res.cookie('login', loginTmp, {httpOnly: true});
+			res.cookie('login', loginTmp);
 		} else {
 			req.session.admin = false;
 			loginTmp = req.body.login.toLowerCase();
@@ -231,7 +231,7 @@ io.sockets.on('connection', function(socket) {
 		socket.broadcast.emit('messageAdmin', socket.handshake.session.login + " s'est connecté", 'Admin');
 		// On recherche dans les clés du tableau tabLogin le parametre de nom 'login' et on vérifie son connect.sid
 		if (! Object.keys(tabLogin).includes(myLogin)) {
-			//console.log('include avec socket');
+			console.log('include avec socket de ' + myLogin);
 			tabLogin[myLogin] = myGetCookie(socket.handshake.headers.cookie, 'connect.sid');
 		}
 		socket.emit('listeUtilisateurs', Object.keys(tabLogin), Object.keys(tabLogin).length);

@@ -10,14 +10,14 @@
  		<form method='POST' action='/define/login' id='communication-formulaire' class='cacher'>
 			<p class='paragraphe-admin-login'><span class='message-admin'><%= message %></span><span id='spn-secure' class='chk-header-right option'>Cacher le login <input type='checkbox' name='secure' id='secure'></span></p>
 			<div>
-           		<input type='text' name='login' id='textbox-login' placeholder='Indiquez votre login' />
+           		<input type='text' name='login' id='textbox-login' placeholder='Indiquez votre login' maxlength=14 />
            		<input type='submit' id='submit-login' value='Envoyer le login' />
 			</div>
         </form>
 
 		<header class='show-on-logon'>
-			<span id='spn-deconnexion' class='chk-header-right option'>Déconnexion <input type='checkbox' id='deconnexion' /></span>
-			<div>
+			<span id='spn-deconnexion' class='chk-header-right option'><span>Déconnexion</span></span>
+			<div id='options-couleurs'>
 				<input type='color' <% if (couleur) { %>value=<%= couleur %> <% } else { %> value="#ffffff" <% } %> id="couleur" name="couleur" />
 				<h1 id='login'><% if (login) { %><%= login.charAt(0).toUpperCase() + login.substr(1)%> <% } %></h1>
 				<input type='color' <% if (couleurTexte) { %>value=<%= couleurTexte %> <% } else { %> value="#ffffff" <% } %> id="couleurTexte" name="couleurTexte" />
