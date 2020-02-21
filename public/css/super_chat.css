@@ -284,7 +284,10 @@ section#section-1 {
 #encart-ecriture-message {
     display: flex;
     flex-direction: row;
-    justify-content: ccenter;
+    justify-content: center;
+	border: 3px groove gray;
+	margin-bottom: 2px;
+	padding-top: 2px;
 }
 
 
