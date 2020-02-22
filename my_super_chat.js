@@ -1,24 +1,28 @@
 var http 				= require('http');
 var express 			= require('express');
 var app 				= express();
+// Lecture de l'URL
+var url                 = require('url');
+var path                = require('path');
 // Lecture de formulaire
 var bodyParser 			= require("body-parser");
 var urlencodedParser 	= bodyParser.urlencoded({extended : false});
 // Sert le favicon
 var favicon 			= require('serve-favicon');
-// Lecture de l'URL
-var url 				= require('url'); 
-var path 				= require('path');
 // Ecriture de logs
 var winston				= require('winston');
 // // Gestion de cookie
 var cookieParser		= require('cookie-parser');
 var cookie              = require('cookie');
 
+var myDefaultColor		= "#C2C1C1";
+var myDefaultColorText	= "#FFFFFF";
+
+var myTabConnectes		= [];
 
 var dtSuppressionCookie = new Date();
 
-// Valeur d'un cookie qui n'expire pas : On définie une années
+// Valeur d'un cookie qui n'expire pas : On définit une années
 // On multiplie par 1000 car le Time est exprimé en milliseconde
 var dtNoExpirationCookie = new Date();
 dtNoExpirationCookie.setTime(dtNoExpirationCookie.getTime() + (3600 * 24 * 365 * 1000));
@@ -94,7 +98,9 @@ function myIndexOf(searchParametre) {
 	return -1;
 }
 
-function myConnectSid(searchParametre) {
+
+// Fonction qui retourne la valeur du login du tableau tabLogin: Cette valeur correspond à l'host utilisé lors de l'enregistrement du login dans le tableau
+function myGetHost(searchParametre) {
     for(login in tabLogin) {
         if(searchParametre.trim() == login.trim()) {
             return tabLogin[login];
@@ -102,6 +108,7 @@ function myConnectSid(searchParametre) {
     }
     return -1;
 }
+
 
 
 
@@ -120,47 +127,46 @@ app.use(session)
 	if (! req.session.view) {
 		req.session.view = 1;
 	}
-	/*
-	} else {
-		req.session.view ++;
-	}
-	/*console.log('nb de connexion : ' + req.session.view);*/
+	// Lors de l'appel de la page d'accueil, on récupère le cookie login
 	utilisateur = req.cookies['login'];
 	if (utilisateur) {
-		// Si le cookie existe mais que le login est déjà utilisé on supprime le cookie (on definit expires a 'maintenant')
+		// Si le cookie login n'existe pas dans le tableau des logins, cad le nom de login n'est pas utilisé -> Login permis et enregistrement du login dans le tableau des logins
 		if (! Object.keys(tabLogin).includes(utilisateur)) {
 			myLogin = utilisateur;
-			console.log('include avec acceuil -> cookie de ' + myLogin);
-			tabLogin[myLogin] = req.cookies['connect.sid'];
+			var urlStr = 'http://' + req.headers.host + req.url;
+			// Un tableau de login est un tableau associatif où le login est associé à l'url
+			tabLogin[myLogin] = url.parse(urlStr).host;
 			logger.log({
 				level: 'info',
 				message: "Nouveau login reçu : " + myLogin
 			});
 		} else {
-			// Si le login est trouvé dans le tableau des logins en cours on vérifie qu'il apparatien à une autre session
-			if (myConnectSid(utilisateur).substr(-10) != req.cookies['connect.sid'].trim().substr(-10)) {
-				//console.log(myConnectSid(utilisateur).substr(-10) + ' != '+ req.cookies['connect.sid'].substr(-10));
-				messageAdmin = 'Le précédent login utilisé : ' + utilisateur + " est déjà en cours d'utilisation";
+			var urlStr = 'http://' + req.headers.host + req.url;
+			// Si le login du cookie est trouvé dans le tableau des logins en cours on vérifie si il est associé à l'url en cours d'utilisation : Permet d'avoir un tableau de login par url:port
+			if (myGetHost(utilisateur) != url.parse(urlStr).host) {
+				// Si il n'est pas associé à l'url courante dans le tableau des logins : on redirige vers la page de login
+				myLogin = null;
 			} else {
-				// Si il appartient à la session courante on redefini le login 
+				// Si il appartient à la session courante on redéfinit le login 
 				myLogin = utilisateur;
 			}
 		}
 	} else {
+		// Si le cookie login n'existe pas on redirige vers la page des logins.
 		myLogin = null;
 	}
 	//Suppression de parametre de cookie	: res.clearCookie('login');
-	//Creation de parametre de cookie 		: res.cookie('couleur', couleur, {maxAge: 9000000, httpOnly: true});
+	//Création de paramètre de cookie 		: res.cookie('couleur', couleur, {maxAge: 9000000, httpOnly: true});
 	// console.log('Cookies : ', req.cookies);
 	// console.log('Signed Cookie : ', req.signedCookies);
 	// res.cookie('ville', 'lille');
 	couleur = req.cookies['couleur'];
 	couleurTexte = req.cookies['couleurTexte'];
 	if(! couleur){
-		couleur = "#C2C1C1";
+		couleur = myDefaultColor;
 	}
 	if (! couleurTexte) {
-		couleurTexte = "#FFFFFF";
+		couleurTexte = myDefaultColorText;
 	}
 	res.render('index.ejs', {
 			login: myLogin, 
@@ -184,7 +190,7 @@ app.use(session)
 .post('/define/login', urlencodedParser, function(req, res) {
 	// Connexion depuis le formulaire de connexion
     if (Object.keys(tabLogin).includes(req.body.login.toLowerCase()) || (req.body.login.toLowerCase().substr(0,5) == 'admin')) {
-		messageAdmin = 'Le login ' + req.body.login + " est déjà en cours d'utilisation";
+		messageAdmin = 'Le login ' + req.body.login + " est déjà utilisé";
     } else {
 		var loginTmp;
 		// Selon le login utilisé on enregistre en variable de session si l'utilisateur est l'admin ou pas : Permet d'ajouter des info dans la page html
@@ -217,27 +223,60 @@ app.use(session)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 io.use(sessionSockets(session));
+
 io.sockets.on('connection', function(socket) {
+    function appelConnectes() {
+        myTabConnectes = [];
+		socket.emit('appelConnectes');
+        socket.broadcast.emit('appelConnectes');
+        return 0;
+    }
+
+
+    function actualisationListeDesConnectes() {
+        // On demande aux navigateurs connectés de se signaler
+        appelConnectes();
+        // Aprés un temps d'attente, pour permettre à tous les navigateurs de répondre, on actualise la liste des personnes connectés
+        setTimeout(function() {
+            socket.emit('listeUtilisateurs', myTabConnectes, myTabConnectes.length);
+            socket.broadcast.emit('listeUtilisateurs', myTabConnectes, myTabConnectes.length);
+        }, 1000);
+    }
+
+
 	// ! login si la page est affichée après la relance du serveur
 	if(! myLogin) {
 		socket.emit('refresh');
 	} else {
-		//console.log(myGetCookie(socket.handshake.headers.cookie, 'connect.sid'));
-		
-		// Si la variable de session socket 'login' n'est pas définie on va l'enregistrer
+		// Si le nombre de connectés différe du nombre sauvegardé en mémoire de programme, c'est qu'un nouvel utilisateur est arrivé (ce n'est pas un rafraichissement de page)
+		// Cela indique également que le bug deconnexion avant connexion lors de rafraichissement à eu lieu. Il faut donc actualiser la liste des utilisateurs du tableau tabLogin
+		// On enregistre le login dans une variable de session (de type socket.session) pour retrouver le login de la session lors de la demande de logout
 		socket.handshake.session.login = myLogin;
 		socket.emit('messageAdmin', 'Bienvenu sur le tchat ' + socket.handshake.session.login, 'Admin');
 		socket.broadcast.emit('messageAdmin', socket.handshake.session.login + " s'est connecté", 'Admin');
-		// On recherche dans les clés du tableau tabLogin le parametre de nom 'login' et on vérifie son connect.sid
-		if (! Object.keys(tabLogin).includes(myLogin)) {
-			console.log('include avec socket de ' + myLogin);
-			tabLogin[myLogin] = myGetCookie(socket.handshake.headers.cookie, 'connect.sid');
-		}
-		socket.emit('listeUtilisateurs', Object.keys(tabLogin), Object.keys(tabLogin).length);
-		socket.broadcast.emit('listeUtilisateurs', Object.keys(tabLogin), Object.keys(tabLogin).length);
-        myLogin = null;
+
+		actualisationListeDesConnectes();
+       	myLogin = null;
 	}
+
+
+ 	socket.on('estConnecte', function(login) {
+		if(! myTabConnectes.includes(login)) {
+			myTabConnectes.push(login);
+		}
+	});
 
     socket.on('message', function(message, login, typeEmoticons){
         if (myTabBannis.includes(login)) {
@@ -257,18 +296,30 @@ io.sockets.on('connection', function(socket) {
         }
     });
 
-    socket.on('disconnect', function(){
-        //console.log('disconnect');
+	// Fonction de déconnexion socket : appelée automatiquement à la fermeture du navigateur et parfois lors des rafraichissement de la page
+	// Pour detecter le rafraichissement de la page on verifie le cookie login. Si 
+    socket.on('disconnect', function() {
 		if (socket.handshake.session.login) {
-         	mySupprimeLogin(socket.handshake.session.login);
+			actualisationListeDesConnectes();
            	socket.broadcast.emit('messageAdmin', socket.handshake.session.login + " s'est déconnecté");
-           	socket.broadcast.emit('listeUtilisateurs', Object.keys(tabLogin), Object.keys(tabLogin).length);
            	logger.log({
            	    level: 'info',
            	    message: "Déconnexion de l'utilisateur " + socket.handshake.session.login
            	});
 		}
     });
+
+	// Fonction appelée lors de la demande de déconnexion
+	socket.on('logout',  function(login){
+        mySupprimeLogin(login);
+        socket.broadcast.emit('messageAdmin', login + " s'est déconnecté");
+		socket.broadcast.emit('listeUtilisateurs', Object.keys(tabLogin), Object.keys(tabLogin).length);
+		logger.log({
+			level: 'info',
+			message: "Déconnexion de l'utilisateur " + login
+		});
+    });
+
 
     socket.on('bannir', function(utilisateur) {
         myTabBannis.push(utilisateur);

@@ -320,9 +320,23 @@ $(document).ready(function()
 		{
 			// Suppression du login pour éviter la reconnexion automatique par cookie et pour pouvoir changer de login
 			setCookie('login', '');
-			socket.emit('disconnect');
+			socket.emit('logout');
 			window.location.reload();
 		});
+
+		$('#liste-emoticons').click(function()
+        {
+			var div = "<div id='div-liste-emoticons'></div>";
+			if ($('#liste-emoticons').is(':checked')) {
+				$('#chat').append(div);
+
+				/*$('#chat').addClass('liste-emoticons');*/
+				$('.chat').addClass('cacher');
+			} else {
+				$('#chat').removeClass('liste-emoticons');
+                $('.chat').removeClass('cacher');
+			}
+        });
 	} else {
 		// Transformation de l'input text du login en input password et inversement
 		$('#spn-secure').click(function() 

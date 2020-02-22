@@ -62,6 +62,12 @@ h1 {
 	display: none !important;
 }
 
+
+#sous-section-2 div#div-liste-emoticons {
+	background-image : url('../../images/liste_emoticons.jpg');
+	height: 700px;
+}
+
 /* Placement des cases à cocher "Deconnexion" et "cacher le login" */
 .chk-header-right {
 	position: fixed;
