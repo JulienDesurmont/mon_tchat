@@ -64,7 +64,7 @@ window.onresize = function(){
 };
 
 function setCookie(nom, valeur, expire, chemin, domaine, securite){
-	document.cookie = nom + ' = ' + escape(valeur) + '  ' +
+	document.cookie = nom + '_' + location.host.split(':').join('') + ' = ' + escape(valeur) + '  ' +
 	((expire == undefined) ? '' : ('; expires = ' + expire.toGMTString())) +
 	((chemin == undefined) ? '' : ('; path = ' + chemin)) +
 	((domaine == undefined) ? '' : ('; domain = ' + domaine)) +
@@ -72,9 +72,9 @@ function setCookie(nom, valeur, expire, chemin, domaine, securite){
 }
 
 function getCookie(name){
+	name = name + '_' + location.host.split(':').join('')
 	if(document.cookie.length == 0)
 		return null;
-
 	var regSepCookie = new RegExp('(; )', 'g');
 	var cookies = document.cookie.split(regSepCookie);
 	for(var i = 0; i < cookies.length; i++)
@@ -320,7 +320,7 @@ $(document).ready(function()
 		{
 			// Suppression du login pour éviter la reconnexion automatique par cookie et pour pouvoir changer de login
 			setCookie('login', '');
-			socket.emit('logout');
+			socket.emit('logout', myLogin);
 			window.location.reload();
 		});
 
@@ -435,6 +435,11 @@ $(document).ready(function()
 	{
 		if (myLogin != '') 
 			window.location.reload();
+	});
+
+	// Réponse à l'appel de navigaterus connectes
+	socket.on('appelConnectes', function() {
+		socket.emit('estConnecte', myLogin);
 	});
 
 });

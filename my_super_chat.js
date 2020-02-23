@@ -50,7 +50,7 @@ var myLoginAdmin = 'L@scslsdc59';
 var myTabBannis = [];
 
 var capitalize = function(str1){
-  return str1.charAt(0).toUpperCase() + str1.slice(1);
+	return str1.charAt(0).toUpperCase() + str1.slice(1);
 }
 
 const logger = winston.createLogger({
@@ -110,6 +110,9 @@ function myGetHost(searchParametre) {
 }
 
 
+function ajoutInfosUrl(name, req) {
+	return (name + '_' +  req.headers.host.split(':').join(''));
+}
 
 
 
@@ -128,7 +131,7 @@ app.use(session)
 		req.session.view = 1;
 	}
 	// Lors de l'appel de la page d'accueil, on récupère le cookie login
-	utilisateur = req.cookies['login'];
+	utilisateur = req.cookies[ajoutInfosUrl('login', req)];
 	if (utilisateur) {
 		// Si le cookie login n'existe pas dans le tableau des logins, cad le nom de login n'est pas utilisé -> Login permis et enregistrement du login dans le tableau des logins
 		if (! Object.keys(tabLogin).includes(utilisateur)) {
@@ -160,8 +163,8 @@ app.use(session)
 	// console.log('Cookies : ', req.cookies);
 	// console.log('Signed Cookie : ', req.signedCookies);
 	// res.cookie('ville', 'lille');
-	couleur = req.cookies['couleur'];
-	couleurTexte = req.cookies['couleurTexte'];
+	couleur = req.cookies[ajoutInfosUrl('couleur', req)];
+	couleurTexte = req.cookies[ajoutInfosUrl('couleurTexte', req)];
 	if(! couleur){
 		couleur = myDefaultColor;
 	}
@@ -198,12 +201,13 @@ app.use(session)
 			req.session.admin = true;
 			loginTmp = 'Admin';
 			// Cookie du compte Admin: Expire à la fin de la session
-			res.cookie('login', loginTmp);
+			res.cookie('login_' + req.headers.host.split(':').join(''), loginTmp);
 		} else {
 			req.session.admin = false;
 			loginTmp = req.body.login.toLowerCase();
+			nomCookieLogin = 'login_' + req.headers.host.split(':').join('');
 			// Cookie utilisateur : Sans date d'expiration
-			res.cookie('login', loginTmp, {expires: dtNoExpirationCookie});
+			res.cookie(nomCookieLogin, loginTmp, {expires: dtNoExpirationCookie}); 
 		}
 		logger.log({
 			level: 'info',
@@ -243,8 +247,6 @@ io.sockets.on('connection', function(socket) {
         socket.broadcast.emit('appelConnectes');
         return 0;
     }
-
-
     function actualisationListeDesConnectes() {
         // On demande aux navigateurs connectés de se signaler
         appelConnectes();
@@ -254,6 +256,7 @@ io.sockets.on('connection', function(socket) {
             socket.broadcast.emit('listeUtilisateurs', myTabConnectes, myTabConnectes.length);
         }, 1000);
     }
+
 
 
 	// ! login si la page est affichée après la relance du serveur
@@ -270,6 +273,8 @@ io.sockets.on('connection', function(socket) {
 		actualisationListeDesConnectes();
        	myLogin = null;
 	}
+
+
 
 
  	socket.on('estConnecte', function(login) {
@@ -297,7 +302,6 @@ io.sockets.on('connection', function(socket) {
     });
 
 	// Fonction de déconnexion socket : appelée automatiquement à la fermeture du navigateur et parfois lors des rafraichissement de la page
-	// Pour detecter le rafraichissement de la page on verifie le cookie login. Si 
     socket.on('disconnect', function() {
 		if (socket.handshake.session.login) {
 			actualisationListeDesConnectes();
@@ -319,7 +323,6 @@ io.sockets.on('connection', function(socket) {
 			message: "Déconnexion de l'utilisateur " + login
 		});
     });
-
 
     socket.on('bannir', function(utilisateur) {
         myTabBannis.push(utilisateur);

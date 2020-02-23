@@ -147,3 +147,4 @@
 {"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_lol.gif","service":"user-service","timestamp":"22-02-2020 17:15:52"}
 {"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_rire.gif","service":"user-service","timestamp":"22-02-2020 17:16:27"}
 {"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_lol.gif","service":"user-service","timestamp":"22-02-2020 17:16:27"}
+{"level":"error","message":"Chemin inconnu demandé : /define/login","service":"user-service","timestamp":"22-02-2020 18:09:57"}
