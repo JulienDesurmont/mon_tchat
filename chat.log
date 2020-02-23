@@ -9704,3 +9704,195 @@
 {"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:18:48"}
 {"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:18:59"}
 {"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:19:15"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 16:22:27"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 16:22:27"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_rire.gif","service":"user-service","timestamp":"23-02-2020 16:22:27"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_rire.gif","service":"user-service","timestamp":"23-02-2020 16:22:28"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_rire.gif","service":"user-service","timestamp":"23-02-2020 16:22:28"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"23-02-2020 16:22:31"}
+{"level":"info","message":"Déconnexion de l'utilisateur dzdz","service":"user-service","timestamp":"23-02-2020 16:22:36"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_rire.gif","service":"user-service","timestamp":"23-02-2020 16:22:36"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:24:23"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:25:36"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:26:24"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:26:24"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 16:26:38"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 16:26:38"}
+{"level":"info","message":"Déconnexion de l'utilisateur admin","service":"user-service","timestamp":"23-02-2020 16:26:50"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 16:26:50"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"23-02-2020 16:26:59"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"23-02-2020 16:26:59"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:32:55"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:33:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:34:20"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:34:56"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:35:55"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:36:28"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:45:09"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 16:55:02"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 16:55:19"}
+{"level":"info","message":"Nouveau login reçu : juju","service":"user-service","timestamp":"23-02-2020 16:55:24"}
+{"level":"info","message":"Nouveau login reçu : juju","service":"user-service","timestamp":"23-02-2020 16:55:24"}
+{"level":"info","message":"Déconnexion de l'utilisateur juju","service":"user-service","timestamp":"23-02-2020 16:55:36"}
+{"level":"info","message":"Nouveau login reçu : juju","service":"user-service","timestamp":"23-02-2020 16:56:21"}
+{"level":"info","message":"Nouveau login reçu : juju","service":"user-service","timestamp":"23-02-2020 16:57:07"}
+{"level":"info","message":"Déconnexion de l'utilisateur juju","service":"user-service","timestamp":"23-02-2020 16:57:12"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 16:58:11"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 16:58:11"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:16"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:17"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:18"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:18"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:19"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:21"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:23"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:27"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:49"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:53"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:53"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:53"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:53"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:54"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:58:54"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 16:59:34"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 17:08:02"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 17:10:43"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 17:25:41"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 17:27:55"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 17:29:04"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 17:34:51"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 17:36:53"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 17:37:43"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 17:38:23"}
+{"level":"info","message":"Déconnexion de l'utilisateur dzdz","service":"user-service","timestamp":"23-02-2020 17:38:27"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 17:38:30"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 17:55:21"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 17:57:40"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 17:58:11"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 18:03:28"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:04:00"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:04:12"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:05:16"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:06:20"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 18:13:26"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:13:56"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:14:27"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 18:14:52"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:15:02"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:15:13"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 18:16:12"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:16:32"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:16:53"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:17:05"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:17:06"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:17:07"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:17:07"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:17:09"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:17:29"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 18:19:04"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 18:19:25"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:19:26"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:19:37"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:19:43"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 18:22:51"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:22:56"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:23:01"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 18:24:24"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:24:29"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:24:34"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 18:28:07"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:28:12"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:28:17"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 18:28:41"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:28:47"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:28:52"}
+{"level":"info","message":"Nouveau login reçu : jju","service":"user-service","timestamp":"23-02-2020 18:29:43"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:29:59"}
+{"level":"info","message":"Déconnexion de l'utilisateur jju","service":"user-service","timestamp":"23-02-2020 18:30:14"}
+{"level":"info","message":"Nouveau login reçu : sqdqs","service":"user-service","timestamp":"23-02-2020 18:31:22"}
+{"level":"info","message":"Nouveau login reçu : sqdqs","service":"user-service","timestamp":"23-02-2020 18:31:22"}
+{"level":"info","message":"Déconnexion de l'utilisateur sqdqs","service":"user-service","timestamp":"23-02-2020 18:31:37"}
+{"level":"info","message":"Déconnexion de l'utilisateur sqdqs","service":"user-service","timestamp":"23-02-2020 18:32:06"}
+{"level":"info","message":"Nouveau login reçu : sqdqs","service":"user-service","timestamp":"23-02-2020 18:32:50"}
+{"level":"info","message":"Déconnexion de l'utilisateur sqdqs","service":"user-service","timestamp":"23-02-2020 18:33:01"}
+{"level":"info","message":"Déconnexion de l'utilisateur sqdqs","service":"user-service","timestamp":"23-02-2020 18:33:11"}
+{"level":"info","message":"Déconnexion de l'utilisateur sqdqs","service":"user-service","timestamp":"23-02-2020 18:33:31"}
+{"level":"info","message":"Déconnexion de l'utilisateur sqdqs","service":"user-service","timestamp":"23-02-2020 18:33:40"}
+{"level":"info","message":"Nouveau login reçu : 3936","service":"user-service","timestamp":"23-02-2020 18:34:14"}
+{"level":"info","message":"Nouveau login reçu : 3936","service":"user-service","timestamp":"23-02-2020 18:34:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur 3936","service":"user-service","timestamp":"23-02-2020 18:34:24"}
+{"level":"info","message":"Déconnexion de l'utilisateur 3936","service":"user-service","timestamp":"23-02-2020 18:34:44"}
+{"level":"info","message":"Déconnexion de l'utilisateur 3936","service":"user-service","timestamp":"23-02-2020 18:34:55"}
+{"level":"info","message":"Nouveau login reçu : 3936","service":"user-service","timestamp":"23-02-2020 18:37:54"}
+{"level":"info","message":"Déconnexion de l'utilisateur 3936","service":"user-service","timestamp":"23-02-2020 18:38:04"}
+{"level":"info","message":"Déconnexion de l'utilisateur 3936","service":"user-service","timestamp":"23-02-2020 18:38:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur 3936","service":"user-service","timestamp":"23-02-2020 18:38:50"}
+{"level":"info","message":"Déconnexion de l'utilisateur 3936","service":"user-service","timestamp":"23-02-2020 18:39:00"}
+{"level":"info","message":"Nouveau login reçu : 3936","service":"user-service","timestamp":"23-02-2020 18:39:39"}
+{"level":"info","message":"Nouveau login reçu : 3936","service":"user-service","timestamp":"23-02-2020 18:41:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur 3936","service":"user-service","timestamp":"23-02-2020 18:41:50"}
+{"level":"info","message":"Nouveau login reçu : 3653","service":"user-service","timestamp":"23-02-2020 18:42:33"}
+{"level":"info","message":"Nouveau login reçu : 3653","service":"user-service","timestamp":"23-02-2020 18:42:33"}
+{"level":"info","message":"Déconnexion de l'utilisateur 3653","service":"user-service","timestamp":"23-02-2020 18:42:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur 3653","service":"user-service","timestamp":"23-02-2020 18:42:39"}
+{"level":"info","message":"Nouveau login reçu : az","service":"user-service","timestamp":"23-02-2020 18:42:43"}
+{"level":"info","message":"Nouveau login reçu : az","service":"user-service","timestamp":"23-02-2020 18:42:43"}
+{"level":"info","message":"Déconnexion de l'utilisateur az","service":"user-service","timestamp":"23-02-2020 18:42:50"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 18:51:19"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 18:51:19"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 18:57:24"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 18:58:11"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 18:58:17"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 18:59:25"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 18:59:25"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 18:59:41"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 18:59:45"}
+{"level":"info","message":"Nouveau login reçu : test","service":"user-service","timestamp":"23-02-2020 18:59:58"}
+{"level":"info","message":"Nouveau login reçu : test","service":"user-service","timestamp":"23-02-2020 18:59:58"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:00:09"}
+{"level":"info","message":"Nouveau login reçu : test","service":"user-service","timestamp":"23-02-2020 19:02:15"}
+{"level":"info","message":"Nouveau login reçu : test","service":"user-service","timestamp":"23-02-2020 19:03:59"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:04:09"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:04:19"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:04:48"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:04:58"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:05:19"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:05:30"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:05:58"}
+{"level":"info","message":"Nouveau login reçu : test","service":"user-service","timestamp":"23-02-2020 19:09:53"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:10:03"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:10:13"}
+{"level":"info","message":"Nouveau login reçu : test","service":"user-service","timestamp":"23-02-2020 19:19:10"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:19:21"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:19:31"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:20:30"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:20:41"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:21:21"}
+{"level":"info","message":"Déconnexion de l'utilisateur test","service":"user-service","timestamp":"23-02-2020 19:21:49"}
+{"level":"info","message":"Nouveau login reçu : kiki","service":"user-service","timestamp":"23-02-2020 19:22:16"}
+{"level":"info","message":"Nouveau login reçu : kiki","service":"user-service","timestamp":"23-02-2020 19:22:16"}
+{"level":"info","message":"Déconnexion de l'utilisateur kiki","service":"user-service","timestamp":"23-02-2020 19:22:34"}
+{"level":"info","message":"Déconnexion de l'utilisateur kiki","service":"user-service","timestamp":"23-02-2020 19:23:07"}
+{"level":"info","message":"Nouveau login reçu : kikii","service":"user-service","timestamp":"23-02-2020 19:23:28"}
+{"level":"info","message":"Nouveau login reçu : kikii","service":"user-service","timestamp":"23-02-2020 19:23:28"}
+{"level":"info","message":"Déconnexion de l'utilisateur kikii","service":"user-service","timestamp":"23-02-2020 19:23:44"}
+{"level":"info","message":"Nouveau login reçu : kikii","service":"user-service","timestamp":"23-02-2020 19:25:46"}
+{"level":"info","message":"Déconnexion de l'utilisateur kikii","service":"user-service","timestamp":"23-02-2020 19:26:01"}
+{"level":"info","message":"Nouveau login reçu : 4321","service":"user-service","timestamp":"23-02-2020 19:26:39"}
+{"level":"info","message":"Nouveau login reçu : 4321","service":"user-service","timestamp":"23-02-2020 19:26:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur 4321","service":"user-service","timestamp":"23-02-2020 19:27:10"}
+{"level":"info","message":"Déconnexion de l'utilisateur 4321","service":"user-service","timestamp":"23-02-2020 19:30:51"}
+{"level":"info","message":"Nouveau login reçu : 3936","service":"user-service","timestamp":"23-02-2020 19:33:13"}
+{"level":"info","message":"Nouveau login reçu : 3936","service":"user-service","timestamp":"23-02-2020 19:33:13"}
+{"level":"info","message":"Déconnexion de l'utilisateur 3936","service":"user-service","timestamp":"23-02-2020 19:33:33"}
+{"level":"info","message":"Déconnexion de l'utilisateur 3936","service":"user-service","timestamp":"23-02-2020 19:33:56"}
+{"level":"info","message":"Nouveau login reçu : 3936","service":"user-service","timestamp":"23-02-2020 19:35:45"}
+{"level":"info","message":"Déconnexion de l'utilisateur 3936","service":"user-service","timestamp":"23-02-2020 19:36:20"}
+{"level":"info","message":"Nouveau login reçu : 3936","service":"user-service","timestamp":"23-02-2020 19:47:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur 3936","service":"user-service","timestamp":"23-02-2020 19:47:44"}
+{"level":"info","message":"Déconnexion de l'utilisateur 3936","service":"user-service","timestamp":"23-02-2020 19:47:44"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 19:47:47"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 19:47:47"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 19:48:40"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 19:49:10"}

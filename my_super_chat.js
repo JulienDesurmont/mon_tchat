@@ -1,3 +1,9 @@
+var myPortServeur       = 6969
+var myPrive            	= true;
+//Duree de la session privé = durée de validité du cookie autorisation 
+var myDureeSessionPrive	= 3600 * 24 * 1000;		// 1 journée
+// Durée d'un cookie illimité : Définit à une année
+var myDureeIllimite		= 3600 * 24 * 365 * 1000;
 var http 				= require('http');
 var express 			= require('express');
 var app 				= express();
@@ -14,23 +20,32 @@ var winston				= require('winston');
 // // Gestion de cookie
 var cookieParser		= require('cookie-parser');
 var cookie              = require('cookie');
-
 var myDefaultColor		= "#C2C1C1";
 var myDefaultColorText	= "#FFFFFF";
-
 var myTabConnectes		= [];
-
 var dtSuppressionCookie = new Date();
+var myPrivateNumber		= 2451;
+var myLogin;
+var tabLogin 			= [];
+var myLoginAdmin 		= 'L@scslsdc59';
+var myTabBannis 		= [];
 
-var mySecure 			= false;
-var mySecureNumber		= 2451;
+function defineDateExpiration(parametre) {
+    var dtExpiration = new Date();
+    switch(parametre) {
+        case 'autorisation' :
+			// On multiplie par 1000 car le Time est exprimé en milliseconde
+            dtExpiration.setTime(dtExpiration.getTime() + myDureeSessionPrive);
+			break;
+        case 'no-expire' :
+			// Valeur d'un cookie qui n'expire pas : On définit une année
+            dtExpiration.setTime(dtExpiration.getTime() + myDureeIllimite);
+			break;
+    }
+    return dtExpiration;
+}
 
-var myPortServeur		= 6969
 
-// Valeur d'un cookie qui n'expire pas : On définit une années
-// On multiplie par 1000 car le Time est exprimé en milliseconde
-var dtNoExpirationCookie = new Date();
-dtNoExpirationCookie.setTime(dtNoExpirationCookie.getTime() + (3600 * 24 * 365 * 1000));
 
 
 // Gestion de session && de session sur socket
@@ -39,20 +54,13 @@ var session = require('express-session') ({
 	resave: true,
 	saveUninitialized: true,
 	cookie: {
-		expires: dtNoExpirationCookie,
+		expires: defineDateExpiration('no-expire'),
 		httpOnly: false
 	}
 });
 var sessionSockets = require("express-socket.io-session");
-
 var server  = http.createServer(app);
 var io      = require("socket.io").listen(server);
-
-
-var myLogin;
-var tabLogin = [];
-var myLoginAdmin = 'L@scslsdc59';
-var myTabBannis = [];
 
 const logger = winston.createLogger({
 	level: 'info',
@@ -115,12 +123,34 @@ function ajoutInfosUrl(name, req) {
 	return (name + '_' +  req.headers.host.split(':').join(''));
 }
 
+
+
+// ----------------------------------------------------------------------------------------------------------
+// Création du cookie secure : Autorisation d'accès au tchat
+function creerCookieAutorisation(req, res) {
+	res.cookie(ajoutInfosUrl('autorisation', req), true, {expires: defineDateExpiration('autorisation')});
+	return res;
+}
+function isAutoriser(req) {
+	if (req.cookies[ajoutInfosUrl('autorisation', req)])
+	{
+		return true;
+	}
+	else 
+	{
+		return false;
+	}
+}
+
+
 function motDePasseSecurise() {
 	var laDate = new Date();
-	console.log('passe du jour : ')
-	console.log((laDate.getDate() + laDate.getMonth() + 1) *  laDate.getFullYear() + mySecureNumber);
-	return ((laDate.getDate() + laDate.getMonth() + 1) *  laDate.getFullYear() + mySecureNumber);
+	// info :  ( laDate.getMinutes() + 1)  pour évité lors des minutes = 0 d'avoir une division par 0
+	console.log('Passe actuel : ' + Math.trunc((laDate.getDate() + laDate.getMonth() + 1) *  laDate.getFullYear() / ( laDate.getMinutes() + 1)  + myPrivateNumber));
+	return (Math.trunc((laDate.getDate() + laDate.getMonth() + 1) *  laDate.getFullYear() / ( laDate.getMinutes() + 1)  + myPrivateNumber));
 }
+// On affiche le mot de passe au démarrage de l'application
+motDePasseSecurise();
 
 app.use(session)
 .use(express.static(path.join(__dirname, '/public')))
@@ -131,15 +161,24 @@ app.use(session)
 .get('/', function(req, res) {
 	res.redirect('/accueil');
 })
+
 .get('/accueil', function(req, res) {
-	// Permet de détecter les redemarrages serveur
+	var motDePasseNecessaire;
+	if ((myPrive == true) && (! isAutoriser(req)))
+	{
+		messageAdmin = "Tchat privé : Mot de passe nécessaire";
+		motDePasseNecessaire = true;
+	} else {
+		motDePasseNecessaire = false;
+	}
+	// Permet de détecter les redémarrages serveur
 	if (! req.session.view) {
 		req.session.view = 1;
 	}
 	// Lors de l'appel de la page d'accueil, on récupère le cookie login
 	utilisateur = req.cookies[ajoutInfosUrl('login', req)];
 	if (utilisateur) {
-		if ((mySecure == true) && (! req.session.autorise)) {
+		if (motDePasseNecessaire == true) {
 			myLogin = null;
     	} else {
 			// Si le cookie login n'existe pas dans le tableau des logins, cad le nom de login n'est pas utilisé -> Login permis et enregistrement du login dans le tableau des logins
@@ -188,11 +227,15 @@ app.use(session)
 			message: messageAdmin, 
 			couleur: couleur, 
 			couleurTexte: couleurTexte,
-			admin: req.session.admin
+			admin: req.session.admin,
+			tchatPrive: myPrive,
+			dureeSessionPrivee: myDureeSessionPrive,
+			motDePasseNecessaire: motDePasseNecessaire
 		}
 	);
 	messageAdmin = '';
 })
+
 .get('/message/:titre', function(req, res){
 	logger.log({
 		level: 'info',
@@ -200,15 +243,14 @@ app.use(session)
 	});
 	res.redirect('/accueil');
 })
+
 .post('/define/login', urlencodedParser, function(req, res) {
-	if(mySecure == false) {
-		req.session.autorise = true;
-	}
-	if(! req.session.autorise) {
-		if(req.body.login != motDePasseSecurise()) {
+	if ( (myPrive == true) && (! isAutoriser(req)) ){
+		if (req.body.login != motDePasseSecurise()) 
+		{
 			messageAdmin = "Tchat privé : Mot de passe nécessaire";
 		} else {
-			req.session.autorise = true;
+			res = creerCookieAutorisation(req, res);
 		}
 	} else {
 		// Connexion depuis le formulaire de connexion
@@ -221,13 +263,12 @@ app.use(session)
 				req.session.admin = true;
 				loginTmp = 'Admin';
 				// Cookie du compte Admin: Expire à la fin de la session
-				res.cookie('login_' + req.headers.host.split(':').join(''), loginTmp);
+				res.cookie(ajoutInfosUrl('login', req), loginTmp);
 			} else {
 				req.session.admin = false;
 				loginTmp = req.body.login.toLowerCase();
-				nomCookieLogin = 'login_' + req.headers.host.split(':').join('');
 				// Cookie utilisateur : Sans date d'expiration
-				res.cookie(nomCookieLogin, loginTmp, {expires: dtNoExpirationCookie}); 
+				res.cookie(ajoutInfosUrl('login', req), loginTmp, {expires: defineDateExpiration('no-expire')}); 
 			}
 			logger.log({
 				level: 'info',
@@ -237,6 +278,7 @@ app.use(session)
 	}
 	res.redirect('/accueil');
 })
+
 .use(function(req, res, next){
 	logger.log({
 		level: 'error',

@@ -10,8 +10,17 @@
  		<form method='POST' action='/define/login' id='communication-formulaire' class='cacher'>
 			<p class='paragraphe-admin-login'><span class='message-admin'><%= message %></span><span id='spn-secure' class='chk-header-right option'>Cacher le login <input type='checkbox' name='secure' id='secure'></span></p>
 			<div>
-           		<input type='text' name='login' id='textbox-login' placeholder='Indiquez votre login' maxlength=14 />
-           		<input type='submit' id='submit-login' value='Envoyer le login' />
+           		<input type='text' name='login' autocomplete="off" id='textbox-login'
+					data-is-prive=<%= tchatPrive %>  
+					data-duree-session=<%= dureeSessionPrivee %> 
+					<% if (motDePasseNecessaire) { %> 
+						placeholder='Indiquez le mot de passe' 
+					<% } else { %> 
+						placeholder='Indiquez votre login' 
+					<% } %> 
+					maxlength=14 
+				/>
+           		<input type='submit' id='submit-login' value='Envoyer' />
 			</div>
         </form>
 
@@ -36,8 +45,7 @@
 					<p class='paragraphe-admin'><span class='message-admin'><%= message %></span></p>
 					<div id='encart-ecriture-message'>
 						<p>
-							<textarea 	id='socket-message' name='socket-message' class='loupe-possible'>
-							</textarea>
+							<textarea id='socket-message' name='socket-message' class='loupe-possible'></textarea>
 						</p>
 						<p>
                         	<input type='button' id='envoi-socket-message' class='loupe-possible' value='Envoyer le message à tous' />

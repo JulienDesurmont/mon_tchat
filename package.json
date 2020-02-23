@@ -1,6 +1,6 @@
 {
 	"name": "Super-Chat",
-	"version": "0.3.0",
+	"version": "1.0.0",
 	"author": "Julien",
 	"description": "Le chat sur socket io ",
 	"dependencies": {

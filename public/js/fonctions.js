@@ -1,6 +1,14 @@
+var myPortServeur = 6969;
+// Dimension estimé pour passage à l'afficahge mobile : ! En cas de modification  : Modifer le css en conséquence
+var myWidthMobile = 700;
+
+
+
 var myLogin = $('#login').html().toLowerCase().trim();
 var myCouleur = $('#couleur').val();
 var myCouleurTexte = $('#couleurTexte').val();
+var myDureeSessionPrivee = $('#textbox-login').data('duree-session');
+var myPrive	= $('#textbox-login').data('is-prive');
 var receptionMessage;
 var myNotifications = 'false';
 var myAffichageVoiture;
@@ -15,10 +23,9 @@ var socket;
 // On multiplie par 1000 car le Time est exprimé en milliseconde
 var dtNoExpiration = new Date();
 dtNoExpiration.setTime(dtNoExpiration.getTime() + (3600 * 24 * 365 * 1000));
-
-var myWidthMobile = 700;
-
-var myPortServeur = 6969;
+// Date inférieure à la date du moment pour supprimer le cookie Autorisation 
+var dtDelete = new Date();
+dtDelete.setTime(dtDelete.getTime() - 20 * 1000);
 
 
 myDivListeUtilisateurs = $($('#div-liste-utilisateurs'));
@@ -55,7 +62,7 @@ window.onresize = function(){
 		}
 	} else {
 		if (myTypeEcran != 'pc') 
-		{
+		{	
 			myTypeEcran = 'pc';
 			$('#sous-section-2').html(myDivChat);
 			$('#sous-section-3').html(myDivListeUtilisateurs);
@@ -66,6 +73,7 @@ window.onresize = function(){
 		}
 	}
 };
+
 
 function setCookie(nom, valeur, expire, chemin, domaine, securite){
 	document.cookie = nom + '_' + location.host.split(':').join('') + ' = ' + escape(valeur) + '  ' +
@@ -195,6 +203,8 @@ function sendToUtilisateur(utilisateur)
 		{
 			socket.emit('messagePersonnel', $('#socket-message').val(), myLogin, utilisateur.trim(), myTypeEmoticons);
 			$('#socket-message').val("");
+			// On retire l'image des émoticons si elle est affichée lors de l'envoi d'un message.
+            removeListeEmoticons();
 		}
 	}
 }
@@ -209,6 +219,17 @@ function getChatClass() {
 	return classes;
 }
 
+function removeListeEmoticons() 
+{
+	// On retire l'image des emoticons si elle est affichée lors de l'envoi d'un message.
+	if($('.div-liste-emoticons').length)
+	{
+		$('#liste-emoticons').prop('checked', false);
+		$('.div-liste-emoticons').remove();
+		$('.chat').removeClass('cacher');
+	}
+}
+
 
 
 
@@ -218,6 +239,14 @@ $(document).ready(function()
 
 	if (myLogin != '') 
 	{
+	    // Si on est dans une session privé, rafraichissment automatique de la page après le delais max de la session privée
+	    if(myDureeSessionPrivee != 0) {
+	        setInterval(function() {
+				setCookie('autorisation','', dtDelete);
+	            window.location.assign(window.location.href);
+	        }, myDureeSessionPrivee);
+	    }
+
 		var nouveauMessage;
 		$('.show-on-logon').show();
 		$('#communication-formulaire').hide();
@@ -242,13 +271,7 @@ $(document).ready(function()
 			{
 				socket.emit('message', $('#socket-message').val(), myLogin, myTypeEmoticons);
 				$('#socket-message').val("");
-				// On retire l'image des emoticons si elle est affichée lors de l'envoi d'un message. 
-				if($('.div-liste-emoticons').length) 
-				{
-					$('#liste-emoticons').prop('checked', false);
-			    	$('.div-liste-emoticons').remove();
-                	$('.chat').removeClass('cacher');
-				}
+				removeListeEmoticons();
 			}
 		});
 
