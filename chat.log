@@ -9566,3 +9566,141 @@
 {"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 03:48:12"}
 {"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 03:48:13"}
 {"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 03:48:13"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 03:48:42"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 03:48:43"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 03:48:45"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"23-02-2020 10:48:09"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"23-02-2020 10:48:09"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 10:48:53"}
+{"level":"info","message":"Déconnexion de l'utilisateur dzdz","service":"user-service","timestamp":"23-02-2020 13:43:43"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 13:49:25"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 13:49:28"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 13:50:41"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 13:50:43"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 13:51:37"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 13:51:39"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 13:51:42"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 13:54:12"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 13:54:12"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 13:54:13"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 13:54:56"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 13:54:56"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 13:55:45"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 13:56:29"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 13:56:30"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 13:57:10"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 13:57:53"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 13:57:54"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 13:58:00"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 14:01:05"}
+{"level":"info","message":"Déconnexion de l'utilisateur dzdz","service":"user-service","timestamp":"23-02-2020 14:01:07"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 14:01:07"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 14:01:51"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 14:02:56"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 14:03:28"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"23-02-2020 14:07:04"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 14:12:35"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 14:13:11"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 14:13:42"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 14:14:19"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 14:15:18"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 14:21:00"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 14:21:27"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 14:31:06"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 14:36:28"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 14:36:35"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"23-02-2020 14:36:54"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 14:42:25"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 14:42:44"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 14:42:48"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 14:42:50"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"23-02-2020 14:42:55"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 14:43:05"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 14:45:01"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 14:46:45"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 14:48:00"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 14:48:00"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"23-02-2020 14:48:04"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 14:48:33"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 14:49:03"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 14:50:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 14:50:51"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 14:51:03"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 14:51:09"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 14:51:25"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 14:51:52"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 14:52:38"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 14:53:55"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 14:54:31"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 15:00:12"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 15:02:34"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:03:09"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:05:11"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:07:12"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 15:08:05"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:08:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 15:10:13"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:10:37"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:10:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 15:11:01"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 15:18:01"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 15:25:58"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 15:36:03"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:36:37"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:37:09"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:37:19"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:38:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:38:22"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:38:54"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:39:43"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:40:06"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 15:43:27"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"23-02-2020 15:43:30"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 15:48:46"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 15:48:47"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:48:47"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"23-02-2020 15:48:48"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 15:49:56"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 15:49:58"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:49:58"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"23-02-2020 15:50:04"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 15:50:20"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 15:50:22"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:50:28"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:50:28"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 15:52:08"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 15:52:13"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_lol.gif","service":"user-service","timestamp":"23-02-2020 15:52:15"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_lol.gif","service":"user-service","timestamp":"23-02-2020 15:52:15"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_rire.gif","service":"user-service","timestamp":"23-02-2020 15:52:37"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_rire.gif","service":"user-service","timestamp":"23-02-2020 15:52:37"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 15:53:03"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_lol.gif","service":"user-service","timestamp":"23-02-2020 15:53:03"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_rire.gif","service":"user-service","timestamp":"23-02-2020 15:53:03"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 15:58:11"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 15:59:05"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 15:59:31"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_lol.gif","service":"user-service","timestamp":"23-02-2020 15:59:32"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_rire.gif","service":"user-service","timestamp":"23-02-2020 15:59:32"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 15:59:34"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_lol.gif","service":"user-service","timestamp":"23-02-2020 15:59:34"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_rire.gif","service":"user-service","timestamp":"23-02-2020 15:59:34"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 16:04:28"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_lol.gif","service":"user-service","timestamp":"23-02-2020 16:04:28"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_rire.gif","service":"user-service","timestamp":"23-02-2020 16:04:28"}
+{"level":"info","message":"Nouveau login reçu : azer","service":"user-service","timestamp":"23-02-2020 16:04:29"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_lol.gif","service":"user-service","timestamp":"23-02-2020 16:04:30"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_rire.gif","service":"user-service","timestamp":"23-02-2020 16:04:30"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"23-02-2020 16:08:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:08:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur azer","service":"user-service","timestamp":"23-02-2020 16:09:41"}
+{"level":"error","message":"Chemin inconnu demandé : /images/null_emoticon_rire.gif","service":"user-service","timestamp":"23-02-2020 16:09:41"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:13:44"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:14:33"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:14:36"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:17:00"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:17:03"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:18:07"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:18:48"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:18:59"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 16:19:15"}

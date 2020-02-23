@@ -63,8 +63,10 @@ h1 {
 }
 
 
-#sous-section-2 div#div-liste-emoticons {
+div.div-liste-emoticons {
 	background-image : url('../../images/liste_emoticons.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
 	height: 700px;
 }
 
@@ -216,7 +218,35 @@ input[type='button'], input[type='submit'] {
     font-weight: bold;
 }
 
-@media screen  and (max-width: 1280px){
+
+
+
+
+
+
+
+
+
+
+@media screen  and (max-width: 1300px){
+div.div-liste-emoticons {
+    background-image : url('../../images/liste_emoticons_mobile.jpg');
+    height: 550px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen  and (max-width: 700px){
 body {
 	display: flex; 
 	flex-direction: column;
@@ -256,6 +286,12 @@ header div#options-couleurs {
 .only-pc {
 	display: none;
 }
+
+div.div-liste-emoticons {
+    background-image : url('../../images/liste_emoticons.jpg');
+    height: 700px;
+}
+
 
 
 
@@ -399,8 +435,19 @@ section#section-1 {
 #liste-utilisateurs p.utilisateur.loupe {
     font-size: 20px;
 }
-
-
-
-
 }
+
+
+
+
+
+
+
+
+@media screen  and (max-width: 550px){
+div.div-liste-emoticons {
+    background-image : url('../../images/liste_emoticons_mobile.jpg');
+    height: 550px;
+}
+}
+

@@ -25,6 +25,8 @@ var dtSuppressionCookie = new Date();
 var mySecure 			= false;
 var mySecureNumber		= 2451;
 
+var myPortServeur		= 6969
+
 // Valeur d'un cookie qui n'expire pas : On définit une années
 // On multiplie par 1000 car le Time est exprimé en milliseconde
 var dtNoExpirationCookie = new Date();
@@ -51,10 +53,6 @@ var myLogin;
 var tabLogin = [];
 var myLoginAdmin = 'L@scslsdc59';
 var myTabBannis = [];
-
-var capitalize = function(str1){
-	return str1.charAt(0).toUpperCase() + str1.slice(1);
-}
 
 const logger = winston.createLogger({
 	level: 'info',
@@ -310,8 +308,8 @@ io.sockets.on('connection', function(socket) {
         if (myTabBannis.includes(login)) {
             socket.emit('messageAdmin', 'Vous avez été banni');
         } else {
-            socket.emit('message', capitalize(message), login, typeEmoticons);
-            socket.broadcast.emit('message', capitalize(message), login, typeEmoticons);
+            socket.emit('message', message, login, typeEmoticons);
+            socket.broadcast.emit('message', message, login, typeEmoticons);
         }
     });
 
@@ -319,8 +317,8 @@ io.sockets.on('connection', function(socket) {
         if (myTabBannis.includes(login)) {
             socket.emit('messageAdmin', 'Vous avez été banni');
         } else {
-            socket.emit('message', '( à ' + utilisateur + ' ) ' + capitalize(message), login, typeEmoticons);
-            socket.broadcast.emit(utilisateur, '( privé ) ' + capitalize(message), login, typeEmoticons);
+            socket.emit('message', '( à ' + utilisateur + ' ) ' + message, login, typeEmoticons);
+            socket.broadcast.emit(utilisateur, '( privé ) ' + message, login, typeEmoticons);
         }
     });
 
@@ -353,6 +351,6 @@ io.sockets.on('connection', function(socket) {
 
 });
 
-server.listen(6969);
+server.listen(myPortServeur);
 
 

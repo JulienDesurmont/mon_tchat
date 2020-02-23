@@ -16,12 +16,16 @@ var socket;
 var dtNoExpiration = new Date();
 dtNoExpiration.setTime(dtNoExpiration.getTime() + (3600 * 24 * 365 * 1000));
 
+var myWidthMobile = 700;
+
+var myPortServeur = 6969;
+
 
 myDivListeUtilisateurs = $($('#div-liste-utilisateurs'));
 myDivChat = $($('#chat'));
 
 // Mise en forme mobile lors de la connexion
-if (document.body.clientWidth < 1280) 
+if (document.body.clientWidth < myWidthMobile) 
 {
 	myTypeEcran = 'mobile';
 	$('#section-2').html(myDivListeUtilisateurs);
@@ -37,7 +41,7 @@ $('.show-on-logon').hide();
 
 // Mise en forme mobile et pc lors du redimensionnement de la page
 window.onresize = function(){
-	if (document.body.clientWidth < 1280) 
+	if (document.body.clientWidth < myWidthMobile) 
 	{
 		if (myTypeEcran != 'mobile') 
 		{
@@ -99,9 +103,12 @@ if (myAffichageVoiture = getCookie('affichageVoiture'))
 
 
 // On coche ou décoche la checkbox emoticon en fonction de la valeur du cookie si il existe
-if (myTypeEmoticons = getCookie('typeEmoticons'))
+if (getCookie('typeEmoticons'))
+{
+	myTypeEmoticons = getCookie('typeEmoticons');
     if (myTypeEmoticons == 'emojis')
         $('#emoticons-animes').prop("checked", true);
+}
 
 
 
@@ -207,13 +214,14 @@ function getChatClass() {
 
 $(document).ready(function()
 {
-	socket = io.connect("http://vps614872.ovh.net:6969");
+	socket = io.connect("http://vps614872.ovh.net:" + myPortServeur);
 
 	if (myLogin != '') 
 	{
 		var nouveauMessage;
 		$('.show-on-logon').show();
 		$('#communication-formulaire').hide();
+		$('#liste-emoticons').prop('checked', false);
 
 		if (getCookie('chat')) 
 		{
@@ -234,6 +242,13 @@ $(document).ready(function()
 			{
 				socket.emit('message', $('#socket-message').val(), myLogin, myTypeEmoticons);
 				$('#socket-message').val("");
+				// On retire l'image des emoticons si elle est affichée lors de l'envoi d'un message. 
+				if($('.div-liste-emoticons').length) 
+				{
+					$('#liste-emoticons').prop('checked', false);
+			    	$('.div-liste-emoticons').remove();
+                	$('.chat').removeClass('cacher');
+				}
 			}
 		});
 
@@ -326,12 +341,13 @@ $(document).ready(function()
 
 		$('#liste-emoticons').click(function()
         {
-			var div = "<div id='div-liste-emoticons'></div>";
+			var div = "<div class='div-liste-emoticons'></div>";
 			if ($('#liste-emoticons').is(':checked')) {
 				$('#chat').prepend(div);
+				$('#section-2').prepend(div);
 				$('.chat').addClass('cacher');
 			} else {
-				$('#div-liste-emoticons').remove();
+				$('.div-liste-emoticons').remove();
                 $('.chat').removeClass('cacher');
 			}
         });
