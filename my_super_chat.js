@@ -22,6 +22,9 @@ var myTabConnectes		= [];
 
 var dtSuppressionCookie = new Date();
 
+var mySecure 			= false;
+var mySecureNumber		= 2451;
+
 // Valeur d'un cookie qui n'expire pas : On définit une années
 // On multiplie par 1000 car le Time est exprimé en milliseconde
 var dtNoExpirationCookie = new Date();
@@ -114,7 +117,12 @@ function ajoutInfosUrl(name, req) {
 	return (name + '_' +  req.headers.host.split(':').join(''));
 }
 
-
+function motDePasseSecurise() {
+	var laDate = new Date();
+	console.log('passe du jour : ')
+	console.log((laDate.getDate() + laDate.getMonth() + 1) *  laDate.getFullYear() + mySecureNumber);
+	return ((laDate.getDate() + laDate.getMonth() + 1) *  laDate.getFullYear() + mySecureNumber);
+}
 
 app.use(session)
 .use(express.static(path.join(__dirname, '/public')))
@@ -133,25 +141,29 @@ app.use(session)
 	// Lors de l'appel de la page d'accueil, on récupère le cookie login
 	utilisateur = req.cookies[ajoutInfosUrl('login', req)];
 	if (utilisateur) {
-		// Si le cookie login n'existe pas dans le tableau des logins, cad le nom de login n'est pas utilisé -> Login permis et enregistrement du login dans le tableau des logins
-		if (! Object.keys(tabLogin).includes(utilisateur)) {
-			myLogin = utilisateur;
-			var urlStr = 'http://' + req.headers.host + req.url;
-			// Un tableau de login est un tableau associatif où le login est associé à l'url
-			tabLogin[myLogin] = url.parse(urlStr).host;
-			logger.log({
-				level: 'info',
-				message: "Nouveau login reçu : " + myLogin
-			});
-		} else {
-			var urlStr = 'http://' + req.headers.host + req.url;
-			// Si le login du cookie est trouvé dans le tableau des logins en cours on vérifie si il est associé à l'url en cours d'utilisation : Permet d'avoir un tableau de login par url:port
-			if (myGetHost(utilisateur) != url.parse(urlStr).host) {
-				// Si il n'est pas associé à l'url courante dans le tableau des logins : on redirige vers la page de login
-				myLogin = null;
-			} else {
-				// Si il appartient à la session courante on redéfinit le login 
+		if ((mySecure == true) && (! req.session.autorise)) {
+			myLogin = null;
+    	} else {
+			// Si le cookie login n'existe pas dans le tableau des logins, cad le nom de login n'est pas utilisé -> Login permis et enregistrement du login dans le tableau des logins
+			if (! Object.keys(tabLogin).includes(utilisateur)) {
 				myLogin = utilisateur;
+				var urlStr = 'http://' + req.headers.host + req.url;
+				// Un tableau de login est un tableau associatif où le login est associé à l'url
+				tabLogin[myLogin] = url.parse(urlStr).host;
+				logger.log({
+					level: 'info',
+					message: "Nouveau login reçu : " + myLogin
+				});
+			} else {
+				var urlStr = 'http://' + req.headers.host + req.url;
+				// Si le login du cookie est trouvé dans le tableau des logins en cours on vérifie si il est associé à l'url en cours d'utilisation : Permet d'avoir un tableau de login par url:port
+				if (myGetHost(utilisateur) != url.parse(urlStr).host) {
+					// Si il n'est pas associé à l'url courante dans le tableau des logins : on redirige vers la page de login
+					myLogin = null;
+				} else {
+					// Si il appartient à la session courante on redéfinit le login 
+					myLogin = utilisateur;
+				}
 			}
 		}
 	} else {
@@ -191,28 +203,39 @@ app.use(session)
 	res.redirect('/accueil');
 })
 .post('/define/login', urlencodedParser, function(req, res) {
-	// Connexion depuis le formulaire de connexion
-    if (Object.keys(tabLogin).includes(req.body.login.toLowerCase()) || (req.body.login.toLowerCase().substr(0,5) == 'admin')) {
-		messageAdmin = 'Le login ' + req.body.login + " est déjà utilisé";
-    } else {
-		var loginTmp;
-		// Selon le login utilisé on enregistre en variable de session si l'utilisateur est l'admin ou pas : Permet d'ajouter des info dans la page html
-		if (req.body.login == myLoginAdmin) {
-			req.session.admin = true;
-			loginTmp = 'Admin';
-			// Cookie du compte Admin: Expire à la fin de la session
-			res.cookie('login_' + req.headers.host.split(':').join(''), loginTmp);
+	if(mySecure == false) {
+		req.session.autorise = true;
+	}
+	if(! req.session.autorise) {
+		if(req.body.login != motDePasseSecurise()) {
+			messageAdmin = "Tchat privé : Mot de passe nécessaire";
 		} else {
-			req.session.admin = false;
-			loginTmp = req.body.login.toLowerCase();
-			nomCookieLogin = 'login_' + req.headers.host.split(':').join('');
-			// Cookie utilisateur : Sans date d'expiration
-			res.cookie(nomCookieLogin, loginTmp, {expires: dtNoExpirationCookie}); 
+			req.session.autorise = true;
 		}
-		logger.log({
-			level: 'info',
-			message: "Nouveau login reçu : " + loginTmp
-		});
+	} else {
+		// Connexion depuis le formulaire de connexion
+	    if (Object.keys(tabLogin).includes(req.body.login.toLowerCase()) || (req.body.login.toLowerCase().substr(0,5) == 'admin')) {
+			messageAdmin = 'Le login ' + req.body.login + " est déjà utilisé";
+	    } else {
+			var loginTmp;
+			// Selon le login utilisé on enregistre en variable de session si l'utilisateur est l'admin ou pas : Permet d'ajouter des info dans la page html
+			if (req.body.login == myLoginAdmin) {
+				req.session.admin = true;
+				loginTmp = 'Admin';
+				// Cookie du compte Admin: Expire à la fin de la session
+				res.cookie('login_' + req.headers.host.split(':').join(''), loginTmp);
+			} else {
+				req.session.admin = false;
+				loginTmp = req.body.login.toLowerCase();
+				nomCookieLogin = 'login_' + req.headers.host.split(':').join('');
+				// Cookie utilisateur : Sans date d'expiration
+				res.cookie(nomCookieLogin, loginTmp, {expires: dtNoExpirationCookie}); 
+			}
+			logger.log({
+				level: 'info',
+				message: "Nouveau login reçu : " + loginTmp
+			});
+		}
 	}
 	res.redirect('/accueil');
 })

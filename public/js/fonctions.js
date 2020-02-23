@@ -328,12 +328,10 @@ $(document).ready(function()
         {
 			var div = "<div id='div-liste-emoticons'></div>";
 			if ($('#liste-emoticons').is(':checked')) {
-				$('#chat').append(div);
-
-				/*$('#chat').addClass('liste-emoticons');*/
+				$('#chat').prepend(div);
 				$('.chat').addClass('cacher');
 			} else {
-				$('#chat').removeClass('liste-emoticons');
+				$('#div-liste-emoticons').remove();
                 $('.chat').removeClass('cacher');
 			}
         });
@@ -362,7 +360,7 @@ $(document).ready(function()
 		setTimeout(function() 
 		{
 			$("#communication-formulaire").removeClass('cacher');
-		}, 2000);
+		}, 100);
 	}
 
 
