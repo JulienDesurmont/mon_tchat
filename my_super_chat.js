@@ -1,5 +1,5 @@
 var myPortServeur       = 6969
-var myPrive            	= true;
+var myPrive            	= false;
 //Duree de la session privé = durée de validité du cookie autorisation 
 var myDureeSessionPrive	= 3600 * 24 * 1000;		// 1 journée
 // Durée d'un cookie illimité : Définit à une année
@@ -40,6 +40,9 @@ function defineDateExpiration(parametre) {
         case 'no-expire' :
 			// Valeur d'un cookie qui n'expire pas : On définit une année
             dtExpiration.setTime(dtExpiration.getTime() + myDureeIllimite);
+			break;
+		case 'has-expired' :
+			dtExpiration.setTime(dtExpiration.getTime() - myDureeSessionPrive)
 			break;
     }
     return dtExpiration;
@@ -149,8 +152,11 @@ function motDePasseSecurise() {
 	console.log('Passe actuel : ' + Math.trunc((laDate.getDate() + laDate.getMonth() + 1) *  laDate.getFullYear() / ( laDate.getMinutes() + 1)  + myPrivateNumber));
 	return (Math.trunc((laDate.getDate() + laDate.getMonth() + 1) *  laDate.getFullYear() / ( laDate.getMinutes() + 1)  + myPrivateNumber));
 }
-// On affiche le mot de passe au démarrage de l'application
-motDePasseSecurise();
+if (myPrive) 
+{
+	// On affiche le mot de passe au démarrage de l'application
+	motDePasseSecurise();
+}
 
 app.use(session)
 .use(express.static(path.join(__dirname, '/public')))
@@ -178,28 +184,34 @@ app.use(session)
 	// Lors de l'appel de la page d'accueil, on récupère le cookie login
 	utilisateur = req.cookies[ajoutInfosUrl('login', req)];
 	if (utilisateur) {
-		if (motDePasseNecessaire == true) {
+		if (myTabConnectes.includes(utilisateur)) {
+            messageAdmin = 'Le login ' + utilisateur + " est déjà utilisé";
+			res.cookie(ajoutInfosUrl('login', req), utilisateur, {expires: defineDateExpiration('has-expired')});
 			myLogin = null;
-    	} else {
-			// Si le cookie login n'existe pas dans le tableau des logins, cad le nom de login n'est pas utilisé -> Login permis et enregistrement du login dans le tableau des logins
-			if (! Object.keys(tabLogin).includes(utilisateur)) {
-				myLogin = utilisateur;
-				var urlStr = 'http://' + req.headers.host + req.url;
-				// Un tableau de login est un tableau associatif où le login est associé à l'url
-				tabLogin[myLogin] = url.parse(urlStr).host;
-				logger.log({
-					level: 'info',
-					message: "Nouveau login reçu : " + myLogin
-				});
-			} else {
-				var urlStr = 'http://' + req.headers.host + req.url;
-				// Si le login du cookie est trouvé dans le tableau des logins en cours on vérifie si il est associé à l'url en cours d'utilisation : Permet d'avoir un tableau de login par url:port
-				if (myGetHost(utilisateur) != url.parse(urlStr).host) {
-					// Si il n'est pas associé à l'url courante dans le tableau des logins : on redirige vers la page de login
-					myLogin = null;
-				} else {
-					// Si il appartient à la session courante on redéfinit le login 
+		} else {
+			if (motDePasseNecessaire == true) {
+				myLogin = null;
+    		} else {
+				// Si le cookie login n'existe pas dans le tableau des logins, cad le nom de login n'est pas utilisé -> Login permis et enregistrement du login dans le tableau des logins
+				if (! Object.keys(tabLogin).includes(utilisateur)) {
 					myLogin = utilisateur;
+					var urlStr = 'http://' + req.headers.host + req.url;
+					// Un tableau de login est un tableau associatif où le login est associé à l'url
+					tabLogin[myLogin] = url.parse(urlStr).host;
+					logger.log({
+						level: 'info',
+						message: "Nouveau login reçu : " + myLogin
+					});
+				} else {
+					var urlStr = 'http://' + req.headers.host + req.url;
+					// Si le login du cookie est trouvé dans le tableau des logins en cours on vérifie si il est associé à l'url en cours d'utilisation : Permet d'avoir un tableau de login par url:port
+					if (myGetHost(utilisateur) != url.parse(urlStr).host) {
+						// Si il n'est pas associé à l'url courante dans le tableau des logins : on redirige vers la page de login
+						myLogin = null;
+					} else {
+						// Si il appartient à la session courante on redéfinit le login 
+						myLogin = utilisateur;
+					}
 				}
 			}
 		}
@@ -332,7 +344,8 @@ io.sockets.on('connection', function(socket) {
 		socket.handshake.session.login = myLogin;
 		socket.emit('messageAdmin', 'Bienvenu sur le tchat ' + socket.handshake.session.login, 'Admin');
 		socket.broadcast.emit('messageAdmin', socket.handshake.session.login + " s'est connecté", 'Admin');
-
+		// Le compte admin doit se rafraichir pour récupérer la nouvelle table tabLogin
+		socket.broadcast.emit('admin', 'please do refresh', 'Admin');
 		actualisationListeDesConnectes();
        	myLogin = null;
 	}
@@ -390,6 +403,13 @@ io.sockets.on('connection', function(socket) {
     socket.on('bannir', function(utilisateur) {
         myTabBannis.push(utilisateur);
     });
+
+	socket.on('removeFromChat', function(user, login, typeEmoticons) {
+		mySupprimeLogin(user);		
+		message = "L'utilisateur " + user + " a été retiré des membres du tchat";
+		socket.emit('message', message, login, typeEmoticons);
+		socket.emit('refresh');
+	});
 
 });
 

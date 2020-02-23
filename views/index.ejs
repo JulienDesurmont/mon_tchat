@@ -7,6 +7,7 @@
 	</head>
 
 	<body>
+		<div id='tab-login' style='display:none' data-tab-login=<%= tabLogin %>></div>
  		<form method='POST' action='/define/login' id='communication-formulaire' class='cacher'>
 			<p class='paragraphe-admin-login'><span class='message-admin'><%= message %></span><span id='spn-secure' class='chk-header-right option'>Cacher le login <input type='checkbox' name='secure' id='secure'></span></p>
 			<div>
@@ -56,15 +57,23 @@
 					<div id='div-liste-utilisateurs'>
                     	<% if (login) {%>
                     	    <h1>
-                    	        <% if (nombreDePostesConnectes > 1) { %>
-                    	            <span id='nombreDePostesConnectes'><%= nombreDePostesConnectes %></span> &nbsp; utilisateurs : 
-                    	        <% } else if (nombreDePostesConnectes == 1) { %>
-                    	            Est connecté
-                    	        <% } else { %>
-                    	            0 utilisateur
-                    	        <% } %>
+								<% if (login == 'Admin') { %>
+									Liste des membres du Tchat
+								<% } else { %>
+                    	        	<% if (nombreDePostesConnectes > 1) { %>
+                    	        	    <span id='nombreDePostesConnectes'><%= nombreDePostesConnectes %></span> &nbsp; utilisateurs : 
+                    	        	<% } else if (nombreDePostesConnectes == 1) { %>
+                    	        	    Est connecté
+                    	        	<% } else { %>
+                    	        	    0 utilisateur
+                    	        	<% } %>
+								<% } %>
                     	    </h1>
-                    	    <p><i><b>(cliquez sur un nom pour envoyer le message en privé)</b></i></p>
+                    	    <% if (login == 'Admin') { %>
+								<p><i><b>(cliquez sur un nom pour le retirer de la liste)</b></i></p>
+							<% } else { %>
+								<p><i><b>(cliquez sur un nom pour envoyer le message en privé)</b></i></p>
+							<% } %>
                     	    <div id='liste-utilisateurs'>
                     	        <% tabLogin.forEach(function(user) { %>
                     	            <p class='utilisateur loupe-possible option' onClick=sendToUtilisateur('<%= user %>');><%= user %></p>

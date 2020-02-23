@@ -17,6 +17,7 @@ var myTypeEcran;
 var myDivListeUtilisateurs;
 var myDivChat;
 var myChat = [];
+var myTabLogin = $('#tab-login').data('tab-login').split(',');
 var myMaxEntreesTab = 10;
 var socket;
 // Valeur d'un cookie qui n'expire pas : On définie une années
@@ -230,6 +231,10 @@ function removeListeEmoticons()
 	}
 }
 
+function removeFromChat(utilisateur) {
+	socket.emit('removeFromChat', utilisateur, myLogin, myTypeEmoticons);
+}
+
 
 
 
@@ -359,7 +364,7 @@ $(document).ready(function()
 			// Suppression du login pour éviter la reconnexion automatique par cookie et pour pouvoir changer de login
 			setCookie('login', '');
 			socket.emit('logout', myLogin);
-			window.location.reload();
+			window.location.assign(window.location.href);
 		});
 
 		$('#liste-emoticons').click(function()
@@ -403,16 +408,29 @@ $(document).ready(function()
 	}
 
 
-	// PROBLEME
     socket.on(myLogin, function(message, login, typeEmoticons)
     {
-        if (myNotifications == 'true')
-            if (! document.hasFocus())
-                if (typeof(receptionMessage) == 'undefined')
-                    receptionMessage = setInterval('FaireClignoterTitre("!")', 1000);
-        nouveauMessage = "<div class='chat " + getChatClass() + "'>" + login + ' : ' + insertion_emoticons(message, typeEmoticons).replace(/[\n]/g,'<br />') + "</div>";
-        $('#chat').prepend(nouveauMessage);
-        enregistreChat(nouveauMessage);
+		var action = false;
+		if (myLogin == 'admin') 
+		{
+			switch(message) {
+				case 'please do refresh' :
+					action = true;
+					window.location.assign(window.location.href);
+					break;
+			}
+		}
+
+		if (action == false) 
+		{
+        	if (myNotifications == 'true')
+        	    if (! document.hasFocus())
+        	        if (typeof(receptionMessage) == 'undefined')
+        	            receptionMessage = setInterval('FaireClignoterTitre("!")', 1000);
+        	nouveauMessage = "<div class='chat " + getChatClass() + "'>" + login + ' : ' + insertion_emoticons(message, typeEmoticons).replace(/[\n]/g,'<br />') + "</div>";
+        	$('#chat').prepend(nouveauMessage);
+        	enregistreChat(nouveauMessage);
+		}
     });
 
 
@@ -453,16 +471,28 @@ $(document).ready(function()
 
 	socket.on('listeUtilisateurs', function(tabUtilisateurs, nbPostesConnectes)
 	{
-		if (tabUtilisateurs.length > 1) 
-			$('#div-liste-utilisateurs h1').html("<span id='nombreDePostesConnectes'>tabUtilisateurs.length</span> &nbsp; utilisateurs : ");
-		else if (tabUtilisateurs.length == 1)
-			$('#div-liste-utilisateurs h1').html("Est connecté");
-		else 
-			$('#div-liste-utilisateurs h1').html("0 utilisateur connectés");
 		var textHtml = '';
-		tabUtilisateurs.forEach(function(user){
-			textHtml += "<p class='utilisateur option " + getChatClass() + "' onClick=sendToUtilisateur('" + user + "');>" + user + '</p>';
-		});
+        if (myLogin == 'admin')
+        {
+			myTabLogin.forEach(function(user) {
+				if (tabUtilisateurs.includes(user) || (user == 'Admin')) {
+					textHtml += "<p class='utilisateur option " + getChatClass() + "' onClick=sendToUtilisateur('" + user + "');>" + user + '</p>';
+				} else {
+					textHtml += "<p class='utilisateur option " + getChatClass() + "' onClick=removeFromChat('" + user + "');>" + user + ' (non connecté)</p>';
+				}
+			});	
+        } else {
+			if (tabUtilisateurs.length > 1)
+        	    $('#div-liste-utilisateurs h1').html("<span id='nombreDePostesConnectes'>tabUtilisateurs.length</span> &nbsp; utilisateurs : ");
+        	else if (tabUtilisateurs.length == 1)
+        	    $('#div-liste-utilisateurs h1').html("Est connecté");
+        	else
+            	$('#div-liste-utilisateurs h1').html("0 utilisateur connectés");
+
+			tabUtilisateurs.forEach(function(user){
+				textHtml += "<p class='utilisateur option " + getChatClass() + "' onClick=sendToUtilisateur('" + user + "');>" + user + '</p>';
+			});
+		}
 		$('#liste-utilisateurs').html(textHtml);
 		$('#nombreDePostesConnectes').html(nbPostesConnectes);
 	});
@@ -471,7 +501,7 @@ $(document).ready(function()
 	socket.on('refresh', function()
 	{
 		if (myLogin != '') 
-			window.location.reload();
+			window.location.assign(window.location.href);
 	});
 
 	// Réponse à l'appel de navigaterus connectes

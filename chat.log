@@ -9896,3 +9896,283 @@
 {"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 19:47:47"}
 {"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 19:48:40"}
 {"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 19:49:10"}
+{"level":"info","message":"Nouveau login reçu : zeilu","service":"user-service","timestamp":"23-02-2020 20:17:39"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 20:20:56"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 20:21:09"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 20:21:27"}
+{"level":"info","message":"Déconnexion de l'utilisateur dzdz","service":"user-service","timestamp":"23-02-2020 20:22:07"}
+{"level":"info","message":"Déconnexion de l'utilisateur dzdz","service":"user-service","timestamp":"23-02-2020 20:22:07"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 20:22:18"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 20:22:18"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 20:22:55"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 20:24:14"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 20:24:14"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 20:24:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 20:25:23"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 20:25:23"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 20:26:18"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 20:29:10"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 20:29:40"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 20:30:24"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 20:30:44"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 20:41:30"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 20:41:58"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 20:42:09"}
+{"level":"info","message":"Déconnexion de l'utilisateur zeilu","service":"user-service","timestamp":"23-02-2020 20:47:11"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 20:49:14"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 20:49:15"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 20:49:51"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 20:57:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 20:57:17"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 20:57:18"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 20:58:17"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 20:58:24"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 20:59:06"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 20:59:07"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 20:59:08"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 20:59:09"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 20:59:16"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 20:59:17"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 21:00:15"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:00:22"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 21:02:45"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:02:46"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 21:02:55"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:02:57"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:03:00"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 21:03:05"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:03:06"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 21:03:17"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:03:19"}
+{"level":"info","message":"Nouveau login reçu : julien","service":"user-service","timestamp":"23-02-2020 21:04:14"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:04:16"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 21:04:23"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:04:26"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 21:04:30"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:04:32"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:04:34"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 21:04:35"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:04:36"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 21:05:53"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:05:54"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 21:06:31"}
+{"level":"info","message":"Déconnexion de l'utilisateur julien","service":"user-service","timestamp":"23-02-2020 21:06:31"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 21:06:38"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 21:06:38"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:06:42"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:11:14"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:11:16"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:11:42"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:11:43"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:12:09"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:12:10"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:13:03"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:13:15"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:13:17"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:13:59"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:14:00"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:14:40"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:14:41"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:15:11"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:15:46"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:17:47"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:17:48"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:17:56"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:20:17"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:20:18"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:22:26"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:22:27"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:24:52"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:24:53"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:25:00"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:25:02"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 21:27:33"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:27:35"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 21:27:44"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:27:55"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:27:57"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:28:03"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:28:50"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:32:20"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:32:20"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:32:26"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:32:26"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 21:34:24"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:34:24"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 21:34:33"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:34:52"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:34:52"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:35:02"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:35:05"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:35:05"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 21:36:04"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:36:04"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 21:36:09"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:36:33"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:36:33"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:36:42"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:36:57"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:37:14"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:37:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:39:05"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:39:06"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 21:39:17"}
+{"level":"info","message":"Nouveau login reçu : bobi","service":"user-service","timestamp":"23-02-2020 21:39:40"}
+{"level":"info","message":"Nouveau login reçu : bobi","service":"user-service","timestamp":"23-02-2020 21:39:40"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:39:46"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:39:46"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:39:51"}
+{"level":"info","message":"Déconnexion de l'utilisateur bobi","service":"user-service","timestamp":"23-02-2020 21:39:54"}
+{"level":"info","message":"Nouveau login reçu : bobi","service":"user-service","timestamp":"23-02-2020 21:43:17"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 21:43:17"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 21:43:17"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:43:18"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:43:22"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:43:25"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:43:45"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:43:45"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:44:10"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:44:10"}
+{"level":"info","message":"Déconnexion de l'utilisateur bobi","service":"user-service","timestamp":"23-02-2020 21:44:17"}
+{"level":"info","message":"Déconnexion de l'utilisateur bobi","service":"user-service","timestamp":"23-02-2020 21:44:27"}
+{"level":"info","message":"Déconnexion de l'utilisateur bobi","service":"user-service","timestamp":"23-02-2020 21:44:27"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:44:38"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:44:38"}
+{"level":"info","message":"Nouveau login reçu : bobi","service":"user-service","timestamp":"23-02-2020 21:44:48"}
+{"level":"info","message":"Nouveau login reçu : bobi","service":"user-service","timestamp":"23-02-2020 21:44:48"}
+{"level":"info","message":"Déconnexion de l'utilisateur bobi","service":"user-service","timestamp":"23-02-2020 21:44:52"}
+{"level":"info","message":"Déconnexion de l'utilisateur bobi","service":"user-service","timestamp":"23-02-2020 21:44:52"}
+{"level":"info","message":"Nouveau login reçu : bobi","service":"user-service","timestamp":"23-02-2020 21:44:57"}
+{"level":"info","message":"Nouveau login reçu : bobi","service":"user-service","timestamp":"23-02-2020 21:44:57"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:45:02"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:45:02"}
+{"level":"info","message":"Déconnexion de l'utilisateur bobi","service":"user-service","timestamp":"23-02-2020 21:45:04"}
+{"level":"info","message":"Déconnexion de l'utilisateur bobi","service":"user-service","timestamp":"23-02-2020 21:45:05"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:45:08"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:45:08"}
+{"level":"info","message":"Nouveau login reçu : bobi","service":"user-service","timestamp":"23-02-2020 21:45:17"}
+{"level":"info","message":"Nouveau login reçu : bobi","service":"user-service","timestamp":"23-02-2020 21:45:17"}
+{"level":"info","message":"Déconnexion de l'utilisateur bobi","service":"user-service","timestamp":"23-02-2020 21:45:38"}
+{"level":"info","message":"Déconnexion de l'utilisateur bobi","service":"user-service","timestamp":"23-02-2020 21:45:38"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:45:43"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:45:43"}
+{"level":"info","message":"Nouveau login reçu : bobi","service":"user-service","timestamp":"23-02-2020 21:45:49"}
+{"level":"info","message":"Nouveau login reçu : bobi","service":"user-service","timestamp":"23-02-2020 21:45:49"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:46:25"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:46:25"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:46:54"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:46:55"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:47:01"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:47:03"}
+{"level":"error","message":"Chemin inconnu demandé : /images/emojis_emoticon_mdr.gif","service":"user-service","timestamp":"23-02-2020 21:47:04"}
+{"level":"info","message":"Déconnexion de l'utilisateur bobi","service":"user-service","timestamp":"23-02-2020 21:47:06"}
+{"level":"info","message":"Déconnexion de l'utilisateur bobi","service":"user-service","timestamp":"23-02-2020 21:47:06"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 21:47:11"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 21:47:11"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 21:50:49"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 21:50:49"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 21:50:52"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 21:52:00"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 21:52:15"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:52:26"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 21:58:34"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 21:58:36"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:58:53"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 21:59:25"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 21:59:27"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 21:59:27"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 21:59:59"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 22:00:01"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 22:00:26"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 22:00:29"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:00:48"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 22:00:54"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:00:56"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 22:01:06"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 22:01:06"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 22:01:29"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:01:33"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:01:35"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 22:01:38"}
+{"level":"info","message":"Nouveau login reçu : miriam","service":"user-service","timestamp":"23-02-2020 22:01:38"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"23-02-2020 22:02:20"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"23-02-2020 22:02:20"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"23-02-2020 22:02:35"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:02:39"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:02:41"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 22:02:44"}
+{"level":"info","message":"Déconnexion de l'utilisateur miriam","service":"user-service","timestamp":"23-02-2020 22:02:44"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"23-02-2020 22:02:48"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"23-02-2020 22:02:48"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 22:03:28"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 22:03:28"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 22:06:11"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 22:06:11"}
+{"level":"info","message":"Déconnexion de l'utilisateur dzdz","service":"user-service","timestamp":"23-02-2020 22:06:21"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"23-02-2020 22:06:29"}
+{"level":"info","message":"Déconnexion de l'utilisateur dzdz","service":"user-service","timestamp":"23-02-2020 22:06:30"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"23-02-2020 22:06:44"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"23-02-2020 22:07:01"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:07:04"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"23-02-2020 22:07:11"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"23-02-2020 22:07:41"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:08:11"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"23-02-2020 22:08:30"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"23-02-2020 22:16:10"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 22:16:15"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"23-02-2020 22:16:23"}
+{"level":"info","message":"Déconnexion de l'utilisateur bob","service":"user-service","timestamp":"23-02-2020 22:16:35"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:16:37"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"23-02-2020 22:16:41"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:17:04"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 22:17:08"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:17:17"}
+{"level":"info","message":"Déconnexion de l'utilisateur dzdz","service":"user-service","timestamp":"23-02-2020 22:17:23"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:17:26"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 22:17:29"}
+{"level":"info","message":"Nouveau login reçu : dzdz","service":"user-service","timestamp":"23-02-2020 22:18:27"}
+{"level":"info","message":"Nouveau login reçu : bob","service":"user-service","timestamp":"23-02-2020 22:18:27"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 22:18:27"}
+{"level":"info","message":"Déconnexion de l'utilisateur dzdz","service":"user-service","timestamp":"23-02-2020 22:18:28"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:18:31"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:18:33"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:18:45"}
+{"level":"info","message":"Nouveau login reçu : azerty","service":"user-service","timestamp":"23-02-2020 22:18:55"}
+{"level":"info","message":"Nouveau login reçu : azerty","service":"user-service","timestamp":"23-02-2020 22:18:55"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:19:02"}
+{"level":"info","message":"Nouveau login reçu : azerty","service":"user-service","timestamp":"23-02-2020 22:19:21"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 22:19:23"}
+{"level":"info","message":"Déconnexion de l'utilisateur azerty","service":"user-service","timestamp":"23-02-2020 22:19:26"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:19:26"}
+{"level":"info","message":"Déconnexion de l'utilisateur azerty","service":"user-service","timestamp":"23-02-2020 22:19:35"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:19:40"}
+{"level":"info","message":"Nouveau login reçu : azerty","service":"user-service","timestamp":"23-02-2020 22:19:42"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:19:43"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:19:53"}
+{"level":"info","message":"Nouveau login reçu : azerty","service":"user-service","timestamp":"23-02-2020 22:21:53"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 22:21:54"}
+{"level":"info","message":"Déconnexion de l'utilisateur azerty","service":"user-service","timestamp":"23-02-2020 22:21:57"}
+{"level":"info","message":"Nouveau login reçu : fefe","service":"user-service","timestamp":"23-02-2020 22:22:01"}
+{"level":"info","message":"Nouveau login reçu : fefe","service":"user-service","timestamp":"23-02-2020 22:22:01"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:22:01"}
+{"level":"info","message":"Nouveau login reçu : Admin","service":"user-service","timestamp":"23-02-2020 22:24:06"}
+{"level":"info","message":"Nouveau login reçu : fefe","service":"user-service","timestamp":"23-02-2020 22:24:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:24:14"}
+{"level":"info","message":"Déconnexion de l'utilisateur fefe","service":"user-service","timestamp":"23-02-2020 22:24:21"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:24:25"}
+{"level":"info","message":"Nouveau login reçu : fefe","service":"user-service","timestamp":"23-02-2020 22:24:28"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:24:28"}
+{"level":"info","message":"Déconnexion de l'utilisateur fefe","service":"user-service","timestamp":"23-02-2020 22:24:47"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:24:49"}
+{"level":"info","message":"Déconnexion de l'utilisateur fefe","service":"user-service","timestamp":"23-02-2020 22:24:51"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:24:54"}
+{"level":"info","message":"Nouveau login reçu : fefe","service":"user-service","timestamp":"23-02-2020 22:24:59"}
+{"level":"info","message":"Nouveau login reçu : fefe","service":"user-service","timestamp":"23-02-2020 22:24:59"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:24:59"}
+{"level":"info","message":"Nouveau login reçu : fr","service":"user-service","timestamp":"23-02-2020 22:25:16"}
+{"level":"info","message":"Nouveau login reçu : fr","service":"user-service","timestamp":"23-02-2020 22:25:16"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:25:16"}
+{"level":"info","message":"Déconnexion de l'utilisateur fr","service":"user-service","timestamp":"23-02-2020 22:25:19"}
+{"level":"info","message":"Déconnexion de l'utilisateur fefe","service":"user-service","timestamp":"23-02-2020 22:25:20"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:25:24"}
+{"level":"info","message":"Déconnexion de l'utilisateur Admin","service":"user-service","timestamp":"23-02-2020 22:25:26"}
