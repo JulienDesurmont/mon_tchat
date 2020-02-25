@@ -153,7 +153,7 @@ function insertion_emoticons(message, typeEmoticons)
 	//alert('URI ---> ' + encodeURI(message));
 	//alert(decodeURI(encodeURI(message)));
 
-	return encodeURI(message)
+	return encodeURI(message.trim())
 		.replace(/:\)/g,        	"<img src='images/" + typeEmoticons + "_emoticon_rire.gif'            	height=40px; />")
 		.replace(/:-\)/g,       	"<img src='images/" + typeEmoticons + "_emoticon_lol.gif'             	height=35px; />")
 		.replace(/:%5D/g,         	"<img src='images/" + typeEmoticons + "_emoticon_lol_2.gif'           	height=45px; />")
@@ -183,7 +183,18 @@ function insertion_emoticons(message, typeEmoticons)
 		.replace(/:\^\)/g,      	"<img src='images/" + typeEmoticons + "_emoticon_mince.gif'           	height=40px; />")
 		.replace(/:-\*/g,       	"<img src='images/" + typeEmoticons + "_emoticon_bisou_feminin.gif'   	height=40px; />")
 		.replace(/:\*r/g,       	"<img src='images/" + typeEmoticons + "_emoticon_bisou_recu.gif'      	height=35px; />")
-		.replace(/:\*/g,        	"<img src='images/" + typeEmoticons + "_emoticon_bisou.gif'           	height=35px; />");
+		.replace(/:\*/g,        	"<img src='images/" + typeEmoticons + "_emoticon_bisou.gif'           	height=35px; />")
+		.replace(/%20/g," ")
+		.replace(/%C3%A9/g, 'é')
+		.replace(/%C3%A8/g, 'è')
+		.replace(/%C3%A0/g, 'à')
+		.replace(/%C3%A7/g, 'ç')
+		.replace(/%C3%B4/g, 'ô')
+		.replace(/%C3%94/g, 'Ô')
+		.replace(/%C3%B9/g, 'ù')
+		.replace(/%22/g, '"')
+		.replace(/%5B/g, '[')
+		.replace(/%5D/, ']');
 }
 
 			
