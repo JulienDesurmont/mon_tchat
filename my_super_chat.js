@@ -1,4 +1,4 @@
-var myPortServeur       = 6969;
+var myPortServeur       = '6969';
 var myPrive            	= true;
 //Duree de la session privé = durée de validité du cookie autorisation 
 var myDureeSessionPrive	= 3600 * 24 * 1000;		// 1 journée
@@ -156,8 +156,8 @@ function isAutoriser(req) {
 function motDePasseSecurise(affichage) {
 	var laDate = new Date();
 	if (affichage) 
-		console.log('Passe actuel : ' + Math.trunc((laDate.getDate() + laDate.getMonth() + 1) * laDate.getFullYear() / myPrivateNumber));
-	return (Math.trunc((laDate.getDate() + laDate.getMonth() + 1) * laDate.getFullYear() / myPrivateNumber));
+		console.log('Passe actuel :  ' + Math.trunc((laDate.getDate() + laDate.getMonth() + 1) * laDate.getFullYear() / myPortServeur.substring(3)));
+	return (Math.trunc((laDate.getDate() + laDate.getMonth() + 1) * laDate.getFullYear() / myPortServeur.substring(3)));
 }
 // On affiche le mot de passe au démarrage de l'application
 if (myPrive) 
