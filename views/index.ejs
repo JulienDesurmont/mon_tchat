@@ -28,9 +28,9 @@
 		<header class='show-on-logon'>
 			<span id='spn-deconnexion' class='chk-header-right option'><span>Déconnexion</span></span>
 			<div id='options-couleurs'>
-				<input type='color' <% if (couleur) { %>value=<%= couleur %> <% } else { %> value="#ffffff" <% } %> id="couleur" name="couleur" />
+				<input type='color' <% if (couleur) { %>value=<%= couleur %> <% } else { %> value="#000000" <% } %> id="couleur" name="couleur" />
 				<h1 id='login'><% if (login) { %><%= login.charAt(0).toUpperCase() + login.substr(1)%> <% } %></h1>
-				<input type='color' <% if (couleurTexte) { %>value=<%= couleurTexte %> <% } else { %> value="#ffffff" <% } %> id="couleurTexte" name="couleurTexte" />
+				<input type='color' <% if (couleurTexte) { %>value=<%= couleurTexte %> <% } else { %> value="#000000" <% } %> id="couleurTexte" name="couleurTexte" />
 			</div>
 			<div id='options-tchat'>	
 				<% if (admin == true) { %> <div><span>Bannir </span><input type='checkbox' id='bannir'/></div><% } %>
