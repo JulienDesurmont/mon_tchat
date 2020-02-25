@@ -1,4 +1,4 @@
-var myPortServeur       = 6969
+var myPortServeur       = 6969;
 var myPrive            	= true;
 //Duree de la session privé = durée de validité du cookie autorisation 
 var myDureeSessionPrive	= 3600 * 24 * 1000;		// 1 journée
