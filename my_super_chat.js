@@ -1,5 +1,5 @@
 var myPortServeur       = 6969
-var myPrive            	= false;
+var myPrive            	= true;
 //Duree de la session privé = durée de validité du cookie autorisation 
 var myDureeSessionPrive	= 3600 * 24 * 1000;		// 1 journée
 // Durée d'un cookie illimité : Définit à une année
@@ -24,7 +24,7 @@ var myDefaultColor		= "#C2C1C1";
 var myDefaultColorText	= "#FFFFFF";
 var myTabConnectes		= [];
 var dtSuppressionCookie = new Date();
-var myPrivateNumber		= 2451;
+var myPrivateNumber		= 24;
 var myLogin;
 var tabLogin 			= [];
 var myLoginAdmin 		= 'L@scslsdc59';
@@ -49,6 +49,12 @@ function defineDateExpiration(parametre) {
 }
 
 
+function generateID() 
+{
+	return Math.floor((1 + Math.random()) * 0x10000)
+		.toString(16)
+		.substring(1);
+}
 
 
 // Gestion de session && de session sur socket
@@ -97,6 +103,7 @@ function myGetCookie(jsonCookies, searchParametre) {
 
 function mySupprimeLogin(loginASupprimer) {
     delete(tabLogin[loginASupprimer]);
+	delete(myTabConnectes[loginASupprimer]);
 }
 
 function myIndexOf(searchParametre) {
@@ -126,6 +133,9 @@ function ajoutInfosUrl(name, req) {
 	return (name + '_' +  req.headers.host.split(':').join(''));
 }
 
+function nouveauConnecte(login, id) {
+	myTabConnectes[login] = id;
+}
 
 
 // ----------------------------------------------------------------------------------------------------------
@@ -136,26 +146,32 @@ function creerCookieAutorisation(req, res) {
 }
 function isAutoriser(req) {
 	if (req.cookies[ajoutInfosUrl('autorisation', req)])
-	{
 		return true;
-	}
 	else 
-	{
 		return false;
-	}
 }
 
 
-function motDePasseSecurise() {
+// Un mot de passe par jour.
+function motDePasseSecurise(affichage) {
 	var laDate = new Date();
-	// info :  ( laDate.getMinutes() + 1)  pour évité lors des minutes = 0 d'avoir une division par 0
-	console.log('Passe actuel : ' + Math.trunc((laDate.getDate() + laDate.getMonth() + 1) *  laDate.getFullYear() / ( laDate.getMinutes() + 1)  + myPrivateNumber));
-	return (Math.trunc((laDate.getDate() + laDate.getMonth() + 1) *  laDate.getFullYear() / ( laDate.getMinutes() + 1)  + myPrivateNumber));
+	if (affichage) 
+		console.log('Passe actuel : ' + Math.trunc((laDate.getDate() + laDate.getMonth() + 1) * laDate.getFullYear() / myPrivateNumber));
+	return (Math.trunc((laDate.getDate() + laDate.getMonth() + 1) * laDate.getFullYear() / myPrivateNumber));
 }
+// On affiche le mot de passe au démarrage de l'application
 if (myPrive) 
-{
-	// On affiche le mot de passe au démarrage de l'application
-	motDePasseSecurise();
+	motDePasseSecurise(true);
+
+
+
+// On recherche dans le tableau des personnes connectés sur le login de l'utilisateur en cours de connexion y est présent 
+// SI le login est présent mais que l'identifucation de  l'utilisateur diffère c'est qu'un autre utilisateur est en ligne avec le login 
+function isLoginUsed(login, id) {
+	if(Object.keys(myTabConnectes).includes(login)) 
+		if (myTabConnectes[login] != id) 
+			return true;
+	return false;
 }
 
 app.use(session)
@@ -181,12 +197,16 @@ app.use(session)
 	if (! req.session.view) {
 		req.session.view = 1;
 	}
+
 	// Lors de l'appel de la page d'accueil, on récupère le cookie login
 	utilisateur = req.cookies[ajoutInfosUrl('login', req)];
 	if (utilisateur) {
-		if (myTabConnectes.includes(utilisateur)) {
-            messageAdmin = 'Le login ' + utilisateur + " est déjà utilisé";
+		if (isLoginUsed(utilisateur, req.cookies[ajoutInfosUrl('identification', req)])) 
+		{
+            messageAdmin = 'Le login ' + utilisateur + " est en ligne";
+			// Si le login est déjà utilisé par une personne en ligne, on supprime le cookie login et le cookie identification
 			res.cookie(ajoutInfosUrl('login', req), utilisateur, {expires: defineDateExpiration('has-expired')});
+			res.cookie(ajoutInfosUrl('identification', req), utilisateur, {expires: defineDateExpiration('has-expired')});
 			myLogin = null;
 		} else {
 			if (motDePasseNecessaire == true) {
@@ -258,30 +278,33 @@ app.use(session)
 
 .post('/define/login', urlencodedParser, function(req, res) {
 	if ( (myPrive == true) && (! isAutoriser(req)) ){
-		if (req.body.login != motDePasseSecurise()) 
-		{
+		if (req.body.login != motDePasseSecurise(false)) 
 			messageAdmin = "Tchat privé : Mot de passe nécessaire";
-		} else {
+		else
 			res = creerCookieAutorisation(req, res);
-		}
 	} else {
 		// Connexion depuis le formulaire de connexion
 	    if (Object.keys(tabLogin).includes(req.body.login.toLowerCase()) || (req.body.login.toLowerCase().substr(0,5) == 'admin')) {
 			messageAdmin = 'Le login ' + req.body.login + " est déjà utilisé";
 	    } else {
 			var loginTmp;
-			// Selon le login utilisé on enregistre en variable de session si l'utilisateur est l'admin ou pas : Permet d'ajouter des info dans la page html
+			var id = generateID();
+			// Selon le login utilisé on enregistre en variable de session si l'utilisateur est l'admin ou pas : Permet d'ajouter des infos dans la page html
 			if (req.body.login == myLoginAdmin) {
 				req.session.admin = true;
 				loginTmp = 'Admin';
 				// Cookie du compte Admin: Expire à la fin de la session
 				res.cookie(ajoutInfosUrl('login', req), loginTmp);
+				res.cookie(ajoutInfosUrl('identification', req), id);
 			} else {
 				req.session.admin = false;
 				loginTmp = req.body.login.toLowerCase();
 				// Cookie utilisateur : Sans date d'expiration
 				res.cookie(ajoutInfosUrl('login', req), loginTmp, {expires: defineDateExpiration('no-expire')}); 
+				res.cookie(ajoutInfosUrl('identification', req), id, {expires: defineDateExpiration('no-expire')});
 			}
+			// Enregistrement de l'utlisateru dans le tableau des membre connectés au tchat
+			nouveauConnecte(loginTmp, id);
 			logger.log({
 				level: 'info',
 				message: "Nouveau login reçu : " + loginTmp
@@ -301,38 +324,30 @@ app.use(session)
 });
 
 
+// *********************************************************************************************************************** //
 
+//												Partie gestion des sockets
 
-
-
-
-
-
-
-
-
-
+// *********************************************************************************************************************** //
 
 io.use(sessionSockets(session));
 
 io.sockets.on('connection', function(socket) {
-    function appelConnectes() {
-        myTabConnectes = [];
-		socket.emit('appelConnectes');
-        socket.broadcast.emit('appelConnectes');
-        return 0;
-    }
+
+	// Pour raffraichir la listes des memnbre connecté au tchat on vide le tableau des connectés
     function actualisationListeDesConnectes() {
         // On demande aux navigateurs connectés de se signaler
-        appelConnectes();
+		myTabConnectes = [];
+		socket.emit('appelConnectes');
+		socket.broadcast.emit('appelConnectes');
         // Aprés un temps d'attente, pour permettre à tous les navigateurs de répondre, on actualise la liste des personnes connectés
         setTimeout(function() {
-            socket.emit('listeUtilisateurs', myTabConnectes, myTabConnectes.length);
-            socket.broadcast.emit('listeUtilisateurs', myTabConnectes, myTabConnectes.length);
-        }, 1000);
+           socket.emit('listeUtilisateurs', Object.keys(myTabConnectes).sort(), Object.keys(myTabConnectes).length);
+            socket.broadcast.emit('listeUtilisateurs', Object.keys(myTabConnectes).sort(), Object.keys(myTabConnectes).length);
+        }, 500);
     }
-
-
+	// On actualise la liste des connectés à chaque connexion socket
+    actualisationListeDesConnectes();
 
 	// ! login si la page est affichée après la relance du serveur
 	if(! myLogin) {
@@ -346,17 +361,15 @@ io.sockets.on('connection', function(socket) {
 		socket.broadcast.emit('messageAdmin', socket.handshake.session.login + " s'est connecté", 'Admin');
 		// Le compte admin doit se rafraichir pour récupérer la nouvelle table tabLogin
 		socket.broadcast.emit('admin', 'please do refresh', 'Admin');
-		actualisationListeDesConnectes();
        	myLogin = null;
 	}
 
 
 
 
- 	socket.on('estConnecte', function(login) {
-		if(! myTabConnectes.includes(login)) {
-			myTabConnectes.push(login);
-		}
+ 	socket.on('estConnecte', function(login, id) {
+		if (! Object.keys(myTabConnectes).includes(login)) 
+			nouveauConnecte(login, id);
 	});
 
     socket.on('message', function(message, login, typeEmoticons){
@@ -393,11 +406,13 @@ io.sockets.on('connection', function(socket) {
 	socket.on('logout',  function(login){
         mySupprimeLogin(login);
         socket.broadcast.emit('messageAdmin', login + " s'est déconnecté");
-		socket.broadcast.emit('listeUtilisateurs', Object.keys(tabLogin), Object.keys(tabLogin).length);
+		socket.broadcast.emit('listeUtilisateurs', Object.keys(myTabConnectes).sort(), Object.keys(myTabConnectes).length);
 		logger.log({
 			level: 'info',
 			message: "Déconnexion de l'utilisateur " + login
 		});
+		// On raffraichi la page de l'administrateur pour qu'il réinitialise sa liste des utilisateurs du tchat
+		socket.broadcast.emit('admin', 'please do refresh', 'Admin');
     });
 
     socket.on('bannir', function(utilisateur) {
@@ -407,7 +422,8 @@ io.sockets.on('connection', function(socket) {
 	socket.on('removeFromChat', function(user, login, typeEmoticons) {
 		mySupprimeLogin(user);		
 		message = "L'utilisateur " + user + " a été retiré des membres du tchat";
-		socket.emit('message', message, login, typeEmoticons);
+		// Seul l'administrateur peut envoyer cet évènement donc login = 'Admin'
+		socket.emit('messageInfo', message);
 		socket.emit('refresh');
 	});
 
