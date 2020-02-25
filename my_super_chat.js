@@ -220,7 +220,7 @@ app.use(session)
 					tabLogin[myLogin] = url.parse(urlStr).host;
 					logger.log({
 						level: 'info',
-						message: "Nouveau login reçu : " + myLogin
+						message: "Connexion de " + myLogin
 					});
 				} else {
 					var urlStr = 'http://' + req.headers.host + req.url;
@@ -271,7 +271,7 @@ app.use(session)
 .get('/message/:titre', function(req, res){
 	logger.log({
 		level: 'info',
-		message: "Reception du message : " + req.params.titre
+		message: "Deconnexion de " + req.params.titre
 	});
 	res.redirect('/accueil');
 })
